@@ -1,0 +1,38 @@
+1. Project Overview: Real Estate Market Monitor
+The goal of this project is to take "messy" data (descriptions, photos, and PDFs) and turn it into a clean table that helps a buyer decide if a house is a good deal.
+
+Data Sources & Types
+We will use three main "buckets" of data:
+
+The "Stats" (RapidAPI): We'll get the price, address, and square footage. This arrives as JSON (a format that looks like a digital grocery list).
+
+The "Story" (Web Scraping): We'll grab the long paragraphs written by realtors and the JPEG photos of the house.
+
+The "Details" (Local Files): We will process PDF floor plans and Word/Excel inspection reports to find hidden issues (like a leaky roof or a small kitchen).
+
+2. Pipeline Architecture
+Think of this as a factory assembly line. Raw materials come in one end, and a finished report comes out the other.
+
+Step 1: Ingestion (The Collector): Small Python scripts that "call" the API and download the files.
+
+Step 2: Processing (The Translator): * OCR (Optical Character Recognition): This is like a digital eyeball that reads text inside a photo or a scanned PDF and types it out into a document.
+
+Text Analysis: A tool that searches for "danger" keywords in the inspection reports (e.g., "mold," "crack," "dated").
+
+Step 3: Storage (The Warehouse): We’ll save everything into a simple database or a CSV file so you can look at it in Excel.
+
+3. Expected Challenges
+Since you're new to this, these are the three "speed bumps" we should plan for:
+
+Messy Text: OCR isn't perfect. Sometimes it reads a "0" as an "O." We will need to "clean" the text after reading it.
+
+Different Layouts: One inspector might put the "Roof Condition" on page 1, while another puts it on page 10.
+
+File Errors: Sometimes a PDF might be corrupted or a website might block our scraper. We need the code to say "Skip this one" rather than crashing the whole project.
+
+4. Success Criteria (How you get the 'A')
+The "All-in-One" View: You can show a single row in a table that contains data from the API plus a summary of the PDF report.
+
+Working OCR: You can successfully extract the "Total Square Footage" from a scanned image of a floor plan.
+
+Searchability: You can search your database for "Properties with new roofs" and the system finds them based on the text it extracted from the Word documents.
