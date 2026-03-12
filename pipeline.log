@@ -1,0 +1,4 @@
+2026-03-11 14:24:34,321 - ERROR - File not found: data/raw/real estate/loopNet-sample.json
+2026-03-11 14:25:00,940 - ERROR - File not found: data/raw/real_state/loopNet-sample.json
+2026-03-11 14:25:36,651 - INFO - Successfully read JSON file: data/raw/real_estate/loopNet-sample.json
+2026-03-11 14:30:19,025 - INFO - Successfully read JSON file: data/raw/real_estate/loopNet-sample.json

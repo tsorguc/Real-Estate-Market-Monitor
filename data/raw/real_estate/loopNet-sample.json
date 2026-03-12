@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "message": "Request has been successful.",
+  "data": [
+    {
+      "brokerId": "zxz0drxb",
+      "brokerImage": "https://images1.loopnet.com/i2/mWE_d3BV6xfrzRV9J_zS9rKXmswSCkPvicRuOZg5dec/118/thomas-tsai.jpg",
+      "name": "Thomas Tsai",
+      "jobTitle": "Director of Commercial Properties, AZ Realty NYC",
+      "location": "New York, NY 10017",
+      "tagLine": "Manhattan Deal Maker.",
+      "phone": "(518) 288-8381",
+      "mobile": null,
+      "specialties": [
+        "Investment Sales Broker",
+        "Landlord Rep (Office)",
+        "Landlord Rep (Residential)",
+        "Tenant Rep",
+        "Tenant Rep (Residential)"
+      ],
+      "propertyTypes": [
+        "Hospitality",
+        "Industrial",
+        "Office",
+        "Retail",
+        "Multi-Family"
+      ],
+      "markets": ["New York City"],
+      "languages": ["English", "Chinese", "Vietnamese"],
+      "bio": "With a long and successful history in Manhattan real estate, Thomas provides exceptional guidance and strong advocacy as an NYC agent. Professionals, investors, families and individuals looking for the perfect property can depend on Thomas to understand their goals, investigate all options, line up resources and ultimately get the deal done!Having worn many hats in the industry, Thomas has had his finger on the market’s pulse since 1987—with keen understanding of residential and commercial properties, as well as sales, rentals and foreclosure auctions. He owns property here in Manhattan and has been involved in everything from design to marketing to project management, construction, financing and beyond.  He has collaborated extensively with contractors, superintendents, engineers, architects, code consultants, attorneys, bankers and brokers. He managed the build-out of corporate offices on Fifth Avenue and is currently overseeing the renovation of a commercial building built in 1915. Thomas has served as president of a commercial co-op board since 2004.  He also sat on a condo board where he oversaw renovation, maintenance, and financing for 12 years. In addition to his work as a licensed real estate agent, Thomas has served as president of an import/export business since 1983. Throughout his career, he has been responsible for negotiations, merchandising and product development for a chain of national mass market retail stores.  Today, he uses his knowledge of white-glove customer service and his exceptional negotiation skills to focus his energies on serving his real estate clients.",
+      "education": null,
+      "affiliations": null,
+      "awards": null
+    }
+  ]
+}
