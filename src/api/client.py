@@ -1,56 +1,58 @@
 import os
 import requests
+import json
 from dotenv import load_dotenv
+
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from utils.logger import logging
 
 load_dotenv()
 API_KEY = os.getenv("LOOPNET_API_KEY")
 
 def fetch_loopnet_data(pages=3):
     all_results = []
-    # This is the most reliable endpoint for 'Sale' listings
     url = "https://loopnet-api.p.rapidapi.com/loopnet/sale/searchByCity"
-    
     headers = {
         "X-RapidAPI-Key": API_KEY,
         "X-RapidAPI-Host": "loopnet-api.p.rapidapi.com",
         "Content-Type": "application/json"
     }
 
+    # Ensure the directory required by the lab exists
+    os.makedirs("../../data/raw/api", exist_ok=True)
+
     for page in range(1, pages + 1):
-        print(f"--- Fetching Page {page} ---")
-        
-        # We'll use 'location' and 'pageIndex' - the gold standard for this API
-        payload = {
-            "location": "NY", # Try a short state code first
-            "pageIndex": page
-        }
+        logging.info(f"--- Fetching Page {page} ---")
+        payload = {"cityId": "11854", "page": page}
 
         try:
             response = requests.post(url, json=payload, headers=headers)
             response.raise_for_status() 
             
             data = response.json()
-            
-            # LoopNet often nests items inside 'searchResult' or 'items'
-            # This check looks in both places just in case!
-            items = data.get('items') or data.get('searchResult', {}).get('items', [])
+            items = data.get('data') or data.get('searchResult', {}).get('items', [])
             
             if not items:
-                print(f"⚠️ Page {page} returned no houses. Trying different payload...")
-                # Backup attempt with 'city' instead of 'location'
+                logging.warning(f"Page {page} returned no houses. Trying backup payload...")
                 payload = {"city": "New York", "pageIndex": page}
                 response = requests.post(url, json=payload, headers=headers)
                 items = response.json().get('items', [])
 
             all_results.extend(items)
-            print(f"Successfully grabbed {len(items)} items from page {page}")
+            logging.info(f"Successfully grabbed {len(items)} items from page {page}")
+            
+            # LAB REQUIREMENT: Save raw data from each page individually
+            page_file = f"../../data/raw/api/loopnet_page_{page}.json"
+            with open(page_file, "w", encoding="utf-8") as f:
+                json.dump(items, f)
+            logging.info(f"Saved raw data to {page_file}")
             
         except Exception as e:
-            print(f"❌ API Error: {e}")
+            logging.error(f"API Error: {e}")
             break
             
     return all_results
 
 if __name__ == "__main__":
-    results = fetch_loopnet_data(3)
-    print(f"✅ Success! Grabbed {len(results)} properties total.")
+    fetch_loopnet_data(3)
