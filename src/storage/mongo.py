@@ -24,3 +24,19 @@ def save_to_mongo(data_list, collection_name):
             
     except Exception as e:
         logging.error(f"MongoDB Error: {e}")
+
+def save_image_metadata(metadata_list):
+    """Saves property image metadata into a separate collection."""
+    try:
+        client = MongoClient(MONGO_URI)
+        db = client["RealEstateDB"]
+        collection = db["image_metadata"]
+        
+        if metadata_list:
+            result = collection.insert_many(metadata_list)
+            logging.info(f"Success! Saved {len(result.inserted_ids)} image metadata entries to MongoDB.")
+        else:
+            logging.warning("No image metadata to save.")
+            
+    except Exception as e:
+        logging.error(f"MongoDB Metadata Error: {e}")

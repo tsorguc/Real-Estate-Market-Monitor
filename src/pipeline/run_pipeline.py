@@ -1,5 +1,6 @@
 import sys
 import os
+import json
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -11,6 +12,11 @@ from storage.mongo import save_to_mongo
 from parsing.document_extractors import extract_from_pdf, extract_from_word, extract_from_excel
 from scraping.scraper import scrape_static_pages, scrape_dynamic_page
 from parsing.ocr_extractor import extract_text_from_image, extract_text_from_scanned_pdf
+
+# New Imports for Image Processing
+from image_processing.downloader import fetch_and_download_images
+from image_processing.batch import batch_process_images
+from utils.report_generator import generate_combined_report
 
 def run_pipeline():
     logging.info("Starting Real Estate Market Monitor Pipeline...")
@@ -24,9 +30,22 @@ def run_pipeline():
     raw_properties = fetch_loopnet_data(pages=3)
 
     if not raw_properties:
-        logging.error("No data fetched from API. Skipping API storage steps.")
-        print("⚠️ No API data fetched. Moving to Phase 2.")
-    else:
+        logging.warning("No data fetched from API. Checking for local raw data fallback...")
+        base_raw_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), f"../../data/raw"))
+        api_raw_dir = os.path.join(base_raw_dir, "api")
+        if os.path.exists(api_raw_dir):
+            for filename in os.listdir(api_raw_dir):
+                if filename.endswith(".json"):
+                    with open(os.path.join(api_raw_dir, filename), "r", encoding="utf-8") as f:
+                        raw_properties.extend(json.load(f))
+        
+        if raw_properties:
+            print(f"📦 Loaded {len(raw_properties)} items from local cache.")
+        else:
+            logging.error("No data fetched from API and no local cache found. Skipping API storage steps.")
+            print("⚠️ No API data available. Moving to Phase 2.")
+
+    if raw_properties:
         # 2. Parse and Save to MongoDB
         logging.info("Parsing data...")
         cleaned_properties = [parse_loopnet_map_data(item) for item in raw_properties] 
@@ -34,12 +53,20 @@ def run_pipeline():
         logging.info("Saving to MongoDB...")
         save_to_mongo(cleaned_properties, "loopnet_listings")
 
-        # 3. Upload raw pages to S3
-        # logging.info("Uploading raw files to S3...")
-        #for page in range(1, 4):
-         #   file_name = f"loopnet_page_{page}.json"
-          #  file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), f"../../data/raw/api/{file_name}"))
-         #   upload_file_to_s3(file_path, file_name) 
+        # =================================================================
+        # NEW: PHASE 1.5 - IMAGE PROCESSING
+        # =================================================================
+        logging.info("Starting Phase 1.5: Image Processing...")
+        print("🖼️ Running Phase 1.5: Image Processing...")
+        
+        # Download images from the fetched API data
+        fetch_and_download_images(raw_properties)
+        
+        # Process the downloaded images
+        raw_images_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/raw/property_images"))
+        batch_process_images(raw_images_dir, raw_properties)
+        
+        print("✅ Image processing batch job completed.")
 
     # =================================================================
     # PHASE 2: NEW LAB FUNCTIONALITY (Document Extraction -> Mongo)
@@ -134,6 +161,9 @@ def run_pipeline():
 
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")
+    
+    # Final step: Generate the summary report for the user
+    generate_combined_report()
 
 if __name__ == "__main__":
     run_pipeline()

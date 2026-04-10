@@ -20,7 +20,9 @@ def fetch_loopnet_data(pages=3):
     }
 
     # Ensure the directory required by the lab exists
-    os.makedirs("../../data/raw/api", exist_ok=True)
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    api_raw_dir = os.path.join(project_root, "data", "raw", "api")
+    os.makedirs(api_raw_dir, exist_ok=True)
 
     for page in range(1, pages + 1):
         logging.info(f"--- Fetching Page {page} ---")
@@ -43,7 +45,7 @@ def fetch_loopnet_data(pages=3):
             logging.info(f"Successfully grabbed {len(items)} items from page {page}")
             
             # LAB REQUIREMENT: Save raw data from each page individually
-            page_file = f"../../data/raw/api/loopnet_page_{page}.json"
+            page_file = os.path.join(api_raw_dir, f"loopnet_page_{page}.json")
             with open(page_file, "w", encoding="utf-8") as f:
                 json.dump(items, f)
             logging.info(f"Saved raw data to {page_file}")

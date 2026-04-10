@@ -43,6 +43,20 @@ def get_base_metadata(file_path, doc_type, library):
         "extraction_library": library
     }
 
+def analyze_text(text):
+    """Searches for danger keywords and highlights in the extracted text."""
+    danger_keywords = ["mold", "crack", "dated", "leak", "asbestos", "pest", "repair required"]
+    highlights = ["new roof", "renovated", "upgraded", "modern", "well-maintained"]
+    
+    found_dangers = [kw for kw in danger_keywords if kw in text.lower()]
+    found_highlights = [kw for kw in highlights if kw in text.lower()]
+    
+    return {
+        "danger_flags": found_dangers,
+        "property_highlights": found_highlights,
+        "is_risky": len(found_dangers) > 0
+    }
+
 def extract_from_pdf(file_path):
     logging.info(f"Extracting PDF: {file_path}")
     extracted_data = []
@@ -51,10 +65,12 @@ def extract_from_pdf(file_path):
             for i, page in enumerate(pdf.pages):
                 text = page.extract_text() or ""
                 safe_text = safe_decode(text)
+                analysis = analyze_text(safe_text)
                 
                 record = get_base_metadata(file_path, "PDF", "pdfplumber")
                 record["page_number"] = i + 1
                 record["content"] = safe_text.strip()
+                record.update(analysis)
                 extracted_data.append(record)
     except Exception as e:
         logging.error(f"Failed to process PDF {file_path}: {e}")
@@ -69,9 +85,11 @@ def extract_from_word(file_path):
         
         raw_text = "\n".join(full_text)
         safe_text = safe_decode(raw_text)
+        analysis = analyze_text(safe_text)
         
         record = get_base_metadata(file_path, "Word", "python-docx")
         record["content"] = safe_text
+        record.update(analysis)
         extracted_data.append(record)
     except Exception as e:
         logging.error(f"Failed to process Word {file_path}: {e}")
@@ -93,10 +111,12 @@ def extract_from_excel(file_path):
             
             raw_text = "\n".join(sheet_content)
             safe_text = safe_decode(raw_text)
+            analysis = analyze_text(safe_text)
             
             record = get_base_metadata(file_path, "Excel", "openpyxl")
             record["sheet_name"] = sheet_name
             record["content"] = safe_text
+            record.update(analysis)
             extracted_data.append(record)
     except Exception as e:
         logging.error(f"Failed to process Excel {file_path}: {e}")
