@@ -709,3 +709,421 @@
 2026-04-10 19:58:05,375 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
 2026-04-10 19:58:05,401 - INFO - Success! Saved 1 houses to MongoDB.
 2026-04-10 19:58:05,402 - INFO - Pipeline finished successfully
+2026-04-17 10:57:09,754 - INFO - Loading audio from test_audio.wav
+2026-04-17 10:57:09,775 - INFO - Trimmed audio saved to trimmed_test.wav
+2026-04-17 10:57:22,260 - INFO - Converted audio saved to converted_test.mp3 (format: mp3)
+2026-04-17 10:57:22,262 - INFO - Concatenated audio saved to concat_test.wav
+2026-04-17 10:59:07,903 - INFO - Transcribing test_transcribe.wav with model tiny
+2026-04-17 10:59:09,524 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-tiny/revision/main "HTTP/1.1 200 OK"
+2026-04-17 10:59:09,725 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-17 10:59:09,832 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-tiny/d90ca5fe260221311c53c58e660288d3deb8d356/config.json "HTTP/1.1 200 OK"
+2026-04-17 10:59:09,934 - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-tiny/d90ca5fe260221311c53c58e660288d3deb8d356/config.json "HTTP/1.1 200 OK"
+2026-04-17 10:59:09,935 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/model.bin "HTTP/1.1 302 Found"
+2026-04-17 10:59:09,935 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-17 10:59:09,936 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/vocabulary.txt "HTTP/1.1 307 Temporary Redirect"
+2026-04-17 10:59:09,938 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-17 10:59:10,042 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-tiny/d90ca5fe260221311c53c58e660288d3deb8d356/vocabulary.txt "HTTP/1.1 200 OK"
+2026-04-17 10:59:10,043 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-tiny/d90ca5fe260221311c53c58e660288d3deb8d356/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-17 10:59:10,101 - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-tiny/d90ca5fe260221311c53c58e660288d3deb8d356/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-17 10:59:10,101 - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-tiny/d90ca5fe260221311c53c58e660288d3deb8d356/vocabulary.txt "HTTP/1.1 200 OK"
+2026-04-17 10:59:10,190 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-tiny/xet-read-token/d90ca5fe260221311c53c58e660288d3deb8d356 "HTTP/1.1 200 OK"
+2026-04-17 10:59:24,044 - INFO - Processing audio with duration 00:02.000
+2026-04-17 10:59:24,420 - INFO - Detected language 'nn' with probability 0.26
+2026-04-17 10:59:24,766 - INFO - Starting chunked transcription for test_transcribe.wav
+2026-04-17 10:59:24,768 - INFO - Transcribing temp_test_transcribe_chunk_0.wav with model tiny
+2026-04-17 10:59:25,003 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-tiny/revision/main "HTTP/1.1 200 OK"
+2026-04-17 10:59:25,324 - INFO - Processing audio with duration 00:01.000
+2026-04-17 10:59:25,621 - INFO - Detected language 'en' with probability 0.26
+2026-04-17 10:59:25,953 - INFO - Transcribing temp_test_transcribe_chunk_1.wav with model tiny
+2026-04-17 10:59:26,100 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-tiny/revision/main "HTTP/1.1 200 OK"
+2026-04-17 10:59:26,387 - INFO - Processing audio with duration 00:01.000
+2026-04-17 10:59:26,664 - INFO - Detected language 'en' with probability 0.26
+2026-04-17 10:59:26,988 - INFO - Combined transcription saved to transcripts_test\test_transcribe_combined.json
+2026-04-17 11:27:17,726 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-17 11:27:17,727 - INFO - Fetching data from API...
+2026-04-17 11:27:17,728 - INFO - --- Fetching Page 1 ---
+2026-04-17 11:27:21,148 - INFO - Successfully grabbed 159 items from page 1
+2026-04-17 11:27:21,150 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-17 11:27:21,150 - INFO - --- Fetching Page 2 ---
+2026-04-17 11:27:23,137 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-17 11:27:24,350 - INFO - Successfully grabbed 0 items from page 2
+2026-04-17 11:27:24,351 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-17 11:27:24,351 - INFO - --- Fetching Page 3 ---
+2026-04-17 11:27:25,246 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-17 11:27:26,469 - INFO - Successfully grabbed 0 items from page 3
+2026-04-17 11:27:26,470 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-17 11:27:26,471 - INFO - Parsing data...
+2026-04-17 11:27:26,471 - INFO - Saving to MongoDB...
+2026-04-17 11:27:26,712 - INFO - Success! Saved 159 houses to MongoDB.
+2026-04-17 11:27:26,712 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-17 11:27:26,713 - INFO - Starting image download for 159 items.
+2026-04-17 11:27:26,724 - INFO - Successfully downloaded 0 images.
+2026-04-17 11:27:26,725 - INFO - Starting batch process for 1 images.
+2026-04-17 11:27:26,725 - INFO - Processing image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-17 11:27:27,064 - INFO - Resized image saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-17 11:27:27,278 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-17 11:27:27,278 - INFO - Uploading 2 files to Google Drive.
+2026-04-17 11:27:27,970 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-17 11:27:28,955 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 11:27:29,262 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 11:27:29,263 - INFO - Batch processing complete.
+2026-04-17 11:27:29,264 - INFO - Starting unstructured document extraction...
+2026-04-17 11:27:29,264 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-17 11:27:29,400 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-17 11:27:29,495 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-17 11:27:29,738 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-17 11:27:29,999 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-17 11:27:30,033 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-17 11:27:30,059 - INFO - Saving 6 document records to MongoDB...
+2026-04-17 11:27:30,103 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-17 11:27:30,103 - INFO - Starting Phase 3: Web Scraping...
+2026-04-17 11:27:30,104 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-17 11:27:30,104 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 11:27:31,105 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-17 11:27:31,958 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-17 11:27:31,958 - INFO - Applying a 2-second delay between requests...
+2026-04-17 11:27:33,958 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 11:27:34,385 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-17 11:27:35,227 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-17 11:27:35,227 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-17 11:27:35,227 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-17 11:27:35,771 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-17 11:28:06,301 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-17 11:28:06,397 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-17 11:28:06,398 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-17 11:28:06,399 - INFO - Starting OCR for image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-17 11:28:08,899 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-17 11:28:08,979 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-17 11:28:08,980 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-17 11:28:08,983 - INFO - Pipeline finished successfully
+2026-04-17 11:29:06,566 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-17 11:29:06,566 - INFO - Fetching data from API...
+2026-04-17 11:29:06,567 - INFO - --- Fetching Page 1 ---
+2026-04-17 11:29:08,488 - INFO - Successfully grabbed 159 items from page 1
+2026-04-17 11:29:08,490 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-17 11:29:08,490 - INFO - --- Fetching Page 2 ---
+2026-04-17 11:29:10,236 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-17 11:29:11,669 - INFO - Successfully grabbed 0 items from page 2
+2026-04-17 11:29:11,670 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-17 11:29:11,670 - INFO - --- Fetching Page 3 ---
+2026-04-17 11:29:13,341 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-17 11:29:19,549 - INFO - Successfully grabbed 0 items from page 3
+2026-04-17 11:29:19,550 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-17 11:29:19,551 - INFO - Parsing data...
+2026-04-17 11:29:19,551 - INFO - Saving to MongoDB...
+2026-04-17 11:29:19,563 - INFO - Success! Saved 159 houses to MongoDB.
+2026-04-17 11:29:19,563 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-17 11:29:19,564 - INFO - Starting image download for 159 items.
+2026-04-17 11:29:19,574 - INFO - Successfully downloaded 0 images.
+2026-04-17 11:29:19,574 - INFO - Starting batch process for 1 images.
+2026-04-17 11:29:19,575 - INFO - Processing image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-17 11:29:19,760 - INFO - Resized image saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-17 11:29:19,948 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-17 11:29:19,948 - INFO - Uploading 2 files to Google Drive.
+2026-04-17 11:29:19,969 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-17 11:29:20,980 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 11:29:21,290 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 11:29:21,290 - INFO - Batch processing complete.
+2026-04-17 11:29:21,291 - INFO - Starting unstructured document extraction...
+2026-04-17 11:29:21,291 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-17 11:29:21,389 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-17 11:29:21,441 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-17 11:29:21,453 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-17 11:29:21,467 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-17 11:29:21,474 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-17 11:29:21,481 - INFO - Saving 6 document records to MongoDB...
+2026-04-17 11:29:21,521 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-17 11:29:21,522 - INFO - Starting Phase 3: Web Scraping...
+2026-04-17 11:29:21,522 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-17 11:29:21,522 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 11:29:21,994 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-17 11:29:22,848 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-17 11:29:22,848 - INFO - Applying a 2-second delay between requests...
+2026-04-17 11:29:24,848 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 11:29:25,281 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-17 11:29:26,229 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-17 11:29:26,229 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-17 11:29:26,229 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-17 11:29:27,269 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-17 11:29:30,859 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-17 11:29:30,897 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-17 11:29:30,897 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-17 11:29:30,898 - INFO - Starting OCR for image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-17 11:29:31,392 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-17 11:29:31,401 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-17 11:29:31,402 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-17 11:29:31,402 - INFO - Loading audio from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav
+2026-04-17 11:29:31,412 - INFO - Trimmed audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\trimmed_sample.wav
+2026-04-17 11:29:31,543 - INFO - Converted audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\converted_sample.ogg (format: ogg)
+2026-04-17 11:29:31,543 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav with model base
+2026-04-17 11:29:32,537 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 11:29:32,684 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-17 11:29:32,712 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 200 OK"
+2026-04-17 11:29:32,736 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-17 11:29:32,737 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-17 11:29:32,742 - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/config.json "HTTP/1.1 200 OK"
+2026-04-17 11:29:32,744 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 307 Temporary Redirect"
+2026-04-17 11:29:32,758 - INFO - HTTP Request: HEAD https://huggingface.co/Systran/faster-whisper-base/resolve/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/model.bin "HTTP/1.1 302 Found"
+2026-04-17 11:29:32,763 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-17 11:29:32,785 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 200 OK"
+2026-04-17 11:29:32,814 - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/tokenizer.json "HTTP/1.1 200 OK"
+2026-04-17 11:29:32,829 - INFO - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Systran/faster-whisper-base/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66/vocabulary.txt "HTTP/1.1 200 OK"
+2026-04-17 11:29:32,974 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/xet-read-token/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66 "HTTP/1.1 200 OK"
+2026-04-17 11:30:02,699 - INFO - Processing audio with duration 00:10.000
+2026-04-17 11:30:03,225 - INFO - Detected language 'cy' with probability 0.30
+2026-04-17 11:30:14,196 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav to MongoDB with ID 69e1fda61c231a3e1ae8ffdd.
+2026-04-17 11:30:14,196 - INFO - Starting chunked transcription for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav
+2026-04-17 11:30:14,198 - INFO - Transcribing temp_sample_audio_chunk_0.wav with model base
+2026-04-17 11:30:14,801 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 11:30:15,309 - INFO - Processing audio with duration 00:10.000
+2026-04-17 11:30:15,865 - INFO - Detected language 'cy' with probability 0.30
+2026-04-17 11:30:25,166 - INFO - Combined transcription saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\transcripts\sample_audio_combined.json
+2026-04-17 11:30:25,166 - INFO - Chunked transcription completed for sample_audio.wav
+2026-04-17 11:30:25,166 - INFO - Loading video from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4
+2026-04-17 11:30:25,500 - INFO - Audio extracted and saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\sample_video_from_video.mp3
+2026-04-17 11:30:25,530 - INFO - Extracting frames from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4 every 10 seconds
+2026-04-17 11:30:25,841 - INFO - Extracted 1 frames to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\frames
+2026-04-17 11:30:25,869 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\sample_video_from_video.mp3 with model base
+2026-04-17 11:30:26,311 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 11:30:26,871 - INFO - Processing audio with duration 00:05.020
+2026-04-17 11:30:27,406 - INFO - Detected language 'en' with probability 0.34
+2026-04-17 11:30:28,027 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4 to MongoDB with ID 69e1fdb31c231a3e1ae8ffdf.
+2026-04-17 11:30:28,028 - INFO - Pipeline finished successfully
+2026-04-17 11:34:57,394 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-17 11:34:57,394 - INFO - Fetching data from API...
+2026-04-17 11:34:57,394 - INFO - --- Fetching Page 1 ---
+2026-04-17 11:34:59,756 - INFO - Successfully grabbed 159 items from page 1
+2026-04-17 11:34:59,758 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-17 11:34:59,758 - INFO - --- Fetching Page 2 ---
+2026-04-17 11:35:02,662 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-17 11:35:05,252 - INFO - Successfully grabbed 0 items from page 2
+2026-04-17 11:35:05,253 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-17 11:35:05,253 - INFO - --- Fetching Page 3 ---
+2026-04-17 11:35:07,082 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-17 11:35:08,733 - INFO - Successfully grabbed 0 items from page 3
+2026-04-17 11:35:08,734 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-17 11:35:08,735 - INFO - Parsing data...
+2026-04-17 11:35:08,735 - INFO - Saving to MongoDB...
+2026-04-17 11:35:08,746 - INFO - Success! Saved 159 houses to MongoDB.
+2026-04-17 11:35:08,746 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-17 11:35:08,746 - INFO - Starting image download for 159 items.
+2026-04-17 11:35:08,756 - INFO - Successfully downloaded 0 images.
+2026-04-17 11:35:08,757 - INFO - Starting batch process for 1 images.
+2026-04-17 11:35:08,757 - INFO - Processing image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-17 11:35:08,929 - INFO - Resized image saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-17 11:35:09,100 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-17 11:35:09,100 - INFO - Uploading 2 files to Google Drive.
+2026-04-17 11:35:09,103 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-17 11:35:10,165 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 11:35:10,472 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 11:35:10,472 - INFO - Batch processing complete.
+2026-04-17 11:35:10,472 - INFO - Starting unstructured document extraction...
+2026-04-17 11:35:10,473 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-17 11:35:10,561 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-17 11:35:10,613 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-17 11:35:10,624 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-17 11:35:10,636 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-17 11:35:10,642 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-17 11:35:10,648 - INFO - Saving 6 document records to MongoDB...
+2026-04-17 11:35:10,658 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-17 11:35:10,658 - INFO - Starting Phase 3: Web Scraping...
+2026-04-17 11:35:10,658 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-17 11:35:10,658 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 11:35:11,192 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-17 11:35:12,026 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-17 11:35:12,026 - INFO - Applying a 2-second delay between requests...
+2026-04-17 11:35:14,027 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 11:35:14,324 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-17 11:35:14,937 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-17 11:35:14,937 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-17 11:35:14,937 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-17 11:35:15,458 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-17 11:35:21,868 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-17 11:35:21,915 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-17 11:35:21,915 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-17 11:35:21,916 - INFO - Starting OCR for image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-17 11:35:22,445 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-17 11:35:22,453 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-17 11:35:22,454 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-17 11:35:22,454 - INFO - Loading audio from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav
+2026-04-17 11:35:22,456 - INFO - Trimmed audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\trimmed_sample.wav
+2026-04-17 11:35:22,591 - INFO - Converted audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\converted_sample.ogg (format: ogg)
+2026-04-17 11:35:22,591 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav with model base
+2026-04-17 11:35:23,786 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 11:35:24,363 - INFO - Processing audio with duration 00:10.000
+2026-04-17 11:35:24,881 - INFO - Detected language 'cy' with probability 0.30
+2026-04-17 11:35:35,254 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav to MongoDB with ID 69e1fee7731250dc67202cc2.
+2026-04-17 11:35:35,255 - INFO - Starting chunked transcription for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav
+2026-04-17 11:35:35,255 - INFO - Loading cached transcript for chunk 0
+2026-04-17 11:35:35,264 - ERROR - Chunked transcription error: 'text'
+2026-04-17 11:35:35,264 - INFO - Loading video from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4
+2026-04-17 11:35:35,604 - INFO - Audio extracted and saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\sample_video_from_video.mp3
+2026-04-17 11:35:35,625 - INFO - Extracting frames from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4 every 10 seconds
+2026-04-17 11:35:35,994 - INFO - Extracted 1 frames to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\frames
+2026-04-17 11:35:36,009 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\sample_video_from_video.mp3 with model base
+2026-04-17 11:35:36,386 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 11:35:36,949 - INFO - Processing audio with duration 00:05.020
+2026-04-17 11:35:37,499 - INFO - Detected language 'en' with probability 0.34
+2026-04-17 11:35:38,086 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4 to MongoDB with ID 69e1feea731250dc67202cc4.
+2026-04-17 11:35:38,087 - INFO - Pipeline finished successfully
+2026-04-17 15:23:05,579 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-17 15:23:05,580 - INFO - Fetching data from API...
+2026-04-17 15:23:05,581 - INFO - --- Fetching Page 1 ---
+2026-04-17 15:23:07,072 - INFO - Successfully grabbed 159 items from page 1
+2026-04-17 15:23:07,077 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-17 15:23:07,077 - INFO - --- Fetching Page 2 ---
+2026-04-17 15:23:08,474 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-17 15:23:09,275 - INFO - Successfully grabbed 0 items from page 2
+2026-04-17 15:23:09,275 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-17 15:23:09,275 - INFO - --- Fetching Page 3 ---
+2026-04-17 15:23:10,345 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-17 15:23:11,593 - INFO - Successfully grabbed 0 items from page 3
+2026-04-17 15:23:11,595 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-17 15:23:11,597 - INFO - Parsing data...
+2026-04-17 15:23:11,598 - INFO - Saving to MongoDB...
+2026-04-17 15:23:11,647 - INFO - Success! Saved 159 houses to MongoDB.
+2026-04-17 15:23:11,648 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-17 15:23:11,648 - INFO - Starting image download for 159 items.
+2026-04-17 15:23:11,680 - INFO - Successfully downloaded 0 images.
+2026-04-17 15:23:11,683 - INFO - Starting batch process for 1 images.
+2026-04-17 15:23:11,684 - INFO - Processing image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-17 15:23:11,908 - INFO - Resized image saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-17 15:23:12,069 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-17 15:23:12,069 - INFO - Uploading 2 files to Google Drive.
+2026-04-17 15:23:12,650 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-17 15:23:13,528 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 15:23:13,880 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 15:23:13,881 - INFO - Batch processing complete.
+2026-04-17 15:23:13,881 - INFO - Starting unstructured document extraction...
+2026-04-17 15:23:13,881 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-17 15:23:13,988 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-17 15:23:14,049 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-17 15:23:14,063 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-17 15:23:14,076 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-17 15:23:14,084 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-17 15:23:14,092 - INFO - Saving 6 document records to MongoDB...
+2026-04-17 15:23:14,100 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-17 15:23:14,100 - INFO - Starting Phase 3: Web Scraping...
+2026-04-17 15:23:14,100 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-17 15:23:14,100 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 15:23:14,679 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-17 15:23:15,298 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-17 15:23:15,299 - INFO - Applying a 2-second delay between requests...
+2026-04-17 15:23:17,299 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 15:23:17,594 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-17 15:23:18,215 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-17 15:23:18,215 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-17 15:23:18,216 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-17 15:23:18,711 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-17 15:23:28,548 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-17 15:23:28,592 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-17 15:23:28,593 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-17 15:23:28,593 - INFO - Starting OCR for image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-17 15:23:29,195 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-17 15:23:29,202 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-17 15:23:29,203 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-17 15:23:29,203 - INFO - Loading audio from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav
+2026-04-17 15:23:29,207 - INFO - Trimmed audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\trimmed_sample.wav
+2026-04-17 15:23:29,333 - INFO - Converted audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\converted_sample.ogg (format: ogg)
+2026-04-17 15:23:29,333 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav with model base
+2026-04-17 15:23:30,189 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 15:23:30,780 - INFO - Processing audio with duration 00:10.000
+2026-04-17 15:23:31,357 - INFO - Detected language 'cy' with probability 0.30
+2026-04-17 15:23:49,000 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav to MongoDB with ID 69e23464978085a265f56349.
+2026-04-17 15:23:49,001 - INFO - Starting chunked transcription for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\sample_audio.wav
+2026-04-17 15:23:49,002 - INFO - Loading cached transcript for chunk 0
+2026-04-17 15:23:49,002 - ERROR - Chunked transcription error: 'text'
+2026-04-17 15:23:49,002 - INFO - Loading video from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4
+2026-04-17 15:23:49,348 - INFO - Audio extracted and saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\sample_video_from_video.mp3
+2026-04-17 15:23:49,368 - INFO - Extracting frames from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4 every 10 seconds
+2026-04-17 15:23:49,621 - INFO - Extracted 1 frames to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\frames
+2026-04-17 15:23:49,642 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\sample_video_from_video.mp3 with model base
+2026-04-17 15:23:50,012 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 15:23:50,512 - INFO - Processing audio with duration 00:05.020
+2026-04-17 15:23:51,033 - INFO - Detected language 'en' with probability 0.34
+2026-04-17 15:23:51,651 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\sample_video.mp4 to MongoDB with ID 69e23467978085a265f5634b.
+2026-04-17 15:23:51,652 - INFO - Pipeline finished successfully
+2026-04-17 16:08:05,982 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-17 16:08:05,984 - INFO - Fetching data from API...
+2026-04-17 16:08:05,986 - INFO - --- Fetching Page 1 ---
+2026-04-17 16:08:09,331 - INFO - Successfully grabbed 159 items from page 1
+2026-04-17 16:08:09,339 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-17 16:08:09,339 - INFO - --- Fetching Page 2 ---
+2026-04-17 16:08:14,406 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-17 16:08:16,246 - INFO - Successfully grabbed 0 items from page 2
+2026-04-17 16:08:16,246 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-17 16:08:16,246 - INFO - --- Fetching Page 3 ---
+2026-04-17 16:08:18,298 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-17 16:08:20,547 - INFO - Successfully grabbed 0 items from page 3
+2026-04-17 16:08:20,548 - INFO - Saved raw data to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-17 16:08:20,549 - INFO - Parsing data...
+2026-04-17 16:08:20,549 - INFO - Saving to MongoDB...
+2026-04-17 16:08:20,574 - INFO - Success! Saved 159 houses to MongoDB.
+2026-04-17 16:08:20,574 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-17 16:08:20,575 - INFO - Starting image download for 159 items.
+2026-04-17 16:08:20,588 - INFO - Successfully downloaded 0 images.
+2026-04-17 16:08:20,590 - INFO - Starting batch process for 1 images.
+2026-04-17 16:08:20,591 - INFO - Processing image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-17 16:08:20,793 - INFO - Resized image saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-17 16:08:21,006 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-17 16:08:21,006 - INFO - Uploading 2 files to Google Drive.
+2026-04-17 16:08:21,027 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-17 16:08:22,299 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 16:08:22,795 - ERROR - Error uploading image C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-17 16:08:22,795 - INFO - Batch processing complete.
+2026-04-17 16:08:22,795 - INFO - Starting unstructured document extraction...
+2026-04-17 16:08:22,796 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-17 16:08:22,912 - INFO - Extracting PDF: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-17 16:08:22,975 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-17 16:08:22,988 - INFO - Extracting Word Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-17 16:08:23,001 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-17 16:08:23,008 - INFO - Extracting Excel Document: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-17 16:08:23,016 - INFO - Saving 6 document records to MongoDB...
+2026-04-17 16:08:23,040 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-17 16:08:23,041 - INFO - Starting Phase 3: Web Scraping...
+2026-04-17 16:08:23,041 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-17 16:08:23,041 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 16:08:23,718 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-17 16:08:24,429 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-17 16:08:24,429 - INFO - Applying a 2-second delay between requests...
+2026-04-17 16:08:26,429 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-17 16:08:26,727 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-17 16:08:27,342 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-17 16:08:27,343 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-17 16:08:27,343 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-17 16:08:27,872 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-17 16:08:35,523 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-17 16:08:35,575 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-17 16:08:35,575 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-17 16:08:35,576 - INFO - Starting OCR for image: C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-17 16:08:36,199 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-17 16:08:36,206 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-17 16:08:36,206 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-17 16:08:36,207 - INFO - Loading audio from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-17 16:08:37,473 - INFO - Trimmed audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\trimmed_sample.wav
+2026-04-17 16:08:51,377 - INFO - Converted audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\converted_sample.ogg (format: ogg)
+2026-04-17 16:08:51,378 - INFO - Loading audio from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\Interstellar - Christopher Nolan - Official Warner Bros. [WqNirxasldY].mp3
+2026-04-17 16:08:52,437 - INFO - Loading audio from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\Interstellar – Building A Black Hole – Official Warner Bros. [MfGfZwQ_qaY].mp3
+2026-04-17 16:08:54,009 - INFO - Concatenated audio saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\concatenated_sample.wav
+2026-04-17 16:08:54,027 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 with model base
+2026-04-17 16:08:57,308 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 16:09:00,496 - INFO - Processing audio with duration 03:12.401
+2026-04-17 16:09:04,752 - INFO - Detected language 'en' with probability 0.99
+2026-04-17 16:10:16,278 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 to MongoDB with ID 69e23f48a0b6fe259a81fee4.
+2026-04-17 16:10:16,279 - INFO - Starting chunked transcription for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-17 16:10:17,383 - INFO - Transcribing temp_Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk]_chunk_0.wav with model base
+2026-04-17 16:10:18,007 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 16:10:20,495 - INFO - Processing audio with duration 03:12.401
+2026-04-17 16:10:23,751 - INFO - Detected language 'en' with probability 0.98
+2026-04-17 16:10:38,123 - INFO - Combined transcription saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\transcripts\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk]_combined.json
+2026-04-17 16:10:38,126 - INFO - Chunked transcription completed for Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-17 16:10:38,126 - INFO - Loading video from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4
+2026-04-17 16:10:41,638 - INFO - Audio extracted and saved to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3
+2026-04-17 16:10:41,649 - INFO - Extracting frames from C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 every 10 seconds
+2026-04-17 16:10:44,420 - INFO - Extracted 20 frames to C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\frames
+2026-04-17 16:10:44,434 - INFO - Transcribing C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3 with model base
+2026-04-17 16:10:44,890 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-17 16:10:45,813 - INFO - Processing audio with duration 03:12.400
+2026-04-17 16:10:46,569 - INFO - Detected language 'en' with probability 0.99
+2026-04-17 16:11:00,585 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 to MongoDB with ID 69e23f74a0b6fe259a81fee6.
+2026-04-17 16:11:00,586 - INFO - Pipeline finished successfully

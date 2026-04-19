@@ -13,6 +13,14 @@ from parsing.document_extractors import extract_from_pdf, extract_from_word, ext
 from scraping.scraper import scrape_static_pages, scrape_dynamic_page
 from parsing.ocr_extractor import extract_text_from_image, extract_text_from_scanned_pdf
 
+# --- LAB 7 AUDIO/VIDEO EXTENSION ---
+from audio_processing.loader import load_audio
+from audio_processing.processor import trim_audio, concatenate_audio, adjust_volume, apply_fades, convert_audio
+from audio_processing.transcriber import transcribe_audio, chunked_transcribe
+from video_processing.loader import load_video_and_extract_audio
+from video_processing.frame_extractor import extract_keyframes
+from storage.mongo import save_transcript_to_mongo
+
 # New Imports for Image Processing
 from image_processing.downloader import fetch_and_download_images
 from image_processing.batch import batch_process_images
@@ -158,6 +166,88 @@ def run_pipeline():
         logging.warning("No images found in data/raw/img for OCR extraction.")
         print("⚠️ No images found in data/raw/img for OCR extraction.")
     
+    # =================================================================
+    # PHASE 5: LAB 7 - AUDIO/VIDEO PROCESSING
+    # =================================================================
+    logging.info("Starting Phase 5: Audio and Video Processing...")
+    print("🎵 Running Phase 5: Audio/Video Processing...")
+
+    audio_raw_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/raw/audio"))
+    video_raw_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/raw/video"))
+    audio_proc_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/processed/audio"))
+    frames_proc_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/processed/frames"))
+    transcripts_proc_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/processed/transcripts"))
+
+    # 1. Process Audio Files
+    audio_files = [f for f in os.listdir(audio_raw_dir) if f.lower().endswith(('.mp3', '.wav', '.flac', '.ogg'))] if os.path.exists(audio_raw_dir) else []
+    
+    if audio_files:
+        loaded_clips = []
+        for i, filename in enumerate(audio_files[:3]): # Load and inspect at least 3
+            file_path = os.path.join(audio_raw_dir, filename)
+            audio_clip = load_audio(file_path)
+            if audio_clip:
+                loaded_clips.append(audio_clip)
+                
+                if i == 0: # Demonstrate operations on the first clip
+                    # Trim
+                    trim_path = os.path.join(audio_proc_dir, "trimmed_sample.wav")
+                    trim_audio(audio_clip, 0, 5000, trim_path)
+                    
+                    # Volume and Fades
+                    modified = adjust_volume(audio_clip, gain_db=5)
+                    modified = apply_fades(modified, fade_in_ms=1000, fade_out_ms=1000)
+                    
+                    # Convert
+                    convert_path = os.path.join(audio_proc_dir, "converted_sample.ogg")
+                    convert_audio(modified, convert_path)
+
+        # Concatenate
+        if len(loaded_clips) >= 2:
+            concat_path = os.path.join(audio_proc_dir, "concatenated_sample.wav")
+            concatenate_audio(loaded_clips[:2], concat_path)
+
+        # Transcription
+        for filename in audio_files[:1]:
+            file_path = os.path.join(audio_raw_dir, filename)
+            transcript_out = os.path.join(transcripts_proc_dir, os.path.splitext(filename)[0])
+            
+            # Short transcription
+            result = transcribe_audio(file_path, output_base_path=transcript_out)
+            if result:
+                save_transcript_to_mongo(result, file_path, result["language"], "faster-whisper-base")
+                print(f"✅ Transcribed {filename}")
+
+            # Chunked transcription (demonstration on the same or another file)
+            chunked_result = chunked_transcribe(file_path, output_dir=transcripts_proc_dir)
+            if chunked_result:
+                logging.info(f"Chunked transcription completed for {filename}")
+    else:
+        print("⚠️ No audio files found in data/raw/audio.")
+
+    # 2. Process Video Files
+    video_files = [f for f in os.listdir(video_raw_dir) if f.lower().endswith(('.mp4', '.mkv', '.mov', '.avi'))] if os.path.exists(video_raw_dir) else []
+    
+    if video_files:
+        for filename in video_files[:1]:
+            video_path = os.path.join(video_raw_dir, filename)
+            extracted_audio_path = os.path.join(audio_proc_dir, f"{os.path.splitext(filename)[0]}_from_video.mp3")
+            
+            # Load and extract audio
+            load_video_and_extract_audio(video_path, extracted_audio_path)
+            
+            # Extract keyframes
+            extract_keyframes(video_path, frames_proc_dir, interval_seconds=10)
+            
+            # Transcribe extracted audio
+            if os.path.exists(extracted_audio_path):
+                transcript_out = os.path.join(transcripts_proc_dir, f"{os.path.splitext(filename)[0]}_video_transcript")
+                result = transcribe_audio(extracted_audio_path, output_base_path=transcript_out)
+                if result:
+                    save_transcript_to_mongo(result, video_path, result["language"], "faster-whisper-base")
+                    print(f"✅ Transcribed audio from video {filename}")
+    else:
+        print("⚠️ No video files found in data/raw/video.")
 
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")

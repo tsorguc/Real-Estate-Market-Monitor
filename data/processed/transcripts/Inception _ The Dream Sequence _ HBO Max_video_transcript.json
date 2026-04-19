@@ -1,0 +1,2687 @@
+{
+    "metadata": {
+        "language": "en",
+        "model": "base",
+        "probability": 0.985148012638092
+    },
+    "segments": [
+        {
+            "start": 0.8799999999999986,
+            "end": 6.96,
+            "text": " I say we only use a fraction of our brain's true potential now that's when we're awake and we're asleep",
+            "avg_logprob": -0.2564714341001077,
+            "words": [
+                {
+                    "start": 0.8799999999999986,
+                    "end": 1.4,
+                    "word": " I",
+                    "prob": 0.3035907745361328
+                },
+                {
+                    "start": 1.4,
+                    "end": 1.58,
+                    "word": " say",
+                    "prob": 0.8797791600227356
+                },
+                {
+                    "start": 1.58,
+                    "end": 1.78,
+                    "word": " we",
+                    "prob": 0.9356998205184937
+                },
+                {
+                    "start": 1.78,
+                    "end": 2.02,
+                    "word": " only",
+                    "prob": 0.9704939126968384
+                },
+                {
+                    "start": 2.02,
+                    "end": 2.24,
+                    "word": " use",
+                    "prob": 0.9809882640838623
+                },
+                {
+                    "start": 2.24,
+                    "end": 2.32,
+                    "word": " a",
+                    "prob": 0.928889811038971
+                },
+                {
+                    "start": 2.32,
+                    "end": 2.72,
+                    "word": " fraction",
+                    "prob": 0.9974833130836487
+                },
+                {
+                    "start": 2.72,
+                    "end": 2.92,
+                    "word": " of",
+                    "prob": 0.9936202168464661
+                },
+                {
+                    "start": 2.92,
+                    "end": 3.02,
+                    "word": " our",
+                    "prob": 0.9964563250541687
+                },
+                {
+                    "start": 3.02,
+                    "end": 3.5,
+                    "word": " brain's",
+                    "prob": 0.7502600252628326
+                },
+                {
+                    "start": 3.5,
+                    "end": 3.66,
+                    "word": " true",
+                    "prob": 0.9744207262992859
+                },
+                {
+                    "start": 3.66,
+                    "end": 4.18,
+                    "word": " potential",
+                    "prob": 0.9982931017875671
+                },
+                {
+                    "start": 4.18,
+                    "end": 4.4,
+                    "word": " now",
+                    "prob": 0.36247438192367554
+                },
+                {
+                    "start": 4.4,
+                    "end": 4.86,
+                    "word": " that's",
+                    "prob": 0.6393278539180756
+                },
+                {
+                    "start": 4.86,
+                    "end": 4.98,
+                    "word": " when",
+                    "prob": 0.985537588596344
+                },
+                {
+                    "start": 4.98,
+                    "end": 5.16,
+                    "word": " we're",
+                    "prob": 0.9778494238853455
+                },
+                {
+                    "start": 5.16,
+                    "end": 5.52,
+                    "word": " awake",
+                    "prob": 0.9959620833396912
+                },
+                {
+                    "start": 5.52,
+                    "end": 6.44,
+                    "word": " and",
+                    "prob": 0.32423362135887146
+                },
+                {
+                    "start": 6.44,
+                    "end": 6.56,
+                    "word": " we're",
+                    "prob": 0.9625242650508881
+                },
+                {
+                    "start": 6.56,
+                    "end": 6.96,
+                    "word": " asleep",
+                    "prob": 0.9989827275276184
+                }
+            ]
+        },
+        {
+            "start": 6.96,
+            "end": 8.86,
+            "text": " Our mind can do almost anything",
+            "avg_logprob": -0.2564714341001077,
+            "words": [
+                {
+                    "start": 6.96,
+                    "end": 7.56,
+                    "word": " Our",
+                    "prob": 0.10285127907991409
+                },
+                {
+                    "start": 7.56,
+                    "end": 7.82,
+                    "word": " mind",
+                    "prob": 0.9442443251609802
+                },
+                {
+                    "start": 7.82,
+                    "end": 8.0,
+                    "word": " can",
+                    "prob": 0.989899218082428
+                },
+                {
+                    "start": 8.0,
+                    "end": 8.16,
+                    "word": " do",
+                    "prob": 0.4898418188095093
+                },
+                {
+                    "start": 8.16,
+                    "end": 8.38,
+                    "word": " almost",
+                    "prob": 0.9973222613334656
+                },
+                {
+                    "start": 8.38,
+                    "end": 8.86,
+                    "word": " anything",
+                    "prob": 0.9965768456459045
+                }
+            ]
+        },
+        {
+            "start": 8.86,
+            "end": 14.2,
+            "text": " Such as imagine you're designing a building, right? You consciously create each aspect",
+            "avg_logprob": -0.2564714341001077,
+            "words": [
+                {
+                    "start": 8.86,
+                    "end": 9.62,
+                    "word": " Such",
+                    "prob": 0.019263282418251038
+                },
+                {
+                    "start": 9.62,
+                    "end": 9.88,
+                    "word": " as",
+                    "prob": 0.9816666841506958
+                },
+                {
+                    "start": 9.88,
+                    "end": 10.72,
+                    "word": " imagine",
+                    "prob": 0.32252049446105957
+                },
+                {
+                    "start": 10.72,
+                    "end": 11.08,
+                    "word": " you're",
+                    "prob": 0.9125123918056488
+                },
+                {
+                    "start": 11.08,
+                    "end": 11.48,
+                    "word": " designing",
+                    "prob": 0.9904996752738953
+                },
+                {
+                    "start": 11.48,
+                    "end": 11.7,
+                    "word": " a",
+                    "prob": 0.992641270160675
+                },
+                {
+                    "start": 11.7,
+                    "end": 11.94,
+                    "word": " building,",
+                    "prob": 0.910286009311676
+                },
+                {
+                    "start": 11.94,
+                    "end": 12.26,
+                    "word": " right?",
+                    "prob": 0.9287223219871521
+                },
+                {
+                    "start": 12.42,
+                    "end": 12.44,
+                    "word": " You",
+                    "prob": 0.8663296699523926
+                },
+                {
+                    "start": 12.44,
+                    "end": 12.84,
+                    "word": " consciously",
+                    "prob": 0.9779108166694641
+                },
+                {
+                    "start": 12.84,
+                    "end": 13.38,
+                    "word": " create",
+                    "prob": 0.9931736588478088
+                },
+                {
+                    "start": 13.38,
+                    "end": 13.78,
+                    "word": " each",
+                    "prob": 0.614791750907898
+                },
+                {
+                    "start": 13.78,
+                    "end": 14.2,
+                    "word": " aspect",
+                    "prob": 0.9974536299705505
+                }
+            ]
+        },
+        {
+            "start": 14.2,
+            "end": 17.96,
+            "text": " But sometimes it feels like it's almost creating itself if you know what I mean",
+            "avg_logprob": -0.2564714341001077,
+            "words": [
+                {
+                    "start": 14.2,
+                    "end": 14.72,
+                    "word": " But",
+                    "prob": 0.292004257440567
+                },
+                {
+                    "start": 14.72,
+                    "end": 15.14,
+                    "word": " sometimes",
+                    "prob": 0.9950392842292786
+                },
+                {
+                    "start": 15.14,
+                    "end": 15.44,
+                    "word": " it",
+                    "prob": 0.9923208355903625
+                },
+                {
+                    "start": 15.44,
+                    "end": 15.64,
+                    "word": " feels",
+                    "prob": 0.9978710412979126
+                },
+                {
+                    "start": 15.64,
+                    "end": 15.86,
+                    "word": " like",
+                    "prob": 0.9981209635734558
+                },
+                {
+                    "start": 15.86,
+                    "end": 16.06,
+                    "word": " it's",
+                    "prob": 0.9949190020561218
+                },
+                {
+                    "start": 16.06,
+                    "end": 16.22,
+                    "word": " almost",
+                    "prob": 0.9972766041755676
+                },
+                {
+                    "start": 16.22,
+                    "end": 16.66,
+                    "word": " creating",
+                    "prob": 0.9962671399116516
+                },
+                {
+                    "start": 16.66,
+                    "end": 17.12,
+                    "word": " itself",
+                    "prob": 0.9975691437721252
+                },
+                {
+                    "start": 17.12,
+                    "end": 17.38,
+                    "word": " if",
+                    "prob": 0.5812643766403198
+                },
+                {
+                    "start": 17.38,
+                    "end": 17.52,
+                    "word": " you",
+                    "prob": 0.9700608253479004
+                },
+                {
+                    "start": 17.52,
+                    "end": 17.66,
+                    "word": " know",
+                    "prob": 0.9918796420097351
+                },
+                {
+                    "start": 17.66,
+                    "end": 17.78,
+                    "word": " what",
+                    "prob": 0.982698380947113
+                },
+                {
+                    "start": 17.78,
+                    "end": 17.88,
+                    "word": " I",
+                    "prob": 0.9774342775344849
+                },
+                {
+                    "start": 17.88,
+                    "end": 17.96,
+                    "word": " mean",
+                    "prob": 0.9709072113037109
+                }
+            ]
+        },
+        {
+            "start": 17.96,
+            "end": 20.38,
+            "text": " Yeah, like I'm discovering",
+            "avg_logprob": -0.2564714341001077,
+            "words": [
+                {
+                    "start": 17.96,
+                    "end": 18.12,
+                    "word": " Yeah,",
+                    "prob": 0.527334988117218
+                },
+                {
+                    "start": 18.28,
+                    "end": 18.76,
+                    "word": " like",
+                    "prob": 0.6756728291511536
+                },
+                {
+                    "start": 18.76,
+                    "end": 19.06,
+                    "word": " I'm",
+                    "prob": 0.9796963334083557
+                },
+                {
+                    "start": 19.06,
+                    "end": 20.38,
+                    "word": " discovering",
+                    "prob": 0.8798953294754028
+                }
+            ]
+        },
+        {
+            "start": 20.38,
+            "end": 22.4,
+            "text": " Genuine inspiration, right?",
+            "avg_logprob": -0.2564714341001077,
+            "words": [
+                {
+                    "start": 20.38,
+                    "end": 21.02,
+                    "word": " Genuine",
+                    "prob": 0.49724863190203905
+                },
+                {
+                    "start": 21.02,
+                    "end": 21.96,
+                    "word": " inspiration,",
+                    "prob": 0.9781674742698669
+                },
+                {
+                    "start": 22.02,
+                    "end": 22.4,
+                    "word": " right?",
+                    "prob": 0.9588132500648499
+                }
+            ]
+        },
+        {
+            "start": 22.899999999999995,
+            "end": 30.58,
+            "text": " Now in a dream our mind continuously does this, we create and perceive our world",
+            "avg_logprob": -0.09959873221814633,
+            "words": [
+                {
+                    "start": 22.899999999999995,
+                    "end": 23.38,
+                    "word": " Now",
+                    "prob": 0.2570786476135254
+                },
+                {
+                    "start": 23.38,
+                    "end": 23.54,
+                    "word": " in",
+                    "prob": 0.6667330861091614
+                },
+                {
+                    "start": 23.54,
+                    "end": 23.6,
+                    "word": " a",
+                    "prob": 0.9872466325759888
+                },
+                {
+                    "start": 23.6,
+                    "end": 23.94,
+                    "word": " dream",
+                    "prob": 0.9901654124259949
+                },
+                {
+                    "start": 23.94,
+                    "end": 24.76,
+                    "word": " our",
+                    "prob": 0.3370262384414673
+                },
+                {
+                    "start": 24.76,
+                    "end": 25.0,
+                    "word": " mind",
+                    "prob": 0.97601318359375
+                },
+                {
+                    "start": 25.0,
+                    "end": 25.82,
+                    "word": " continuously",
+                    "prob": 0.9868193864822388
+                },
+                {
+                    "start": 25.82,
+                    "end": 26.36,
+                    "word": " does",
+                    "prob": 0.9967085123062134
+                },
+                {
+                    "start": 26.36,
+                    "end": 26.7,
+                    "word": " this,",
+                    "prob": 0.9984466433525085
+                },
+                {
+                    "start": 26.74,
+                    "end": 26.92,
+                    "word": " we",
+                    "prob": 0.9828246831893921
+                },
+                {
+                    "start": 26.92,
+                    "end": 28.2,
+                    "word": " create",
+                    "prob": 0.9667351245880127
+                },
+                {
+                    "start": 28.2,
+                    "end": 29.16,
+                    "word": " and",
+                    "prob": 0.9792617559432983
+                },
+                {
+                    "start": 29.16,
+                    "end": 29.7,
+                    "word": " perceive",
+                    "prob": 0.9942359328269958
+                },
+                {
+                    "start": 29.7,
+                    "end": 30.16,
+                    "word": " our",
+                    "prob": 0.9980995059013367
+                },
+                {
+                    "start": 30.16,
+                    "end": 30.58,
+                    "word": " world",
+                    "prob": 0.9195416569709778
+                }
+            ]
+        },
+        {
+            "start": 30.58,
+            "end": 34.56,
+            "text": " Simultaneously and our mind does this so well that we don't even know what's happening",
+            "avg_logprob": -0.09959873221814633,
+            "words": [
+                {
+                    "start": 30.58,
+                    "end": 31.5,
+                    "word": " Simultaneously",
+                    "prob": 0.6278855189836273
+                },
+                {
+                    "start": 31.5,
+                    "end": 31.86,
+                    "word": " and",
+                    "prob": 0.3559110760688782
+                },
+                {
+                    "start": 31.86,
+                    "end": 31.94,
+                    "word": " our",
+                    "prob": 0.9938147068023682
+                },
+                {
+                    "start": 31.94,
+                    "end": 32.16,
+                    "word": " mind",
+                    "prob": 0.9865632057189941
+                },
+                {
+                    "start": 32.16,
+                    "end": 32.34,
+                    "word": " does",
+                    "prob": 0.9974662065505981
+                },
+                {
+                    "start": 32.34,
+                    "end": 32.52,
+                    "word": " this",
+                    "prob": 0.9943110942840576
+                },
+                {
+                    "start": 32.52,
+                    "end": 32.86,
+                    "word": " so",
+                    "prob": 0.9847185015678406
+                },
+                {
+                    "start": 32.86,
+                    "end": 33.12,
+                    "word": " well",
+                    "prob": 0.9987872242927551
+                },
+                {
+                    "start": 33.12,
+                    "end": 33.26,
+                    "word": " that",
+                    "prob": 0.9321702718734741
+                },
+                {
+                    "start": 33.26,
+                    "end": 33.46,
+                    "word": " we",
+                    "prob": 0.994476854801178
+                },
+                {
+                    "start": 33.46,
+                    "end": 33.58,
+                    "word": " don't",
+                    "prob": 0.9976215958595276
+                },
+                {
+                    "start": 33.58,
+                    "end": 33.78,
+                    "word": " even",
+                    "prob": 0.985672116279602
+                },
+                {
+                    "start": 33.78,
+                    "end": 33.98,
+                    "word": " know",
+                    "prob": 0.9983002543449402
+                },
+                {
+                    "start": 33.98,
+                    "end": 34.2,
+                    "word": " what's",
+                    "prob": 0.9616202116012573
+                },
+                {
+                    "start": 34.2,
+                    "end": 34.56,
+                    "word": " happening",
+                    "prob": 0.9991406202316284
+                }
+            ]
+        },
+        {
+            "start": 34.56,
+            "end": 37.82,
+            "text": " That allows us to get right in the middle of that process",
+            "avg_logprob": -0.09959873221814633,
+            "words": [
+                {
+                    "start": 34.56,
+                    "end": 35.38,
+                    "word": " That",
+                    "prob": 0.1562630981206894
+                },
+                {
+                    "start": 35.38,
+                    "end": 35.64,
+                    "word": " allows",
+                    "prob": 0.9961512684822083
+                },
+                {
+                    "start": 35.64,
+                    "end": 35.88,
+                    "word": " us",
+                    "prob": 0.9983437061309814
+                },
+                {
+                    "start": 35.88,
+                    "end": 36.06,
+                    "word": " to",
+                    "prob": 0.9973956346511841
+                },
+                {
+                    "start": 36.06,
+                    "end": 36.18,
+                    "word": " get",
+                    "prob": 0.9608954787254333
+                },
+                {
+                    "start": 36.18,
+                    "end": 36.52,
+                    "word": " right",
+                    "prob": 0.9549849629402161
+                },
+                {
+                    "start": 36.52,
+                    "end": 36.74,
+                    "word": " in",
+                    "prob": 0.9279865622520447
+                },
+                {
+                    "start": 36.74,
+                    "end": 36.8,
+                    "word": " the",
+                    "prob": 0.999011754989624
+                },
+                {
+                    "start": 36.8,
+                    "end": 36.94,
+                    "word": " middle",
+                    "prob": 0.9992074370384216
+                },
+                {
+                    "start": 36.94,
+                    "end": 37.14,
+                    "word": " of",
+                    "prob": 0.9970611929893494
+                },
+                {
+                    "start": 37.14,
+                    "end": 37.24,
+                    "word": " that",
+                    "prob": 0.994666576385498
+                },
+                {
+                    "start": 37.24,
+                    "end": 37.82,
+                    "word": " process",
+                    "prob": 0.9991664886474609
+                }
+            ]
+        },
+        {
+            "start": 38.400000000000006,
+            "end": 38.62,
+            "text": " How?",
+            "avg_logprob": -0.09959873221814633,
+            "words": [
+                {
+                    "start": 38.379999999999995,
+                    "end": 38.62,
+                    "word": " How?",
+                    "prob": 0.26838913559913635
+                }
+            ]
+        },
+        {
+            "start": 38.96,
+            "end": 41.88,
+            "text": " By taking over the creating part now this is where I need you",
+            "avg_logprob": -0.09959873221814633,
+            "words": [
+                {
+                    "start": 38.96,
+                    "end": 39.14,
+                    "word": " By",
+                    "prob": 0.8746213316917419
+                },
+                {
+                    "start": 39.14,
+                    "end": 39.42,
+                    "word": " taking",
+                    "prob": 0.9968934059143066
+                },
+                {
+                    "start": 39.42,
+                    "end": 39.7,
+                    "word": " over",
+                    "prob": 0.9909959435462952
+                },
+                {
+                    "start": 39.7,
+                    "end": 39.86,
+                    "word": " the",
+                    "prob": 0.9936787486076355
+                },
+                {
+                    "start": 39.86,
+                    "end": 40.2,
+                    "word": " creating",
+                    "prob": 0.9736599326133728
+                },
+                {
+                    "start": 40.2,
+                    "end": 40.48,
+                    "word": " part",
+                    "prob": 0.998354434967041
+                },
+                {
+                    "start": 40.48,
+                    "end": 40.7,
+                    "word": " now",
+                    "prob": 0.3362765908241272
+                },
+                {
+                    "start": 40.7,
+                    "end": 40.86,
+                    "word": " this",
+                    "prob": 0.3201849162578583
+                },
+                {
+                    "start": 40.86,
+                    "end": 41.04,
+                    "word": " is",
+                    "prob": 0.9970517158508301
+                },
+                {
+                    "start": 41.04,
+                    "end": 41.32,
+                    "word": " where",
+                    "prob": 0.9955470561981201
+                },
+                {
+                    "start": 41.32,
+                    "end": 41.44,
+                    "word": " I",
+                    "prob": 0.9889066219329834
+                },
+                {
+                    "start": 41.44,
+                    "end": 41.64,
+                    "word": " need",
+                    "prob": 0.9664114713668823
+                },
+                {
+                    "start": 41.64,
+                    "end": 41.88,
+                    "word": " you",
+                    "prob": 0.9423837065696716
+                }
+            ]
+        },
+        {
+            "start": 41.88,
+            "end": 44.0,
+            "text": " You create the world of the dream",
+            "avg_logprob": -0.09959873221814633,
+            "words": [
+                {
+                    "start": 41.88,
+                    "end": 42.34,
+                    "word": " You",
+                    "prob": 0.12954439222812653
+                },
+                {
+                    "start": 42.34,
+                    "end": 42.78,
+                    "word": " create",
+                    "prob": 0.9959542751312256
+                },
+                {
+                    "start": 42.78,
+                    "end": 43.12,
+                    "word": " the",
+                    "prob": 0.9978470802307129
+                },
+                {
+                    "start": 43.12,
+                    "end": 43.36,
+                    "word": " world",
+                    "prob": 0.9980260729789734
+                },
+                {
+                    "start": 43.36,
+                    "end": 43.62,
+                    "word": " of",
+                    "prob": 0.9978982210159302
+                },
+                {
+                    "start": 43.62,
+                    "end": 43.7,
+                    "word": " the",
+                    "prob": 0.997847318649292
+                },
+                {
+                    "start": 43.7,
+                    "end": 44.0,
+                    "word": " dream",
+                    "prob": 0.9710628390312195
+                }
+            ]
+        },
+        {
+            "start": 44.0,
+            "end": 48.96,
+            "text": " We bring the subject into that dream and they feel it but they're subconscious",
+            "avg_logprob": -0.09959873221814633,
+            "words": [
+                {
+                    "start": 44.0,
+                    "end": 44.92,
+                    "word": " We",
+                    "prob": 0.5702874660491943
+                },
+                {
+                    "start": 44.92,
+                    "end": 45.12,
+                    "word": " bring",
+                    "prob": 0.9964904189109802
+                },
+                {
+                    "start": 45.12,
+                    "end": 45.24,
+                    "word": " the",
+                    "prob": 0.9531917572021484
+                },
+                {
+                    "start": 45.24,
+                    "end": 45.58,
+                    "word": " subject",
+                    "prob": 0.9981381893157959
+                },
+                {
+                    "start": 45.58,
+                    "end": 45.94,
+                    "word": " into",
+                    "prob": 0.9970756769180298
+                },
+                {
+                    "start": 45.94,
+                    "end": 46.22,
+                    "word": " that",
+                    "prob": 0.9987093210220337
+                },
+                {
+                    "start": 46.22,
+                    "end": 46.54,
+                    "word": " dream",
+                    "prob": 0.9911585450172424
+                },
+                {
+                    "start": 46.54,
+                    "end": 47.52,
+                    "word": " and",
+                    "prob": 0.7095767259597778
+                },
+                {
+                    "start": 47.52,
+                    "end": 47.66,
+                    "word": " they",
+                    "prob": 0.9951247572898865
+                },
+                {
+                    "start": 47.66,
+                    "end": 47.9,
+                    "word": " feel",
+                    "prob": 0.5781185030937195
+                },
+                {
+                    "start": 47.9,
+                    "end": 47.98,
+                    "word": " it",
+                    "prob": 0.6976513862609863
+                },
+                {
+                    "start": 47.98,
+                    "end": 48.14,
+                    "word": " but",
+                    "prob": 0.6397665143013
+                },
+                {
+                    "start": 48.14,
+                    "end": 48.34,
+                    "word": " they're",
+                    "prob": 0.9753603041172028
+                },
+                {
+                    "start": 48.34,
+                    "end": 48.96,
+                    "word": " subconscious",
+                    "prob": 0.9934630393981934
+                }
+            ]
+        },
+        {
+            "start": 49.839999999999996,
+            "end": 54.9,
+            "text": " How could I ever acquire enough detail to make them think that it's reality?",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 49.839999999999996,
+                    "end": 50.24,
+                    "word": " How",
+                    "prob": 0.18772657215595245
+                },
+                {
+                    "start": 50.24,
+                    "end": 50.4,
+                    "word": " could",
+                    "prob": 0.9382830262184143
+                },
+                {
+                    "start": 50.4,
+                    "end": 50.5,
+                    "word": " I",
+                    "prob": 0.9749807715415955
+                },
+                {
+                    "start": 50.5,
+                    "end": 50.76,
+                    "word": " ever",
+                    "prob": 0.9987013339996338
+                },
+                {
+                    "start": 50.76,
+                    "end": 51.88,
+                    "word": " acquire",
+                    "prob": 0.9575790762901306
+                },
+                {
+                    "start": 51.88,
+                    "end": 52.3,
+                    "word": " enough",
+                    "prob": 0.9980243444442749
+                },
+                {
+                    "start": 52.3,
+                    "end": 53.2,
+                    "word": " detail",
+                    "prob": 0.984027624130249
+                },
+                {
+                    "start": 53.2,
+                    "end": 53.56,
+                    "word": " to",
+                    "prob": 0.9837333559989929
+                },
+                {
+                    "start": 53.56,
+                    "end": 53.74,
+                    "word": " make",
+                    "prob": 0.9972090125083923
+                },
+                {
+                    "start": 53.74,
+                    "end": 53.88,
+                    "word": " them",
+                    "prob": 0.9958637952804565
+                },
+                {
+                    "start": 53.88,
+                    "end": 54.1,
+                    "word": " think",
+                    "prob": 0.9888513684272766
+                },
+                {
+                    "start": 54.1,
+                    "end": 54.26,
+                    "word": " that",
+                    "prob": 0.9827942848205566
+                },
+                {
+                    "start": 54.26,
+                    "end": 54.46,
+                    "word": " it's",
+                    "prob": 0.9687548577785492
+                },
+                {
+                    "start": 54.46,
+                    "end": 54.9,
+                    "word": " reality?",
+                    "prob": 0.989045262336731
+                }
+            ]
+        },
+        {
+            "start": 55.32,
+            "end": 58.6,
+            "text": " Well dreams they feel real while we're in them, right?",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 55.32,
+                    "end": 55.46,
+                    "word": " Well",
+                    "prob": 0.8851845264434814
+                },
+                {
+                    "start": 55.46,
+                    "end": 55.86,
+                    "word": " dreams",
+                    "prob": 0.13267916440963745
+                },
+                {
+                    "start": 55.86,
+                    "end": 56.96,
+                    "word": " they",
+                    "prob": 0.08498924225568771
+                },
+                {
+                    "start": 56.96,
+                    "end": 57.28,
+                    "word": " feel",
+                    "prob": 0.9975866079330444
+                },
+                {
+                    "start": 57.28,
+                    "end": 57.66,
+                    "word": " real",
+                    "prob": 0.9941422343254089
+                },
+                {
+                    "start": 57.66,
+                    "end": 57.9,
+                    "word": " while",
+                    "prob": 0.9220886826515198
+                },
+                {
+                    "start": 57.9,
+                    "end": 58.08,
+                    "word": " we're",
+                    "prob": 0.9913013577461243
+                },
+                {
+                    "start": 58.08,
+                    "end": 58.22,
+                    "word": " in",
+                    "prob": 0.9936880469322205
+                },
+                {
+                    "start": 58.22,
+                    "end": 58.36,
+                    "word": " them,",
+                    "prob": 0.988000214099884
+                },
+                {
+                    "start": 58.36,
+                    "end": 58.6,
+                    "word": " right?",
+                    "prob": 0.9867522716522217
+                }
+            ]
+        },
+        {
+            "start": 59.0,
+            "end": 62.36,
+            "text": " It's only when we wake up that we realize something was actually strange",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 59.0,
+                    "end": 59.16,
+                    "word": " It's",
+                    "prob": 0.9873994588851929
+                },
+                {
+                    "start": 59.16,
+                    "end": 59.36,
+                    "word": " only",
+                    "prob": 0.8194020390510559
+                },
+                {
+                    "start": 59.36,
+                    "end": 59.58,
+                    "word": " when",
+                    "prob": 0.9890678524971008
+                },
+                {
+                    "start": 59.58,
+                    "end": 59.72,
+                    "word": " we",
+                    "prob": 0.9839052557945251
+                },
+                {
+                    "start": 59.72,
+                    "end": 59.9,
+                    "word": " wake",
+                    "prob": 0.9973965883255005
+                },
+                {
+                    "start": 59.9,
+                    "end": 60.12,
+                    "word": " up",
+                    "prob": 0.993636965751648
+                },
+                {
+                    "start": 60.12,
+                    "end": 60.32,
+                    "word": " that",
+                    "prob": 0.9583093523979187
+                },
+                {
+                    "start": 60.32,
+                    "end": 60.46,
+                    "word": " we",
+                    "prob": 0.9980632662773132
+                },
+                {
+                    "start": 60.46,
+                    "end": 60.8,
+                    "word": " realize",
+                    "prob": 0.9325118660926819
+                },
+                {
+                    "start": 60.8,
+                    "end": 61.24,
+                    "word": " something",
+                    "prob": 0.9960777163505554
+                },
+                {
+                    "start": 61.24,
+                    "end": 61.44,
+                    "word": " was",
+                    "prob": 0.6885425448417664
+                },
+                {
+                    "start": 61.44,
+                    "end": 61.82,
+                    "word": " actually",
+                    "prob": 0.9927648901939392
+                },
+                {
+                    "start": 61.82,
+                    "end": 62.36,
+                    "word": " strange",
+                    "prob": 0.9956949949264526
+                }
+            ]
+        },
+        {
+            "start": 63.72,
+            "end": 64.9,
+            "text": " Let me ask you a question",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 63.72,
+                    "end": 64.12,
+                    "word": " Let",
+                    "prob": 0.040140315890312195
+                },
+                {
+                    "start": 64.12,
+                    "end": 64.18,
+                    "word": " me",
+                    "prob": 0.998894989490509
+                },
+                {
+                    "start": 64.18,
+                    "end": 64.32,
+                    "word": " ask",
+                    "prob": 0.9950195550918579
+                },
+                {
+                    "start": 64.32,
+                    "end": 64.46,
+                    "word": " you",
+                    "prob": 0.9990137815475464
+                },
+                {
+                    "start": 64.46,
+                    "end": 64.58,
+                    "word": " a",
+                    "prob": 0.9984374642372131
+                },
+                {
+                    "start": 64.58,
+                    "end": 64.9,
+                    "word": " question",
+                    "prob": 0.9994564652442932
+                }
+            ]
+        },
+        {
+            "start": 64.9,
+            "end": 68.9,
+            "text": " You never really remember the beginning of a dream, do you?",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 64.9,
+                    "end": 65.2,
+                    "word": " You",
+                    "prob": 0.07555580884218216
+                },
+                {
+                    "start": 65.2,
+                    "end": 65.9,
+                    "word": " never",
+                    "prob": 0.9094176292419434
+                },
+                {
+                    "start": 65.9,
+                    "end": 66.34,
+                    "word": " really",
+                    "prob": 0.9981768131256104
+                },
+                {
+                    "start": 66.34,
+                    "end": 67.08,
+                    "word": " remember",
+                    "prob": 0.98387211561203
+                },
+                {
+                    "start": 67.08,
+                    "end": 67.28,
+                    "word": " the",
+                    "prob": 0.9971696734428406
+                },
+                {
+                    "start": 67.28,
+                    "end": 67.7,
+                    "word": " beginning",
+                    "prob": 0.998654842376709
+                },
+                {
+                    "start": 67.7,
+                    "end": 68.24,
+                    "word": " of",
+                    "prob": 0.9885097146034241
+                },
+                {
+                    "start": 68.24,
+                    "end": 68.32,
+                    "word": " a",
+                    "prob": 0.9733721613883972
+                },
+                {
+                    "start": 68.32,
+                    "end": 68.56,
+                    "word": " dream,",
+                    "prob": 0.9558004140853882
+                },
+                {
+                    "start": 68.66,
+                    "end": 68.76,
+                    "word": " do",
+                    "prob": 0.8971865177154541
+                },
+                {
+                    "start": 68.76,
+                    "end": 68.9,
+                    "word": " you?",
+                    "prob": 0.9879065752029419
+                }
+            ]
+        },
+        {
+            "start": 69.1,
+            "end": 72.04,
+            "text": " You've always wind up right in the middle of what's going on?",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 69.1,
+                    "end": 69.14,
+                    "word": " You've",
+                    "prob": 0.5748789757490158
+                },
+                {
+                    "start": 69.14,
+                    "end": 69.38,
+                    "word": " always",
+                    "prob": 0.9987579584121704
+                },
+                {
+                    "start": 69.38,
+                    "end": 69.7,
+                    "word": " wind",
+                    "prob": 0.8987029194831848
+                },
+                {
+                    "start": 69.7,
+                    "end": 69.88,
+                    "word": " up",
+                    "prob": 0.9683724641799927
+                },
+                {
+                    "start": 69.88,
+                    "end": 70.44,
+                    "word": " right",
+                    "prob": 0.979130208492279
+                },
+                {
+                    "start": 70.44,
+                    "end": 70.64,
+                    "word": " in",
+                    "prob": 0.9961344003677368
+                },
+                {
+                    "start": 70.64,
+                    "end": 70.7,
+                    "word": " the",
+                    "prob": 0.9994814991950989
+                },
+                {
+                    "start": 70.7,
+                    "end": 70.9,
+                    "word": " middle",
+                    "prob": 0.9995120763778687
+                },
+                {
+                    "start": 70.9,
+                    "end": 71.08,
+                    "word": " of",
+                    "prob": 0.9975199103355408
+                },
+                {
+                    "start": 71.08,
+                    "end": 71.34,
+                    "word": " what's",
+                    "prob": 0.9980436861515045
+                },
+                {
+                    "start": 71.34,
+                    "end": 71.6,
+                    "word": " going",
+                    "prob": 0.9983377456665039
+                },
+                {
+                    "start": 71.6,
+                    "end": 72.04,
+                    "word": " on?",
+                    "prob": 0.9868965744972229
+                }
+            ]
+        },
+        {
+            "start": 72.32,
+            "end": 73.14,
+            "text": " I guess, yeah",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 72.32,
+                    "end": 72.52,
+                    "word": " I",
+                    "prob": 0.9601921439170837
+                },
+                {
+                    "start": 72.52,
+                    "end": 72.7,
+                    "word": " guess,",
+                    "prob": 0.9982509016990662
+                },
+                {
+                    "start": 73.0,
+                    "end": 73.14,
+                    "word": " yeah",
+                    "prob": 0.9851292371749878
+                }
+            ]
+        },
+        {
+            "start": 73.14,
+            "end": 74.78,
+            "text": " So how did we end up here?",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 73.14,
+                    "end": 73.78,
+                    "word": " So",
+                    "prob": 0.1252603530883789
+                },
+                {
+                    "start": 73.78,
+                    "end": 73.96,
+                    "word": " how",
+                    "prob": 0.9282302260398865
+                },
+                {
+                    "start": 73.96,
+                    "end": 74.06,
+                    "word": " did",
+                    "prob": 0.9951332211494446
+                },
+                {
+                    "start": 74.06,
+                    "end": 74.22,
+                    "word": " we",
+                    "prob": 0.9993748068809509
+                },
+                {
+                    "start": 74.22,
+                    "end": 74.4,
+                    "word": " end",
+                    "prob": 0.9984322190284729
+                },
+                {
+                    "start": 74.4,
+                    "end": 74.56,
+                    "word": " up",
+                    "prob": 0.9986988306045532
+                },
+                {
+                    "start": 74.56,
+                    "end": 74.78,
+                    "word": " here?",
+                    "prob": 0.997791051864624
+                }
+            ]
+        },
+        {
+            "start": 75.46,
+            "end": 76.96000000000001,
+            "text": " Well we just came from the...",
+            "avg_logprob": -0.10202100275662439,
+            "words": [
+                {
+                    "start": 75.46,
+                    "end": 75.7,
+                    "word": " Well",
+                    "prob": 0.6126657128334045
+                },
+                {
+                    "start": 75.7,
+                    "end": 75.84,
+                    "word": " we",
+                    "prob": 0.24683652818202972
+                },
+                {
+                    "start": 75.84,
+                    "end": 75.96,
+                    "word": " just",
+                    "prob": 0.9991576671600342
+                },
+                {
+                    "start": 75.96,
+                    "end": 76.16,
+                    "word": " came",
+                    "prob": 0.9981654286384583
+                },
+                {
+                    "start": 76.16,
+                    "end": 76.36,
+                    "word": " from",
+                    "prob": 0.9957055449485779
+                },
+                {
+                    "start": 76.36,
+                    "end": 76.96000000000001,
+                    "word": " the...",
+                    "prob": 0.5889133214950562
+                }
+            ]
+        },
+        {
+            "start": 77.64,
+            "end": 80.42,
+            "text": " Think about it Ariadne, how did you get here?",
+            "avg_logprob": -0.2343537077307701,
+            "words": [
+                {
+                    "start": 77.64,
+                    "end": 78.08,
+                    "word": " Think",
+                    "prob": 0.7109809517860413
+                },
+                {
+                    "start": 78.08,
+                    "end": 78.3,
+                    "word": " about",
+                    "prob": 0.9925172328948975
+                },
+                {
+                    "start": 78.3,
+                    "end": 78.48,
+                    "word": " it",
+                    "prob": 0.9927067160606384
+                },
+                {
+                    "start": 78.48,
+                    "end": 79.06,
+                    "word": " Ariadne,",
+                    "prob": 0.7107982238133749
+                },
+                {
+                    "start": 79.34,
+                    "end": 79.44,
+                    "word": " how",
+                    "prob": 0.9660982489585876
+                },
+                {
+                    "start": 79.44,
+                    "end": 79.56,
+                    "word": " did",
+                    "prob": 0.9896724224090576
+                },
+                {
+                    "start": 79.56,
+                    "end": 79.76,
+                    "word": " you",
+                    "prob": 0.9945417046546936
+                },
+                {
+                    "start": 79.76,
+                    "end": 79.98,
+                    "word": " get",
+                    "prob": 0.9989783763885498
+                },
+                {
+                    "start": 79.98,
+                    "end": 80.42,
+                    "word": " here?",
+                    "prob": 0.9979815483093262
+                }
+            ]
+        },
+        {
+            "start": 81.56,
+            "end": 82.78,
+            "text": " Where are you right now?",
+            "avg_logprob": -0.2343537077307701,
+            "words": [
+                {
+                    "start": 81.56,
+                    "end": 82.0,
+                    "word": " Where",
+                    "prob": 0.702855110168457
+                },
+                {
+                    "start": 82.0,
+                    "end": 82.18,
+                    "word": " are",
+                    "prob": 0.9955778121948242
+                },
+                {
+                    "start": 82.18,
+                    "end": 82.32,
+                    "word": " you",
+                    "prob": 0.9972809553146362
+                },
+                {
+                    "start": 82.32,
+                    "end": 82.52,
+                    "word": " right",
+                    "prob": 0.9808536767959595
+                },
+                {
+                    "start": 82.52,
+                    "end": 82.78,
+                    "word": " now?",
+                    "prob": 0.9997895359992981
+                }
+            ]
+        },
+        {
+            "start": 86.92,
+            "end": 87.72,
+            "text": " What do you mean?",
+            "avg_logprob": -0.2343537077307701,
+            "words": [
+                {
+                    "start": 86.92,
+                    "end": 87.36,
+                    "word": " What",
+                    "prob": 0.1305023580789566
+                },
+                {
+                    "start": 87.36,
+                    "end": 87.54,
+                    "word": " do",
+                    "prob": 0.4340502917766571
+                },
+                {
+                    "start": 87.54,
+                    "end": 87.58,
+                    "word": " you",
+                    "prob": 0.9964303374290466
+                },
+                {
+                    "start": 87.58,
+                    "end": 87.72,
+                    "word": " mean?",
+                    "prob": 0.9422546625137329
+                }
+            ]
+        },
+        {
+            "start": 88.06,
+            "end": 93.08,
+            "text": " You're actually in the middle of the workshop right now, sleepiness is your first lesson and share it with me",
+            "avg_logprob": -0.2343537077307701,
+            "words": [
+                {
+                    "start": 88.06,
+                    "end": 88.28,
+                    "word": " You're",
+                    "prob": 0.902300089597702
+                },
+                {
+                    "start": 88.28,
+                    "end": 88.58,
+                    "word": " actually",
+                    "prob": 0.9669396877288818
+                },
+                {
+                    "start": 88.58,
+                    "end": 88.7,
+                    "word": " in",
+                    "prob": 0.9861944913864136
+                },
+                {
+                    "start": 88.7,
+                    "end": 88.78,
+                    "word": " the",
+                    "prob": 0.9974207878112793
+                },
+                {
+                    "start": 88.78,
+                    "end": 88.94,
+                    "word": " middle",
+                    "prob": 0.9996761083602905
+                },
+                {
+                    "start": 88.94,
+                    "end": 89.08,
+                    "word": " of",
+                    "prob": 0.9957148432731628
+                },
+                {
+                    "start": 89.08,
+                    "end": 89.16,
+                    "word": " the",
+                    "prob": 0.9858033657073975
+                },
+                {
+                    "start": 89.16,
+                    "end": 89.52,
+                    "word": " workshop",
+                    "prob": 0.9804670214653015
+                },
+                {
+                    "start": 89.52,
+                    "end": 89.98,
+                    "word": " right",
+                    "prob": 0.9624778032302856
+                },
+                {
+                    "start": 89.98,
+                    "end": 90.28,
+                    "word": " now,",
+                    "prob": 0.9990900754928589
+                },
+                {
+                    "start": 90.54,
+                    "end": 91.08,
+                    "word": " sleepiness",
+                    "prob": 0.2948513329029083
+                },
+                {
+                    "start": 91.08,
+                    "end": 91.26,
+                    "word": " is",
+                    "prob": 0.8089528679847717
+                },
+                {
+                    "start": 91.26,
+                    "end": 91.4,
+                    "word": " your",
+                    "prob": 0.9824531078338623
+                },
+                {
+                    "start": 91.4,
+                    "end": 91.76,
+                    "word": " first",
+                    "prob": 0.9962443113327026
+                },
+                {
+                    "start": 91.76,
+                    "end": 92.14,
+                    "word": " lesson",
+                    "prob": 0.9934056997299194
+                },
+                {
+                    "start": 92.14,
+                    "end": 92.3,
+                    "word": " and",
+                    "prob": 0.701080858707428
+                },
+                {
+                    "start": 92.3,
+                    "end": 92.6,
+                    "word": " share",
+                    "prob": 0.718350887298584
+                },
+                {
+                    "start": 92.6,
+                    "end": 92.76,
+                    "word": " it",
+                    "prob": 0.5511042475700378
+                },
+                {
+                    "start": 92.76,
+                    "end": 92.84,
+                    "word": " with",
+                    "prob": 0.7728385925292969
+                },
+                {
+                    "start": 92.84,
+                    "end": 93.08,
+                    "word": " me",
+                    "prob": 0.9318154454231262
+                }
+            ]
+        },
+        {
+            "start": 93.08,
+            "end": 93.96,
+            "text": " Stay calm",
+            "avg_logprob": -0.2343537077307701,
+            "words": [
+                {
+                    "start": 93.08,
+                    "end": 93.64,
+                    "word": " Stay",
+                    "prob": 0.01399657316505909
+                },
+                {
+                    "start": 93.64,
+                    "end": 93.96,
+                    "word": " calm",
+                    "prob": 0.9116436839103699
+                }
+            ]
+        },
+        {
+            "start": 126.06,
+            "end": 126.54,
+            "text": " Stay calm",
+            "avg_logprob": -0.5547841015984031,
+            "words": [
+                {
+                    "start": 126.06,
+                    "end": 126.54,
+                    "word": " Stay",
+                    "prob": 7.970397564349696e-05
+                },
+                {
+                    "start": 126.54,
+                    "end": 126.54,
+                    "word": " calm",
+                    "prob": 0.02435515634715557
+                }
+            ]
+        },
+        {
+            "start": 131.18,
+            "end": 133.26,
+            "text": " It's just a dream the wider you exist",
+            "avg_logprob": -0.5547841015984031,
+            "words": [
+                {
+                    "start": 131.18,
+                    "end": 131.66,
+                    "word": " It's",
+                    "prob": 0.470587448682636
+                },
+                {
+                    "start": 131.66,
+                    "end": 131.76,
+                    "word": " just",
+                    "prob": 0.8882358074188232
+                },
+                {
+                    "start": 131.76,
+                    "end": 131.96,
+                    "word": " a",
+                    "prob": 0.9459697604179382
+                },
+                {
+                    "start": 131.96,
+                    "end": 132.2,
+                    "word": " dream",
+                    "prob": 0.9946354031562805
+                },
+                {
+                    "start": 132.2,
+                    "end": 132.42,
+                    "word": " the",
+                    "prob": 0.2264060378074646
+                },
+                {
+                    "start": 132.42,
+                    "end": 132.7,
+                    "word": " wider",
+                    "prob": 0.061682865023612976
+                },
+                {
+                    "start": 132.7,
+                    "end": 132.92,
+                    "word": " you",
+                    "prob": 0.8521338701248169
+                },
+                {
+                    "start": 132.92,
+                    "end": 133.26,
+                    "word": " exist",
+                    "prob": 0.12682928144931793
+                }
+            ]
+        },
+        {
+            "start": 134.1,
+            "end": 136.32,
+            "text": " Because it's never just a dream isn't",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 134.1,
+                    "end": 134.6,
+                    "word": " Because",
+                    "prob": 0.046143174171447754
+                },
+                {
+                    "start": 134.6,
+                    "end": 134.8,
+                    "word": " it's",
+                    "prob": 0.9782410264015198
+                },
+                {
+                    "start": 134.8,
+                    "end": 135.0,
+                    "word": " never",
+                    "prob": 0.9952467083930969
+                },
+                {
+                    "start": 135.0,
+                    "end": 135.36,
+                    "word": " just",
+                    "prob": 0.9937810301780701
+                },
+                {
+                    "start": 135.36,
+                    "end": 135.5,
+                    "word": " a",
+                    "prob": 0.99357670545578
+                },
+                {
+                    "start": 135.5,
+                    "end": 135.82,
+                    "word": " dream",
+                    "prob": 0.9940616488456726
+                },
+                {
+                    "start": 135.82,
+                    "end": 136.32,
+                    "word": " isn't",
+                    "prob": 0.5564664006233215
+                }
+            ]
+        },
+        {
+            "start": 136.32,
+            "end": 140.48,
+            "text": " A face full of glass hurts like hell when you're in it, it feels real",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 136.32,
+                    "end": 136.52,
+                    "word": " A",
+                    "prob": 0.015548978000879288
+                },
+                {
+                    "start": 136.52,
+                    "end": 136.78,
+                    "word": " face",
+                    "prob": 0.5191759467124939
+                },
+                {
+                    "start": 136.78,
+                    "end": 137.02,
+                    "word": " full",
+                    "prob": 0.9846412539482117
+                },
+                {
+                    "start": 137.02,
+                    "end": 137.18,
+                    "word": " of",
+                    "prob": 0.9934080839157104
+                },
+                {
+                    "start": 137.18,
+                    "end": 137.36,
+                    "word": " glass",
+                    "prob": 0.9488973021507263
+                },
+                {
+                    "start": 137.36,
+                    "end": 137.64,
+                    "word": " hurts",
+                    "prob": 0.4219556748867035
+                },
+                {
+                    "start": 137.64,
+                    "end": 137.88,
+                    "word": " like",
+                    "prob": 0.9424363374710083
+                },
+                {
+                    "start": 137.88,
+                    "end": 138.16,
+                    "word": " hell",
+                    "prob": 0.9373152852058411
+                },
+                {
+                    "start": 138.16,
+                    "end": 138.32,
+                    "word": " when",
+                    "prob": 0.8744285106658936
+                },
+                {
+                    "start": 138.32,
+                    "end": 138.52,
+                    "word": " you're",
+                    "prob": 0.9731508195400238
+                },
+                {
+                    "start": 138.52,
+                    "end": 138.62,
+                    "word": " in",
+                    "prob": 0.9912075400352478
+                },
+                {
+                    "start": 138.62,
+                    "end": 138.84,
+                    "word": " it,",
+                    "prob": 0.9863693714141846
+                },
+                {
+                    "start": 138.84,
+                    "end": 139.86,
+                    "word": " it",
+                    "prob": 0.46080300211906433
+                },
+                {
+                    "start": 139.86,
+                    "end": 140.12,
+                    "word": " feels",
+                    "prob": 0.993618369102478
+                },
+                {
+                    "start": 140.12,
+                    "end": 140.48,
+                    "word": " real",
+                    "prob": 0.9965395927429199
+                }
+            ]
+        },
+        {
+            "start": 140.48,
+            "end": 142.42,
+            "text": " It's why the military develops dream sharing",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 140.48,
+                    "end": 140.72,
+                    "word": " It's",
+                    "prob": 0.6880322992801666
+                },
+                {
+                    "start": 140.72,
+                    "end": 140.82,
+                    "word": " why",
+                    "prob": 0.9575145840644836
+                },
+                {
+                    "start": 140.82,
+                    "end": 140.92,
+                    "word": " the",
+                    "prob": 0.9978697299957275
+                },
+                {
+                    "start": 140.92,
+                    "end": 141.2,
+                    "word": " military",
+                    "prob": 0.9524171352386475
+                },
+                {
+                    "start": 141.2,
+                    "end": 141.8,
+                    "word": " develops",
+                    "prob": 0.7237671613693237
+                },
+                {
+                    "start": 141.8,
+                    "end": 142.04,
+                    "word": " dream",
+                    "prob": 0.44669145345687866
+                },
+                {
+                    "start": 142.04,
+                    "end": 142.42,
+                    "word": " sharing",
+                    "prob": 0.5977747440338135
+                }
+            ]
+        },
+        {
+            "start": 142.42,
+            "end": 147.26,
+            "text": " There's a training program for soldiers to shoot and stab and strangle each other and wake up",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 142.42,
+                    "end": 142.66,
+                    "word": " There's",
+                    "prob": 0.691071629524231
+                },
+                {
+                    "start": 142.66,
+                    "end": 142.7,
+                    "word": " a",
+                    "prob": 0.9901039004325867
+                },
+                {
+                    "start": 142.7,
+                    "end": 142.94,
+                    "word": " training",
+                    "prob": 0.9979385733604431
+                },
+                {
+                    "start": 142.94,
+                    "end": 143.3,
+                    "word": " program",
+                    "prob": 0.982781708240509
+                },
+                {
+                    "start": 143.3,
+                    "end": 143.64,
+                    "word": " for",
+                    "prob": 0.4299635589122772
+                },
+                {
+                    "start": 143.64,
+                    "end": 143.96,
+                    "word": " soldiers",
+                    "prob": 0.9913620352745056
+                },
+                {
+                    "start": 143.96,
+                    "end": 144.28,
+                    "word": " to",
+                    "prob": 0.9669362306594849
+                },
+                {
+                    "start": 144.28,
+                    "end": 144.84,
+                    "word": " shoot",
+                    "prob": 0.9940162897109985
+                },
+                {
+                    "start": 144.84,
+                    "end": 145.02,
+                    "word": " and",
+                    "prob": 0.8399907350540161
+                },
+                {
+                    "start": 145.02,
+                    "end": 145.24,
+                    "word": " stab",
+                    "prob": 0.9891536831855774
+                },
+                {
+                    "start": 145.24,
+                    "end": 145.38,
+                    "word": " and",
+                    "prob": 0.7831577658653259
+                },
+                {
+                    "start": 145.38,
+                    "end": 145.74,
+                    "word": " strangle",
+                    "prob": 0.8428330421447754
+                },
+                {
+                    "start": 145.74,
+                    "end": 145.94,
+                    "word": " each",
+                    "prob": 0.9984978437423706
+                },
+                {
+                    "start": 145.94,
+                    "end": 146.12,
+                    "word": " other",
+                    "prob": 0.9946946501731873
+                },
+                {
+                    "start": 146.12,
+                    "end": 146.28,
+                    "word": " and",
+                    "prob": 0.8643724918365479
+                },
+                {
+                    "start": 146.28,
+                    "end": 146.66,
+                    "word": " wake",
+                    "prob": 0.9534446597099304
+                },
+                {
+                    "start": 146.66,
+                    "end": 147.26,
+                    "word": " up",
+                    "prob": 0.9990818500518799
+                }
+            ]
+        },
+        {
+            "start": 147.88,
+            "end": 149.56,
+            "text": " How did architects become involved?",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 147.88,
+                    "end": 148.38,
+                    "word": " How",
+                    "prob": 0.8208938837051392
+                },
+                {
+                    "start": 148.38,
+                    "end": 148.5,
+                    "word": " did",
+                    "prob": 0.9900608062744141
+                },
+                {
+                    "start": 148.5,
+                    "end": 148.86,
+                    "word": " architects",
+                    "prob": 0.9295169711112976
+                },
+                {
+                    "start": 148.86,
+                    "end": 149.22,
+                    "word": " become",
+                    "prob": 0.5012540817260742
+                },
+                {
+                    "start": 149.22,
+                    "end": 149.56,
+                    "word": " involved?",
+                    "prob": 0.8137688636779785
+                }
+            ]
+        },
+        {
+            "start": 150.18,
+            "end": 151.92,
+            "text": " Someone had to design the dreams, right?",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 150.18,
+                    "end": 150.44,
+                    "word": " Someone",
+                    "prob": 0.8586554527282715
+                },
+                {
+                    "start": 150.44,
+                    "end": 150.68,
+                    "word": " had",
+                    "prob": 0.98822021484375
+                },
+                {
+                    "start": 150.68,
+                    "end": 150.8,
+                    "word": " to",
+                    "prob": 0.7945591807365417
+                },
+                {
+                    "start": 150.8,
+                    "end": 151.12,
+                    "word": " design",
+                    "prob": 0.9925717711448669
+                },
+                {
+                    "start": 151.12,
+                    "end": 151.34,
+                    "word": " the",
+                    "prob": 0.9168383479118347
+                },
+                {
+                    "start": 151.34,
+                    "end": 151.6,
+                    "word": " dreams,",
+                    "prob": 0.8529062867164612
+                },
+                {
+                    "start": 151.76,
+                    "end": 151.92,
+                    "word": " right?",
+                    "prob": 0.9706267714500427
+                }
+            ]
+        },
+        {
+            "start": 153.56,
+            "end": 155.18,
+            "text": " Why don't you give us another five minutes?",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 153.56,
+                    "end": 154.06,
+                    "word": " Why",
+                    "prob": 0.6263832449913025
+                },
+                {
+                    "start": 154.06,
+                    "end": 154.1,
+                    "word": " don't",
+                    "prob": 0.9867370426654816
+                },
+                {
+                    "start": 154.1,
+                    "end": 154.22,
+                    "word": " you",
+                    "prob": 0.9906458854675293
+                },
+                {
+                    "start": 154.22,
+                    "end": 154.3,
+                    "word": " give",
+                    "prob": 0.9074094295501709
+                },
+                {
+                    "start": 154.3,
+                    "end": 154.46,
+                    "word": " us",
+                    "prob": 0.9494230151176453
+                },
+                {
+                    "start": 154.46,
+                    "end": 154.62,
+                    "word": " another",
+                    "prob": 0.9978519678115845
+                },
+                {
+                    "start": 154.62,
+                    "end": 154.92,
+                    "word": " five",
+                    "prob": 0.8277266621589661
+                },
+                {
+                    "start": 154.92,
+                    "end": 155.18,
+                    "word": " minutes?",
+                    "prob": 0.9962524771690369
+                }
+            ]
+        },
+        {
+            "start": 156.04,
+            "end": 156.94,
+            "text": " Five minutes?",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 156.04,
+                    "end": 156.54,
+                    "word": " Five",
+                    "prob": 0.9657288789749146
+                },
+                {
+                    "start": 156.54,
+                    "end": 156.94,
+                    "word": " minutes?",
+                    "prob": 0.9991111159324646
+                }
+            ]
+        },
+        {
+            "start": 158.0,
+            "end": 158.5,
+            "text": " What?",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 158.0,
+                    "end": 158.5,
+                    "word": " What?",
+                    "prob": 0.7926708459854126
+                }
+            ]
+        },
+        {
+            "start": 159.22,
+            "end": 161.06,
+            "text": " We were talking for like at least an hour",
+            "avg_logprob": -0.15747099422049105,
+            "words": [
+                {
+                    "start": 159.22,
+                    "end": 159.4,
+                    "word": " We",
+                    "prob": 0.9862435460090637
+                },
+                {
+                    "start": 159.4,
+                    "end": 159.52,
+                    "word": " were",
+                    "prob": 0.9932479858398438
+                },
+                {
+                    "start": 159.52,
+                    "end": 159.82,
+                    "word": " talking",
+                    "prob": 0.9984574317932129
+                },
+                {
+                    "start": 159.82,
+                    "end": 160.02,
+                    "word": " for",
+                    "prob": 0.9870046973228455
+                },
+                {
+                    "start": 160.02,
+                    "end": 160.12,
+                    "word": " like",
+                    "prob": 0.8843278884887695
+                },
+                {
+                    "start": 160.12,
+                    "end": 160.26,
+                    "word": " at",
+                    "prob": 0.9661915302276611
+                },
+                {
+                    "start": 160.26,
+                    "end": 160.4,
+                    "word": " least",
+                    "prob": 0.9995276927947998
+                },
+                {
+                    "start": 160.4,
+                    "end": 160.66,
+                    "word": " an",
+                    "prob": 0.9948685169219971
+                },
+                {
+                    "start": 160.66,
+                    "end": 161.06,
+                    "word": " hour",
+                    "prob": 0.9998573064804077
+                }
+            ]
+        },
+        {
+            "start": 161.06,
+            "end": 166.58,
+            "text": " The dream, your mind functions more quickly, therefore time seems to feel more slow",
+            "avg_logprob": -0.1517997506786795,
+            "words": [
+                {
+                    "start": 161.06,
+                    "end": 161.62,
+                    "word": " The",
+                    "prob": 0.1654815524816513
+                },
+                {
+                    "start": 161.62,
+                    "end": 161.94,
+                    "word": " dream,",
+                    "prob": 0.9675814509391785
+                },
+                {
+                    "start": 161.94,
+                    "end": 162.14,
+                    "word": " your",
+                    "prob": 0.9846652150154114
+                },
+                {
+                    "start": 162.14,
+                    "end": 162.42,
+                    "word": " mind",
+                    "prob": 0.99085932970047
+                },
+                {
+                    "start": 162.42,
+                    "end": 162.86,
+                    "word": " functions",
+                    "prob": 0.6436086893081665
+                },
+                {
+                    "start": 162.86,
+                    "end": 163.2,
+                    "word": " more",
+                    "prob": 0.9886264204978943
+                },
+                {
+                    "start": 163.2,
+                    "end": 163.62,
+                    "word": " quickly,",
+                    "prob": 0.99887615442276
+                },
+                {
+                    "start": 163.82,
+                    "end": 164.08,
+                    "word": " therefore",
+                    "prob": 0.9902265071868896
+                },
+                {
+                    "start": 164.08,
+                    "end": 165.24,
+                    "word": " time",
+                    "prob": 0.5800522565841675
+                },
+                {
+                    "start": 165.24,
+                    "end": 165.52,
+                    "word": " seems",
+                    "prob": 0.9934465289115906
+                },
+                {
+                    "start": 165.52,
+                    "end": 165.76,
+                    "word": " to",
+                    "prob": 0.9994138479232788
+                },
+                {
+                    "start": 165.76,
+                    "end": 165.96,
+                    "word": " feel",
+                    "prob": 0.9946271777153015
+                },
+                {
+                    "start": 165.96,
+                    "end": 166.18,
+                    "word": " more",
+                    "prob": 0.9918145537376404
+                },
+                {
+                    "start": 166.18,
+                    "end": 166.58,
+                    "word": " slow",
+                    "prob": 0.996991753578186
+                }
+            ]
+        },
+        {
+            "start": 166.58,
+            "end": 169.14,
+            "text": " Five minutes in the real world gives you an hour in the dream",
+            "avg_logprob": -0.1517997506786795,
+            "words": [
+                {
+                    "start": 166.58,
+                    "end": 167.06,
+                    "word": " Five",
+                    "prob": 0.0052222078666090965
+                },
+                {
+                    "start": 167.06,
+                    "end": 167.34,
+                    "word": " minutes",
+                    "prob": 0.9990012049674988
+                },
+                {
+                    "start": 167.34,
+                    "end": 167.52,
+                    "word": " in",
+                    "prob": 0.9579705595970154
+                },
+                {
+                    "start": 167.52,
+                    "end": 167.58,
+                    "word": " the",
+                    "prob": 0.976403534412384
+                },
+                {
+                    "start": 167.58,
+                    "end": 167.8,
+                    "word": " real",
+                    "prob": 0.9971736669540405
+                },
+                {
+                    "start": 167.8,
+                    "end": 168.12,
+                    "word": " world",
+                    "prob": 0.9868844747543335
+                },
+                {
+                    "start": 168.12,
+                    "end": 168.32,
+                    "word": " gives",
+                    "prob": 0.8067469596862793
+                },
+                {
+                    "start": 168.32,
+                    "end": 168.48,
+                    "word": " you",
+                    "prob": 0.9992967844009399
+                },
+                {
+                    "start": 168.48,
+                    "end": 168.58,
+                    "word": " an",
+                    "prob": 0.9951097369194031
+                },
+                {
+                    "start": 168.58,
+                    "end": 168.74,
+                    "word": " hour",
+                    "prob": 0.9996337890625
+                },
+                {
+                    "start": 168.74,
+                    "end": 168.86,
+                    "word": " in",
+                    "prob": 0.8564947247505188
+                },
+                {
+                    "start": 168.86,
+                    "end": 168.96,
+                    "word": " the",
+                    "prob": 0.9941908717155457
+                },
+                {
+                    "start": 168.96,
+                    "end": 169.14,
+                    "word": " dream",
+                    "prob": 0.9895435571670532
+                }
+            ]
+        },
+        {
+            "start": 170.72,
+            "end": 173.2,
+            "text": " Why don't you see what you can get up to in five minutes?",
+            "avg_logprob": -0.1517997506786795,
+            "words": [
+                {
+                    "start": 170.72,
+                    "end": 171.12,
+                    "word": " Why",
+                    "prob": 0.5792620778083801
+                },
+                {
+                    "start": 171.12,
+                    "end": 171.22,
+                    "word": " don't",
+                    "prob": 0.9949408769607544
+                },
+                {
+                    "start": 171.22,
+                    "end": 171.32,
+                    "word": " you",
+                    "prob": 0.995736837387085
+                },
+                {
+                    "start": 171.32,
+                    "end": 171.52,
+                    "word": " see",
+                    "prob": 0.9966727495193481
+                },
+                {
+                    "start": 171.52,
+                    "end": 171.62,
+                    "word": " what",
+                    "prob": 0.9839990735054016
+                },
+                {
+                    "start": 171.62,
+                    "end": 171.76,
+                    "word": " you",
+                    "prob": 0.9941884279251099
+                },
+                {
+                    "start": 171.76,
+                    "end": 171.9,
+                    "word": " can",
+                    "prob": 0.9923686385154724
+                },
+                {
+                    "start": 171.9,
+                    "end": 172.08,
+                    "word": " get",
+                    "prob": 0.9980754852294922
+                },
+                {
+                    "start": 172.08,
+                    "end": 172.2,
+                    "word": " up",
+                    "prob": 0.9973037242889404
+                },
+                {
+                    "start": 172.2,
+                    "end": 172.36,
+                    "word": " to",
+                    "prob": 0.9894577264785767
+                },
+                {
+                    "start": 172.36,
+                    "end": 172.48,
+                    "word": " in",
+                    "prob": 0.9884032607078552
+                },
+                {
+                    "start": 172.48,
+                    "end": 172.78,
+                    "word": " five",
+                    "prob": 0.9646351337432861
+                },
+                {
+                    "start": 172.78,
+                    "end": 173.2,
+                    "word": " minutes?",
+                    "prob": 0.9991099238395691
+                }
+            ]
+        },
+        {
+            "start": 191.06,
+            "end": 192.38,
+            "text": " You",
+            "avg_logprob": -0.8394186794757843,
+            "words": [
+                {
+                    "start": 191.06,
+                    "end": 192.38,
+                    "word": " You",
+                    "prob": 0.033133476972579956
+                }
+            ]
+        }
+    ]
+}
