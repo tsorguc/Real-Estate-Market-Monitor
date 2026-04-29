@@ -1,7 +1,11 @@
 import time
 import requests
 from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
+try:
+    from playwright.sync_api import sync_playwright
+    PLAYWRIGHT_AVAILABLE = True
+except ImportError:
+    PLAYWRIGHT_AVAILABLE = False
 from datetime import datetime
 from utils.logger import logging as logger
 from utils.robots_utils import check_robots_txt
@@ -52,6 +56,10 @@ def scrape_static_pages(base_url, max_pages=2):
 def scrape_dynamic_page(url):
     logger.info("Starting Dynamic Web Scraping (Playwright)...")
     dynamic_data = []
+    
+    if not PLAYWRIGHT_AVAILABLE:
+        logger.error("Playwright is not installed. Skipping dynamic scrape.")
+        return dynamic_data
     
     if not check_robots_txt(url, USER_AGENT):
         logger.warning(f"Skipping dynamic scrape of {url} due to robots.txt.")

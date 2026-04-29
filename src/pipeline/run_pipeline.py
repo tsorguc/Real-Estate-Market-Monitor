@@ -26,6 +26,20 @@ from image_processing.downloader import fetch_and_download_images
 from image_processing.batch import batch_process_images
 from utils.report_generator import generate_combined_report
 
+# New Imports for Analytics (Lab 8)
+from analytics import (
+    demonstrate_numpy_features,
+    get_integrated_data,
+    optimize_dataframe,
+    export_to_csv,
+    load_csv_in_chunks,
+    process_chunks_per_category,
+    perform_eda,
+    demonstrate_selection,
+    perform_regex_operations,
+    generate_quality_report
+)
+
 def run_pipeline():
     logging.info("Starting Real Estate Market Monitor Pipeline...")
     print("🚀 Starting Pipeline...")
@@ -248,6 +262,48 @@ def run_pipeline():
                     print(f"✅ Transcribed audio from video {filename}")
     else:
         print("⚠️ No video files found in data/raw/video.")
+
+    # =================================================================
+    # PHASE 6: LAB 8 - DATA ANALYTICS
+    # =================================================================
+    logging.info("Starting Phase 6: Data Analytics...")
+    print("📊 Running Phase 6: Data Analytics...")
+
+    # 1. NumPy Foundations
+    numpy_results = demonstrate_numpy_features()
+    print(f"✅ NumPy demonstration completed. Max Price: {numpy_results['max_price']}")
+
+    # 2. Loading & Integration
+    df = get_integrated_data()
+    logging.info(f"Loaded integrated data with {len(df)} records.")
+    
+    # 3. Memory Optimization
+    df = optimize_dataframe(df)
+    
+    # 4. Export and Chunked Loading
+    raw_csv_path = export_to_csv(df, "raw_integrated_data.csv")
+    global_mean = load_csv_in_chunks(raw_csv_path, chunk_size=20)
+    print(f"📈 Global mean price from chunks: ${global_mean:,.2f}")
+    
+    # 5. Process chunks per-category
+    category_means = process_chunks_per_category(raw_csv_path, chunk_size=20)
+    print(f"🏘️ Category means computed from chunks: {list(category_means.keys())}")
+
+    # 6. Exploratory Data Analysis
+    perform_eda(df)
+    print("📈 EDA completed and charts saved.")
+
+    # 7. Selection & Filtering
+    demonstrate_selection(df)
+    print("🔍 Selection and filtering demonstration completed.")
+
+    # 8. Regex Operations
+    df = perform_regex_operations(df)
+    print("🔡 Regex operations on text columns completed.")
+
+    # 9. Data Quality Assessment
+    generate_quality_report(df)
+    print("🛠️ Data Quality Report generated.")
 
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")

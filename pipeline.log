@@ -1127,3 +1127,2229 @@
 2026-04-17 16:10:46,569 - INFO - Detected language 'en' with probability 0.99
 2026-04-17 16:11:00,585 - INFO - Success! Saved transcript for C:\Users\User\Desktop\IT-2012\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 to MongoDB with ID 69e23f74a0b6fe259a81fee6.
 2026-04-17 16:11:00,586 - INFO - Pipeline finished successfully
+2026-04-24 17:49:16,763 - WARNING - Matplotlib is building the font cache; this may take a moment.
+2026-04-24 17:49:17,004 - INFO - generated new fontManager
+2026-04-24 17:49:18,092 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-24 17:49:18,092 - INFO - Fetching data from API...
+2026-04-24 17:49:18,093 - INFO - --- Fetching Page 1 ---
+2026-04-24 17:49:20,959 - INFO - Successfully grabbed 160 items from page 1
+2026-04-24 17:49:20,960 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-24 17:49:20,960 - INFO - --- Fetching Page 2 ---
+2026-04-24 17:49:23,079 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-24 17:49:24,413 - INFO - Successfully grabbed 0 items from page 2
+2026-04-24 17:49:24,413 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-24 17:49:24,413 - INFO - --- Fetching Page 3 ---
+2026-04-24 17:49:26,050 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-24 17:49:28,207 - INFO - Successfully grabbed 0 items from page 3
+2026-04-24 17:49:28,208 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-24 17:49:28,209 - INFO - Parsing data...
+2026-04-24 17:49:28,210 - INFO - Saving to MongoDB...
+2026-04-24 17:49:28,293 - INFO - Success! Saved 160 houses to MongoDB.
+2026-04-24 17:49:28,294 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-24 17:49:28,294 - INFO - Starting image download for 160 items.
+2026-04-24 17:49:28,345 - INFO - Successfully downloaded 0 images.
+2026-04-24 17:49:28,346 - INFO - Starting batch process for 1 images.
+2026-04-24 17:49:28,348 - INFO - Processing image: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-24 17:49:28,719 - INFO - Resized image saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-24 17:49:28,960 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-24 17:49:28,960 - INFO - Uploading 2 files to Google Drive.
+2026-04-24 17:49:29,976 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-24 17:49:31,179 - ERROR - Error uploading image C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-24 17:49:31,579 - ERROR - Error uploading image C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-24 17:49:31,579 - INFO - Batch processing complete.
+2026-04-24 17:49:31,579 - INFO - Starting unstructured document extraction...
+2026-04-24 17:49:31,579 - INFO - Extracting PDF: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-24 17:49:31,736 - INFO - Extracting PDF: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-24 17:49:31,837 - INFO - Extracting Word Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-24 17:49:31,870 - INFO - Extracting Word Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-24 17:49:31,900 - INFO - Extracting Excel Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-24 17:49:31,924 - INFO - Extracting Excel Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-24 17:49:31,946 - INFO - Saving 6 document records to MongoDB...
+2026-04-24 17:49:31,976 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-24 17:49:31,977 - INFO - Starting Phase 3: Web Scraping...
+2026-04-24 17:49:31,977 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-24 17:49:31,977 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-24 17:49:33,012 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-24 17:49:34,189 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-24 17:49:34,189 - INFO - Applying a 2-second delay between requests...
+2026-04-24 17:49:36,189 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-24 17:49:36,598 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-24 17:49:37,738 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-24 17:49:37,739 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-24 17:49:37,739 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-24 17:49:38,543 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-24 17:50:00,153 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-24 17:50:00,212 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-24 17:50:00,212 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-24 17:50:00,213 - INFO - Starting OCR for image: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-24 17:50:03,298 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-24 17:50:03,324 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-24 17:50:03,324 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-24 17:50:03,325 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-24 17:50:05,189 - INFO - Trimmed audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\trimmed_sample.wav
+2026-04-24 17:50:11,977 - INFO - Converted audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\converted_sample.ogg (format: ogg)
+2026-04-24 17:50:11,977 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Interstellar - Christopher Nolan - Official Warner Bros. [WqNirxasldY].mp3
+2026-04-24 17:50:12,599 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Interstellar – Building A Black Hole – Official Warner Bros. [MfGfZwQ_qaY].mp3
+2026-04-24 17:50:13,597 - INFO - Concatenated audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\concatenated_sample.wav
+2026-04-24 17:50:13,605 - INFO - Transcribing C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 with model base
+2026-04-24 17:50:14,995 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-24 17:50:16,507 - INFO - Processing audio with duration 03:12.401
+2026-04-24 17:50:17,789 - INFO - Detected language 'en' with probability 0.99
+2026-04-24 17:50:34,475 - INFO - Success! Saved transcript for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 to MongoDB with ID 69eb914a5b5c15441dfbc372.
+2026-04-24 17:50:34,476 - INFO - Starting chunked transcription for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-24 17:50:35,073 - INFO - Loading cached transcript for chunk 0
+2026-04-24 17:50:35,095 - ERROR - Chunked transcription error: 'text'
+2026-04-24 17:50:35,099 - INFO - Loading video from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4
+2026-04-24 17:50:39,409 - INFO - Audio extracted and saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3
+2026-04-24 17:50:39,419 - INFO - Extracting frames from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 every 10 seconds
+2026-04-24 17:50:43,417 - INFO - Extracted 20 frames to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\frames
+2026-04-24 17:50:43,432 - INFO - Transcribing C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3 with model base
+2026-04-24 17:50:44,418 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-24 17:50:45,473 - INFO - Processing audio with duration 03:12.400
+2026-04-24 17:50:46,445 - INFO - Detected language 'en' with probability 0.99
+2026-04-24 17:51:02,953 - INFO - Success! Saved transcript for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 to MongoDB with ID 69eb91665b5c15441dfbc374.
+2026-04-24 17:51:02,953 - INFO - Starting Phase 6: Data Analytics...
+2026-04-24 17:51:02,953 - INFO - --- NumPy Foundations ---
+2026-04-24 17:51:02,957 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-24 17:51:02,959 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-24 17:51:02,960 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-24 17:51:02,960 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-24 17:51:03,169 - INFO - Loaded integrated data with 4111 records.
+2026-04-24 17:51:03,175 - INFO - Memory usage before optimization: 1.50 MB
+2026-04-24 18:06:20,295 - INFO - --- NumPy Foundations ---
+2026-04-24 18:06:20,295 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-24 18:06:20,297 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-24 18:06:20,298 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-24 18:06:20,299 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-24 18:06:20,489 - INFO - Memory usage before optimization: 1.50 MB
+2026-04-24 18:07:14,080 - INFO - --- NumPy Foundations ---
+2026-04-24 18:07:14,080 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-24 18:07:14,081 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-24 18:07:14,082 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-24 18:07:14,082 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-24 18:07:14,184 - INFO - Memory usage before optimization: 1.50 MB
+2026-04-24 18:08:30,024 - INFO - --- NumPy Foundations ---
+2026-04-24 18:08:30,025 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-24 18:08:30,025 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-24 18:08:30,026 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-24 18:08:30,026 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-24 18:08:30,075 - INFO - Memory usage before optimization: 1.50 MB
+2026-04-24 18:08:30,082 - INFO - Skipping category optimization for column coordinates due to unhashable type.
+2026-04-24 18:08:30,085 - INFO - Memory usage after optimization: 0.78 MB
+2026-04-24 18:08:30,108 - INFO - Data exported to data/processed/analytics\test_analytics.csv
+2026-04-24 18:08:30,108 - INFO - Loading CSV in chunks: data/processed/analytics\test_analytics.csv
+2026-04-24 18:08:30,131 - INFO - Processed chunk 1, chunk mean: nan
+2026-04-24 18:08:30,136 - INFO - Processed chunk 2, chunk mean: nan
+2026-04-24 18:08:30,141 - INFO - Processed chunk 3, chunk mean: nan
+2026-04-24 18:08:30,146 - INFO - Processed chunk 4, chunk mean: nan
+2026-04-24 18:08:30,151 - INFO - Processed chunk 5, chunk mean: nan
+2026-04-24 18:08:30,156 - INFO - Processed chunk 6, chunk mean: nan
+2026-04-24 18:08:30,162 - INFO - Processed chunk 7, chunk mean: nan
+2026-04-24 18:08:30,167 - INFO - Processed chunk 8, chunk mean: nan
+2026-04-24 18:08:30,171 - INFO - Processed chunk 9, chunk mean: nan
+2026-04-24 18:08:30,177 - INFO - Processed chunk 10, chunk mean: nan
+2026-04-24 18:08:30,181 - INFO - Processed chunk 11, chunk mean: nan
+2026-04-24 18:08:30,186 - INFO - Processed chunk 12, chunk mean: nan
+2026-04-24 18:08:30,191 - INFO - Processed chunk 13, chunk mean: nan
+2026-04-24 18:08:30,196 - INFO - Processed chunk 14, chunk mean: nan
+2026-04-24 18:08:30,201 - INFO - Processed chunk 15, chunk mean: nan
+2026-04-24 18:08:30,206 - INFO - Processed chunk 16, chunk mean: nan
+2026-04-24 18:08:30,211 - INFO - Processed chunk 17, chunk mean: nan
+2026-04-24 18:08:30,216 - INFO - Processed chunk 18, chunk mean: nan
+2026-04-24 18:08:30,222 - INFO - Processed chunk 19, chunk mean: nan
+2026-04-24 18:08:30,228 - INFO - Processed chunk 20, chunk mean: nan
+2026-04-24 18:08:30,237 - INFO - Processed chunk 21, chunk mean: nan
+2026-04-24 18:08:30,244 - INFO - Processed chunk 22, chunk mean: nan
+2026-04-24 18:08:30,254 - INFO - Processed chunk 23, chunk mean: nan
+2026-04-24 18:08:30,260 - INFO - Processed chunk 24, chunk mean: nan
+2026-04-24 18:08:30,269 - INFO - Processed chunk 25, chunk mean: nan
+2026-04-24 18:08:30,280 - INFO - Processed chunk 26, chunk mean: nan
+2026-04-24 18:08:30,289 - INFO - Processed chunk 27, chunk mean: nan
+2026-04-24 18:08:30,295 - INFO - Processed chunk 28, chunk mean: nan
+2026-04-24 18:08:30,303 - INFO - Processed chunk 29, chunk mean: nan
+2026-04-24 18:08:30,311 - INFO - Processed chunk 30, chunk mean: nan
+2026-04-24 18:08:30,316 - INFO - Processed chunk 31, chunk mean: nan
+2026-04-24 18:08:30,321 - INFO - Processed chunk 32, chunk mean: nan
+2026-04-24 18:08:30,327 - INFO - Processed chunk 33, chunk mean: nan
+2026-04-24 18:08:30,332 - INFO - Processed chunk 34, chunk mean: nan
+2026-04-24 18:08:30,338 - INFO - Processed chunk 35, chunk mean: nan
+2026-04-24 18:08:30,344 - INFO - Processed chunk 36, chunk mean: nan
+2026-04-24 18:08:30,348 - INFO - Processed chunk 37, chunk mean: nan
+2026-04-24 18:08:30,353 - INFO - Processed chunk 38, chunk mean: nan
+2026-04-24 18:08:30,358 - INFO - Processed chunk 39, chunk mean: nan
+2026-04-24 18:08:30,363 - INFO - Processed chunk 40, chunk mean: nan
+2026-04-24 18:08:30,368 - INFO - Processed chunk 41, chunk mean: nan
+2026-04-24 18:08:30,374 - INFO - Processed chunk 42, chunk mean: nan
+2026-04-24 18:08:30,379 - INFO - Processed chunk 43, chunk mean: nan
+2026-04-24 18:08:30,384 - INFO - Processed chunk 44, chunk mean: nan
+2026-04-24 18:08:30,389 - INFO - Processed chunk 45, chunk mean: nan
+2026-04-24 18:08:30,395 - INFO - Processed chunk 46, chunk mean: nan
+2026-04-24 18:08:30,403 - INFO - Processed chunk 47, chunk mean: nan
+2026-04-24 18:08:30,411 - INFO - Processed chunk 48, chunk mean: nan
+2026-04-24 18:08:30,419 - INFO - Processed chunk 49, chunk mean: nan
+2026-04-24 18:08:30,424 - INFO - Processed chunk 50, chunk mean: nan
+2026-04-24 18:08:30,430 - INFO - Processed chunk 51, chunk mean: nan
+2026-04-24 18:08:30,435 - INFO - Processed chunk 52, chunk mean: nan
+2026-04-24 18:08:30,440 - INFO - Processed chunk 53, chunk mean: nan
+2026-04-24 18:08:30,444 - INFO - Processed chunk 54, chunk mean: nan
+2026-04-24 18:08:30,452 - INFO - Processed chunk 55, chunk mean: nan
+2026-04-24 18:08:30,457 - INFO - Processed chunk 56, chunk mean: nan
+2026-04-24 18:08:30,464 - INFO - Processed chunk 57, chunk mean: nan
+2026-04-24 18:08:30,471 - INFO - Processed chunk 58, chunk mean: nan
+2026-04-24 18:08:30,477 - INFO - Processed chunk 59, chunk mean: nan
+2026-04-24 18:08:30,483 - INFO - Processed chunk 60, chunk mean: nan
+2026-04-24 18:08:30,487 - INFO - Processed chunk 61, chunk mean: nan
+2026-04-24 18:08:30,492 - INFO - Processed chunk 62, chunk mean: nan
+2026-04-24 18:08:30,496 - INFO - Processed chunk 63, chunk mean: nan
+2026-04-24 18:08:30,501 - INFO - Processed chunk 64, chunk mean: nan
+2026-04-24 18:08:30,505 - INFO - Processed chunk 65, chunk mean: nan
+2026-04-24 18:08:30,511 - INFO - Processed chunk 66, chunk mean: nan
+2026-04-24 18:08:30,515 - INFO - Processed chunk 67, chunk mean: nan
+2026-04-24 18:08:30,520 - INFO - Processed chunk 68, chunk mean: nan
+2026-04-24 18:08:30,526 - INFO - Processed chunk 69, chunk mean: nan
+2026-04-24 18:08:30,531 - INFO - Processed chunk 70, chunk mean: nan
+2026-04-24 18:08:30,535 - INFO - Processed chunk 71, chunk mean: nan
+2026-04-24 18:08:30,541 - INFO - Processed chunk 72, chunk mean: nan
+2026-04-24 18:08:30,546 - INFO - Processed chunk 73, chunk mean: nan
+2026-04-24 18:08:30,550 - INFO - Processed chunk 74, chunk mean: nan
+2026-04-24 18:08:30,556 - INFO - Processed chunk 75, chunk mean: nan
+2026-04-24 18:08:30,561 - INFO - Processed chunk 76, chunk mean: nan
+2026-04-24 18:08:30,565 - INFO - Processed chunk 77, chunk mean: nan
+2026-04-24 18:08:30,571 - INFO - Processed chunk 78, chunk mean: nan
+2026-04-24 18:08:30,576 - INFO - Processed chunk 79, chunk mean: nan
+2026-04-24 18:08:30,581 - INFO - Processed chunk 80, chunk mean: nan
+2026-04-24 18:08:30,586 - INFO - Processed chunk 81, chunk mean: nan
+2026-04-24 18:08:30,591 - INFO - Processed chunk 82, chunk mean: nan
+2026-04-24 18:08:30,596 - INFO - Processed chunk 83, chunk mean: nan
+2026-04-24 18:08:30,602 - INFO - Processed chunk 84, chunk mean: nan
+2026-04-24 18:08:30,607 - INFO - Processed chunk 85, chunk mean: nan
+2026-04-24 18:08:30,611 - INFO - Processed chunk 86, chunk mean: nan
+2026-04-24 18:08:30,619 - INFO - Processed chunk 87, chunk mean: nan
+2026-04-24 18:08:30,624 - INFO - Processed chunk 88, chunk mean: nan
+2026-04-24 18:08:30,631 - INFO - Processed chunk 89, chunk mean: nan
+2026-04-24 18:08:30,639 - INFO - Processed chunk 90, chunk mean: nan
+2026-04-24 18:08:30,646 - INFO - Processed chunk 91, chunk mean: nan
+2026-04-24 18:08:30,654 - INFO - Processed chunk 92, chunk mean: nan
+2026-04-24 18:08:30,659 - INFO - Processed chunk 93, chunk mean: nan
+2026-04-24 18:08:30,666 - INFO - Processed chunk 94, chunk mean: nan
+2026-04-24 18:08:30,670 - INFO - Processed chunk 95, chunk mean: nan
+2026-04-24 18:08:30,675 - INFO - Processed chunk 96, chunk mean: nan
+2026-04-24 18:08:30,681 - INFO - Processed chunk 97, chunk mean: nan
+2026-04-24 18:08:30,690 - INFO - Processed chunk 98, chunk mean: nan
+2026-04-24 18:08:30,703 - INFO - Processed chunk 99, chunk mean: nan
+2026-04-24 18:08:30,708 - INFO - Processed chunk 100, chunk mean: nan
+2026-04-24 18:08:30,715 - INFO - Processed chunk 101, chunk mean: nan
+2026-04-24 18:08:30,720 - INFO - Processed chunk 102, chunk mean: nan
+2026-04-24 18:08:30,726 - INFO - Processed chunk 103, chunk mean: nan
+2026-04-24 18:08:30,732 - INFO - Processed chunk 104, chunk mean: nan
+2026-04-24 18:08:30,736 - INFO - Processed chunk 105, chunk mean: nan
+2026-04-24 18:08:30,741 - INFO - Processed chunk 106, chunk mean: nan
+2026-04-24 18:08:30,746 - INFO - Processed chunk 107, chunk mean: nan
+2026-04-24 18:08:30,751 - INFO - Processed chunk 108, chunk mean: nan
+2026-04-24 18:08:30,756 - INFO - Processed chunk 109, chunk mean: nan
+2026-04-24 18:08:30,764 - INFO - Processed chunk 110, chunk mean: nan
+2026-04-24 18:08:30,769 - INFO - Processed chunk 111, chunk mean: nan
+2026-04-24 18:08:30,776 - INFO - Processed chunk 112, chunk mean: nan
+2026-04-24 18:08:30,782 - INFO - Processed chunk 113, chunk mean: nan
+2026-04-24 18:08:30,787 - INFO - Processed chunk 114, chunk mean: nan
+2026-04-24 18:08:30,794 - INFO - Processed chunk 115, chunk mean: nan
+2026-04-24 18:08:30,802 - INFO - Processed chunk 116, chunk mean: nan
+2026-04-24 18:08:30,807 - INFO - Processed chunk 117, chunk mean: nan
+2026-04-24 18:08:30,812 - INFO - Processed chunk 118, chunk mean: nan
+2026-04-24 18:08:30,817 - INFO - Processed chunk 119, chunk mean: nan
+2026-04-24 18:08:30,823 - INFO - Processed chunk 120, chunk mean: nan
+2026-04-24 18:08:30,828 - INFO - Processed chunk 121, chunk mean: nan
+2026-04-24 18:08:30,836 - INFO - Processed chunk 122, chunk mean: nan
+2026-04-24 18:08:30,844 - INFO - Processed chunk 123, chunk mean: nan
+2026-04-24 18:08:30,852 - INFO - Processed chunk 124, chunk mean: nan
+2026-04-24 18:08:30,858 - INFO - Processed chunk 125, chunk mean: nan
+2026-04-24 18:08:30,863 - INFO - Processed chunk 126, chunk mean: nan
+2026-04-24 18:08:30,871 - INFO - Processed chunk 127, chunk mean: nan
+2026-04-24 18:08:30,879 - INFO - Processed chunk 128, chunk mean: nan
+2026-04-24 18:08:30,887 - INFO - Processed chunk 129, chunk mean: nan
+2026-04-24 18:08:30,893 - INFO - Processed chunk 130, chunk mean: nan
+2026-04-24 18:08:30,899 - INFO - Processed chunk 131, chunk mean: nan
+2026-04-24 18:08:30,908 - INFO - Processed chunk 132, chunk mean: nan
+2026-04-24 18:08:30,918 - INFO - Processed chunk 133, chunk mean: nan
+2026-04-24 18:08:30,925 - INFO - Processed chunk 134, chunk mean: nan
+2026-04-24 18:08:30,930 - INFO - Processed chunk 135, chunk mean: nan
+2026-04-24 18:08:30,937 - INFO - Processed chunk 136, chunk mean: nan
+2026-04-24 18:08:30,943 - INFO - Processed chunk 137, chunk mean: nan
+2026-04-24 18:08:30,948 - INFO - Processed chunk 138, chunk mean: nan
+2026-04-24 18:08:30,952 - INFO - Processed chunk 139, chunk mean: nan
+2026-04-24 18:08:30,959 - INFO - Processed chunk 140, chunk mean: nan
+2026-04-24 18:08:30,965 - INFO - Processed chunk 141, chunk mean: nan
+2026-04-24 18:08:30,970 - INFO - Processed chunk 142, chunk mean: nan
+2026-04-24 18:08:30,976 - INFO - Processed chunk 143, chunk mean: nan
+2026-04-24 18:08:30,981 - INFO - Processed chunk 144, chunk mean: nan
+2026-04-24 18:08:30,985 - INFO - Processed chunk 145, chunk mean: nan
+2026-04-24 18:08:30,989 - INFO - Processed chunk 146, chunk mean: nan
+2026-04-24 18:08:30,997 - INFO - Processed chunk 147, chunk mean: nan
+2026-04-24 18:08:31,002 - INFO - Processed chunk 148, chunk mean: nan
+2026-04-24 18:08:31,007 - INFO - Processed chunk 149, chunk mean: nan
+2026-04-24 18:08:31,015 - INFO - Processed chunk 150, chunk mean: nan
+2026-04-24 18:08:31,020 - INFO - Processed chunk 151, chunk mean: nan
+2026-04-24 18:08:31,024 - INFO - Processed chunk 152, chunk mean: nan
+2026-04-24 18:08:31,028 - INFO - Processed chunk 153, chunk mean: nan
+2026-04-24 18:08:31,032 - INFO - Processed chunk 154, chunk mean: nan
+2026-04-24 18:08:31,036 - INFO - Processed chunk 155, chunk mean: nan
+2026-04-24 18:08:31,041 - INFO - Processed chunk 156, chunk mean: nan
+2026-04-24 18:08:31,045 - INFO - Processed chunk 157, chunk mean: nan
+2026-04-24 18:08:31,050 - INFO - Processed chunk 158, chunk mean: nan
+2026-04-24 18:08:31,054 - INFO - Processed chunk 159, chunk mean: nan
+2026-04-24 18:08:31,058 - INFO - Processed chunk 160, chunk mean: nan
+2026-04-24 18:08:31,062 - INFO - Processed chunk 161, chunk mean: nan
+2026-04-24 18:08:31,066 - INFO - Processed chunk 162, chunk mean: nan
+2026-04-24 18:08:31,070 - INFO - Processed chunk 163, chunk mean: nan
+2026-04-24 18:08:31,074 - INFO - Processed chunk 164, chunk mean: nan
+2026-04-24 18:08:31,078 - INFO - Processed chunk 165, chunk mean: nan
+2026-04-24 18:08:31,082 - INFO - Processed chunk 166, chunk mean: nan
+2026-04-24 18:08:31,086 - INFO - Processed chunk 167, chunk mean: nan
+2026-04-24 18:08:31,090 - INFO - Processed chunk 168, chunk mean: nan
+2026-04-24 18:08:31,095 - INFO - Processed chunk 169, chunk mean: nan
+2026-04-24 18:08:31,099 - INFO - Processed chunk 170, chunk mean: nan
+2026-04-24 18:08:31,104 - INFO - Processed chunk 171, chunk mean: nan
+2026-04-24 18:08:31,108 - INFO - Processed chunk 172, chunk mean: nan
+2026-04-24 18:08:31,112 - INFO - Processed chunk 173, chunk mean: nan
+2026-04-24 18:08:31,117 - INFO - Processed chunk 174, chunk mean: nan
+2026-04-24 18:08:31,121 - INFO - Processed chunk 175, chunk mean: nan
+2026-04-24 18:08:31,125 - INFO - Processed chunk 176, chunk mean: nan
+2026-04-24 18:08:31,130 - INFO - Processed chunk 177, chunk mean: nan
+2026-04-24 18:08:31,134 - INFO - Processed chunk 178, chunk mean: nan
+2026-04-24 18:08:31,138 - INFO - Processed chunk 179, chunk mean: nan
+2026-04-24 18:08:31,143 - INFO - Processed chunk 180, chunk mean: nan
+2026-04-24 18:08:31,147 - INFO - Processed chunk 181, chunk mean: nan
+2026-04-24 18:08:31,151 - INFO - Processed chunk 182, chunk mean: nan
+2026-04-24 18:08:31,155 - INFO - Processed chunk 183, chunk mean: nan
+2026-04-24 18:08:31,160 - INFO - Processed chunk 184, chunk mean: nan
+2026-04-24 18:08:31,164 - INFO - Processed chunk 185, chunk mean: nan
+2026-04-24 18:08:31,168 - INFO - Processed chunk 186, chunk mean: nan
+2026-04-24 18:08:31,172 - INFO - Processed chunk 187, chunk mean: nan
+2026-04-24 18:08:31,176 - INFO - Processed chunk 188, chunk mean: nan
+2026-04-24 18:08:31,180 - INFO - Processed chunk 189, chunk mean: nan
+2026-04-24 18:08:31,184 - INFO - Processed chunk 190, chunk mean: nan
+2026-04-24 18:08:31,189 - INFO - Processed chunk 191, chunk mean: nan
+2026-04-24 18:08:31,194 - INFO - Processed chunk 192, chunk mean: nan
+2026-04-24 18:08:31,199 - INFO - Processed chunk 193, chunk mean: nan
+2026-04-24 18:08:31,203 - INFO - Processed chunk 194, chunk mean: nan
+2026-04-24 18:08:31,210 - INFO - Processed chunk 195, chunk mean: nan
+2026-04-24 18:08:31,214 - INFO - Processed chunk 196, chunk mean: nan
+2026-04-24 18:08:31,218 - INFO - Processed chunk 197, chunk mean: nan
+2026-04-24 18:08:31,223 - INFO - Processed chunk 198, chunk mean: nan
+2026-04-24 18:08:31,228 - INFO - Processed chunk 199, chunk mean: nan
+2026-04-24 18:08:31,233 - INFO - Processed chunk 200, chunk mean: nan
+2026-04-24 18:08:31,237 - INFO - Processed chunk 201, chunk mean: nan
+2026-04-24 18:08:31,242 - INFO - Processed chunk 202, chunk mean: nan
+2026-04-24 18:08:31,246 - INFO - Processed chunk 203, chunk mean: nan
+2026-04-24 18:08:31,250 - INFO - Processed chunk 204, chunk mean: nan
+2026-04-24 18:08:31,254 - INFO - Processed chunk 205, chunk mean: nan
+2026-04-24 18:08:31,260 - INFO - Processed chunk 206, chunk mean: nan
+2026-04-24 18:08:31,266 - INFO - Processed chunk 207, chunk mean: nan
+2026-04-24 18:08:31,276 - INFO - Processed chunk 208, chunk mean: nan
+2026-04-24 18:08:31,283 - INFO - Processed chunk 209, chunk mean: nan
+2026-04-24 18:08:31,290 - INFO - Processed chunk 210, chunk mean: nan
+2026-04-24 18:08:31,296 - INFO - Processed chunk 211, chunk mean: nan
+2026-04-24 18:08:31,301 - INFO - Processed chunk 212, chunk mean: nan
+2026-04-24 18:08:31,305 - INFO - Processed chunk 213, chunk mean: nan
+2026-04-24 18:08:31,309 - INFO - Processed chunk 214, chunk mean: nan
+2026-04-24 18:08:31,314 - INFO - Processed chunk 215, chunk mean: nan
+2026-04-24 18:08:31,319 - INFO - Processed chunk 216, chunk mean: nan
+2026-04-24 18:08:31,323 - INFO - Processed chunk 217, chunk mean: nan
+2026-04-24 18:08:31,328 - INFO - Processed chunk 218, chunk mean: nan
+2026-04-24 18:08:31,333 - INFO - Processed chunk 219, chunk mean: nan
+2026-04-24 18:08:31,337 - INFO - Processed chunk 220, chunk mean: nan
+2026-04-24 18:08:31,342 - INFO - Processed chunk 221, chunk mean: nan
+2026-04-24 18:08:31,347 - INFO - Processed chunk 222, chunk mean: nan
+2026-04-24 18:08:31,352 - INFO - Processed chunk 223, chunk mean: nan
+2026-04-24 18:08:31,356 - INFO - Processed chunk 224, chunk mean: nan
+2026-04-24 18:08:31,363 - INFO - Processed chunk 225, chunk mean: nan
+2026-04-24 18:08:31,367 - INFO - Processed chunk 226, chunk mean: nan
+2026-04-24 18:08:31,371 - INFO - Processed chunk 227, chunk mean: nan
+2026-04-24 18:08:31,375 - INFO - Processed chunk 228, chunk mean: nan
+2026-04-24 18:08:31,380 - INFO - Processed chunk 229, chunk mean: nan
+2026-04-24 18:08:31,384 - INFO - Processed chunk 230, chunk mean: nan
+2026-04-24 18:08:31,388 - INFO - Processed chunk 231, chunk mean: nan
+2026-04-24 18:08:31,391 - INFO - Processed chunk 232, chunk mean: nan
+2026-04-24 18:08:31,395 - INFO - Processed chunk 233, chunk mean: nan
+2026-04-24 18:08:31,399 - INFO - Processed chunk 234, chunk mean: nan
+2026-04-24 18:08:31,403 - INFO - Processed chunk 235, chunk mean: nan
+2026-04-24 18:08:31,407 - INFO - Processed chunk 236, chunk mean: nan
+2026-04-24 18:08:31,412 - INFO - Processed chunk 237, chunk mean: nan
+2026-04-24 18:08:31,416 - INFO - Processed chunk 238, chunk mean: nan
+2026-04-24 18:08:31,421 - INFO - Processed chunk 239, chunk mean: nan
+2026-04-24 18:08:31,427 - INFO - Processed chunk 240, chunk mean: nan
+2026-04-24 18:08:31,431 - INFO - Processed chunk 241, chunk mean: nan
+2026-04-24 18:08:31,435 - INFO - Processed chunk 242, chunk mean: nan
+2026-04-24 18:08:31,439 - INFO - Processed chunk 243, chunk mean: nan
+2026-04-24 18:08:31,445 - INFO - Processed chunk 244, chunk mean: nan
+2026-04-24 18:08:31,449 - INFO - Processed chunk 245, chunk mean: nan
+2026-04-24 18:08:31,453 - INFO - Processed chunk 246, chunk mean: nan
+2026-04-24 18:08:31,458 - INFO - Processed chunk 247, chunk mean: nan
+2026-04-24 18:08:31,465 - INFO - Processed chunk 248, chunk mean: nan
+2026-04-24 18:08:31,469 - INFO - Processed chunk 249, chunk mean: nan
+2026-04-24 18:08:31,474 - INFO - Processed chunk 250, chunk mean: nan
+2026-04-24 18:08:31,479 - INFO - Processed chunk 251, chunk mean: nan
+2026-04-24 18:08:31,483 - INFO - Processed chunk 252, chunk mean: nan
+2026-04-24 18:08:31,487 - INFO - Processed chunk 253, chunk mean: nan
+2026-04-24 18:08:31,491 - INFO - Processed chunk 254, chunk mean: nan
+2026-04-24 18:08:31,495 - INFO - Processed chunk 255, chunk mean: nan
+2026-04-24 18:08:31,499 - INFO - Processed chunk 256, chunk mean: nan
+2026-04-24 18:08:31,503 - INFO - Processed chunk 257, chunk mean: nan
+2026-04-24 18:08:31,507 - INFO - Processed chunk 258, chunk mean: nan
+2026-04-24 18:08:31,511 - INFO - Processed chunk 259, chunk mean: nan
+2026-04-24 18:08:31,516 - INFO - Processed chunk 260, chunk mean: nan
+2026-04-24 18:08:31,523 - INFO - Processed chunk 261, chunk mean: nan
+2026-04-24 18:08:31,527 - INFO - Processed chunk 262, chunk mean: nan
+2026-04-24 18:08:31,530 - INFO - Processed chunk 263, chunk mean: nan
+2026-04-24 18:08:31,537 - INFO - Processed chunk 264, chunk mean: nan
+2026-04-24 18:08:31,545 - INFO - Processed chunk 265, chunk mean: nan
+2026-04-24 18:08:31,553 - INFO - Processed chunk 266, chunk mean: nan
+2026-04-24 18:08:31,560 - INFO - Processed chunk 267, chunk mean: nan
+2026-04-24 18:08:31,564 - INFO - Processed chunk 268, chunk mean: nan
+2026-04-24 18:08:31,569 - INFO - Processed chunk 269, chunk mean: nan
+2026-04-24 18:08:31,573 - INFO - Processed chunk 270, chunk mean: nan
+2026-04-24 18:08:31,579 - INFO - Processed chunk 271, chunk mean: nan
+2026-04-24 18:08:31,583 - INFO - Processed chunk 272, chunk mean: nan
+2026-04-24 18:08:31,588 - INFO - Processed chunk 273, chunk mean: nan
+2026-04-24 18:08:31,595 - INFO - Processed chunk 274, chunk mean: nan
+2026-04-24 18:08:31,602 - INFO - Processed chunk 275, chunk mean: nan
+2026-04-24 18:08:31,609 - INFO - Processed chunk 276, chunk mean: nan
+2026-04-24 18:08:31,617 - INFO - Processed chunk 277, chunk mean: nan
+2026-04-24 18:08:31,624 - INFO - Processed chunk 278, chunk mean: nan
+2026-04-24 18:08:31,629 - INFO - Processed chunk 279, chunk mean: nan
+2026-04-24 18:08:31,634 - INFO - Processed chunk 280, chunk mean: nan
+2026-04-24 18:08:31,639 - INFO - Processed chunk 281, chunk mean: nan
+2026-04-24 18:08:31,643 - INFO - Processed chunk 282, chunk mean: nan
+2026-04-24 18:08:31,648 - INFO - Processed chunk 283, chunk mean: nan
+2026-04-24 18:08:31,653 - INFO - Processed chunk 284, chunk mean: nan
+2026-04-24 18:08:31,694 - INFO - Processed chunk 285, chunk mean: nan
+2026-04-24 18:08:31,725 - INFO - Processed chunk 286, chunk mean: nan
+2026-04-24 18:08:31,735 - INFO - Processed chunk 287, chunk mean: nan
+2026-04-24 18:08:31,740 - INFO - Processed chunk 288, chunk mean: nan
+2026-04-24 18:08:31,744 - INFO - Processed chunk 289, chunk mean: nan
+2026-04-24 18:08:31,748 - INFO - Processed chunk 290, chunk mean: nan
+2026-04-24 18:08:31,752 - INFO - Processed chunk 291, chunk mean: nan
+2026-04-24 18:08:31,757 - INFO - Processed chunk 292, chunk mean: nan
+2026-04-24 18:08:31,762 - INFO - Processed chunk 293, chunk mean: nan
+2026-04-24 18:08:31,766 - INFO - Processed chunk 294, chunk mean: nan
+2026-04-24 18:08:31,771 - INFO - Processed chunk 295, chunk mean: nan
+2026-04-24 18:08:31,775 - INFO - Processed chunk 296, chunk mean: nan
+2026-04-24 18:08:31,779 - INFO - Processed chunk 297, chunk mean: nan
+2026-04-24 18:08:31,786 - INFO - Processed chunk 298, chunk mean: nan
+2026-04-24 18:08:31,791 - INFO - Processed chunk 299, chunk mean: nan
+2026-04-24 18:08:31,795 - INFO - Processed chunk 300, chunk mean: nan
+2026-04-24 18:08:31,800 - INFO - Processed chunk 301, chunk mean: nan
+2026-04-24 18:08:31,809 - INFO - Processed chunk 302, chunk mean: nan
+2026-04-24 18:08:31,814 - INFO - Processed chunk 303, chunk mean: nan
+2026-04-24 18:08:31,819 - INFO - Processed chunk 304, chunk mean: nan
+2026-04-24 18:08:31,823 - INFO - Processed chunk 305, chunk mean: nan
+2026-04-24 18:08:31,827 - INFO - Processed chunk 306, chunk mean: nan
+2026-04-24 18:08:31,831 - INFO - Processed chunk 307, chunk mean: nan
+2026-04-24 18:08:31,838 - INFO - Processed chunk 308, chunk mean: nan
+2026-04-24 18:08:31,842 - INFO - Processed chunk 309, chunk mean: nan
+2026-04-24 18:08:31,846 - INFO - Processed chunk 310, chunk mean: nan
+2026-04-24 18:08:31,852 - INFO - Processed chunk 311, chunk mean: nan
+2026-04-24 18:08:31,857 - INFO - Processed chunk 312, chunk mean: nan
+2026-04-24 18:08:31,862 - INFO - Processed chunk 313, chunk mean: nan
+2026-04-24 18:08:31,867 - INFO - Processed chunk 314, chunk mean: nan
+2026-04-24 18:08:31,870 - INFO - Processed chunk 315, chunk mean: nan
+2026-04-24 18:08:31,874 - INFO - Processed chunk 316, chunk mean: nan
+2026-04-24 18:08:31,879 - INFO - Processed chunk 317, chunk mean: nan
+2026-04-24 18:08:31,882 - INFO - Processed chunk 318, chunk mean: nan
+2026-04-24 18:08:31,887 - INFO - Processed chunk 319, chunk mean: nan
+2026-04-24 18:08:31,890 - INFO - Processed chunk 320, chunk mean: nan
+2026-04-24 18:08:31,894 - INFO - Processed chunk 321, chunk mean: nan
+2026-04-24 18:08:31,899 - INFO - Processed chunk 322, chunk mean: nan
+2026-04-24 18:08:31,904 - INFO - Processed chunk 323, chunk mean: nan
+2026-04-24 18:08:31,908 - INFO - Processed chunk 324, chunk mean: nan
+2026-04-24 18:08:31,912 - INFO - Processed chunk 325, chunk mean: nan
+2026-04-24 18:08:31,916 - INFO - Processed chunk 326, chunk mean: nan
+2026-04-24 18:08:31,923 - INFO - Processed chunk 327, chunk mean: nan
+2026-04-24 18:08:31,928 - INFO - Processed chunk 328, chunk mean: nan
+2026-04-24 18:08:31,933 - INFO - Processed chunk 329, chunk mean: nan
+2026-04-24 18:08:31,937 - INFO - Processed chunk 330, chunk mean: nan
+2026-04-24 18:08:31,943 - INFO - Processed chunk 331, chunk mean: nan
+2026-04-24 18:08:31,949 - INFO - Processed chunk 332, chunk mean: nan
+2026-04-24 18:08:31,955 - INFO - Processed chunk 333, chunk mean: nan
+2026-04-24 18:08:31,960 - INFO - Processed chunk 334, chunk mean: nan
+2026-04-24 18:08:31,968 - INFO - Processed chunk 335, chunk mean: nan
+2026-04-24 18:08:31,976 - INFO - Processed chunk 336, chunk mean: nan
+2026-04-24 18:08:31,982 - INFO - Processed chunk 337, chunk mean: nan
+2026-04-24 18:08:31,988 - INFO - Processed chunk 338, chunk mean: nan
+2026-04-24 18:08:31,994 - INFO - Processed chunk 339, chunk mean: nan
+2026-04-24 18:08:31,999 - INFO - Processed chunk 340, chunk mean: nan
+2026-04-24 18:08:32,003 - INFO - Processed chunk 341, chunk mean: nan
+2026-04-24 18:08:32,006 - INFO - Processed chunk 342, chunk mean: nan
+2026-04-24 18:08:32,010 - INFO - Processed chunk 343, chunk mean: nan
+2026-04-24 18:08:32,014 - INFO - Processed chunk 344, chunk mean: nan
+2026-04-24 18:08:32,018 - INFO - Processed chunk 345, chunk mean: nan
+2026-04-24 18:08:32,022 - INFO - Processed chunk 346, chunk mean: nan
+2026-04-24 18:08:32,026 - INFO - Processed chunk 347, chunk mean: nan
+2026-04-24 18:08:32,029 - INFO - Processed chunk 348, chunk mean: nan
+2026-04-24 18:08:32,033 - INFO - Processed chunk 349, chunk mean: nan
+2026-04-24 18:08:32,037 - INFO - Processed chunk 350, chunk mean: nan
+2026-04-24 18:08:32,042 - INFO - Processed chunk 351, chunk mean: nan
+2026-04-24 18:08:32,045 - INFO - Processed chunk 352, chunk mean: nan
+2026-04-24 18:08:32,050 - INFO - Processed chunk 353, chunk mean: nan
+2026-04-24 18:08:32,053 - INFO - Processed chunk 354, chunk mean: nan
+2026-04-24 18:08:32,057 - INFO - Processed chunk 355, chunk mean: nan
+2026-04-24 18:08:32,061 - INFO - Processed chunk 356, chunk mean: nan
+2026-04-24 18:08:32,065 - INFO - Processed chunk 357, chunk mean: nan
+2026-04-24 18:08:32,068 - INFO - Processed chunk 358, chunk mean: nan
+2026-04-24 18:08:32,072 - INFO - Processed chunk 359, chunk mean: nan
+2026-04-24 18:08:32,076 - INFO - Processed chunk 360, chunk mean: nan
+2026-04-24 18:08:32,079 - INFO - Processed chunk 361, chunk mean: nan
+2026-04-24 18:08:32,083 - INFO - Processed chunk 362, chunk mean: nan
+2026-04-24 18:08:32,087 - INFO - Processed chunk 363, chunk mean: nan
+2026-04-24 18:08:32,091 - INFO - Processed chunk 364, chunk mean: nan
+2026-04-24 18:08:32,095 - INFO - Processed chunk 365, chunk mean: nan
+2026-04-24 18:08:32,100 - INFO - Processed chunk 366, chunk mean: nan
+2026-04-24 18:08:32,104 - INFO - Processed chunk 367, chunk mean: nan
+2026-04-24 18:08:32,108 - INFO - Processed chunk 368, chunk mean: nan
+2026-04-24 18:08:32,111 - INFO - Processed chunk 369, chunk mean: nan
+2026-04-24 18:08:32,115 - INFO - Processed chunk 370, chunk mean: nan
+2026-04-24 18:08:32,119 - INFO - Processed chunk 371, chunk mean: nan
+2026-04-24 18:08:32,122 - INFO - Processed chunk 372, chunk mean: nan
+2026-04-24 18:08:32,126 - INFO - Processed chunk 373, chunk mean: nan
+2026-04-24 18:08:32,130 - INFO - Processed chunk 374, chunk mean: nan
+2026-04-24 18:08:32,134 - INFO - Processed chunk 375, chunk mean: nan
+2026-04-24 18:08:32,137 - INFO - Processed chunk 376, chunk mean: nan
+2026-04-24 18:08:32,141 - INFO - Processed chunk 377, chunk mean: nan
+2026-04-24 18:08:32,145 - INFO - Processed chunk 378, chunk mean: nan
+2026-04-24 18:08:32,149 - INFO - Processed chunk 379, chunk mean: nan
+2026-04-24 18:08:32,153 - INFO - Processed chunk 380, chunk mean: nan
+2026-04-24 18:08:32,156 - INFO - Processed chunk 381, chunk mean: nan
+2026-04-24 18:08:32,161 - INFO - Processed chunk 382, chunk mean: nan
+2026-04-24 18:08:32,165 - INFO - Processed chunk 383, chunk mean: nan
+2026-04-24 18:08:32,169 - INFO - Processed chunk 384, chunk mean: nan
+2026-04-24 18:08:32,172 - INFO - Processed chunk 385, chunk mean: nan
+2026-04-24 18:08:32,177 - INFO - Processed chunk 386, chunk mean: nan
+2026-04-24 18:08:32,181 - INFO - Processed chunk 387, chunk mean: nan
+2026-04-24 18:08:32,184 - INFO - Processed chunk 388, chunk mean: nan
+2026-04-24 18:08:32,188 - INFO - Processed chunk 389, chunk mean: nan
+2026-04-24 18:08:32,192 - INFO - Processed chunk 390, chunk mean: nan
+2026-04-24 18:08:32,196 - INFO - Processed chunk 391, chunk mean: nan
+2026-04-24 18:08:32,200 - INFO - Processed chunk 392, chunk mean: nan
+2026-04-24 18:08:32,204 - INFO - Processed chunk 393, chunk mean: nan
+2026-04-24 18:08:32,208 - INFO - Processed chunk 394, chunk mean: nan
+2026-04-24 18:08:32,211 - INFO - Processed chunk 395, chunk mean: nan
+2026-04-24 18:08:32,215 - INFO - Processed chunk 396, chunk mean: nan
+2026-04-24 18:08:32,219 - INFO - Processed chunk 397, chunk mean: nan
+2026-04-24 18:08:32,222 - INFO - Processed chunk 398, chunk mean: nan
+2026-04-24 18:08:32,226 - INFO - Processed chunk 399, chunk mean: nan
+2026-04-24 18:08:32,230 - INFO - Processed chunk 400, chunk mean: nan
+2026-04-24 18:08:32,233 - INFO - Processed chunk 401, chunk mean: nan
+2026-04-24 18:08:32,237 - INFO - Processed chunk 402, chunk mean: nan
+2026-04-24 18:08:32,241 - INFO - Processed chunk 403, chunk mean: nan
+2026-04-24 18:08:32,244 - INFO - Processed chunk 404, chunk mean: nan
+2026-04-24 18:08:32,248 - INFO - Processed chunk 405, chunk mean: nan
+2026-04-24 18:08:32,252 - INFO - Processed chunk 406, chunk mean: nan
+2026-04-24 18:08:32,255 - INFO - Processed chunk 407, chunk mean: nan
+2026-04-24 18:08:32,259 - INFO - Processed chunk 408, chunk mean: nan
+2026-04-24 18:08:32,262 - INFO - Processed chunk 409, chunk mean: nan
+2026-04-24 18:08:32,266 - INFO - Processed chunk 410, chunk mean: nan
+2026-04-24 18:08:32,269 - INFO - Processed chunk 411, chunk mean: nan
+2026-04-24 18:08:32,273 - INFO - Processed chunk 412, chunk mean: nan
+2026-04-24 18:08:32,273 - INFO - Global mean price across chunks: 0
+2026-04-24 18:08:32,274 - INFO - Processing chunks per-category (Language equivalent) from: data/processed/analytics\test_analytics.csv
+2026-04-24 18:08:34,653 - INFO - Combined accumulators - Category Means: {}
+2026-04-24 18:08:34,653 - INFO - --- Exploratory Data Analysis ---
+2026-04-24 18:08:34,653 - INFO - Dataset Shape: (4111, 11)
+2026-04-24 18:08:34,667 - INFO - Dataset Info:
+None
+2026-04-24 18:08:34,698 - INFO - Descriptive Statistics:
+       property_id  name  address  price  sq_ft         area
+count          0.0   0.0      0.0    0.0    0.0  4111.000000
+mean           NaN   NaN      NaN    NaN    NaN  2765.304306
+std            NaN   NaN      NaN    NaN    NaN  1291.553754
+min            NaN   NaN      NaN    NaN    NaN   500.000000
+25%            NaN   NaN      NaN    NaN    NaN  1655.000000
+50%            NaN   NaN      NaN    NaN    NaN  2767.000000
+75%            NaN   NaN      NaN    NaN    NaN  3881.000000
+max            NaN   NaN      NaN    NaN    NaN  4999.000000
+2026-04-24 18:08:34,699 - INFO - Value Counts for 'type':
+type
+Retail          1052
+Office          1041
+Industrial      1025
+Multi-Family     993
+Name: count, dtype: int64
+2026-04-24 18:08:34,700 - INFO - Unique values in 'type': 4
+2026-04-24 18:08:37,147 - INFO - Saved chart: data/processed/analytics/charts/property_types_dist.png
+2026-04-24 18:09:22,803 - INFO - --- NumPy Foundations ---
+2026-04-24 18:09:22,803 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-24 18:09:22,804 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-24 18:09:22,805 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-24 18:09:22,805 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-24 18:09:22,890 - INFO - Memory usage before optimization: 1.49 MB
+2026-04-24 18:09:22,897 - INFO - Skipping category optimization for column coordinates due to unhashable type.
+2026-04-24 18:09:22,901 - INFO - Memory usage after optimization: 0.78 MB
+2026-04-24 18:09:22,941 - INFO - Data exported to data/processed/analytics\test_analytics.csv
+2026-04-24 18:09:22,941 - INFO - Loading CSV in chunks: data/processed/analytics\test_analytics.csv
+2026-04-24 18:09:23,107 - INFO - Processed chunk 1, chunk mean: 1117731.2
+2026-04-24 18:09:23,112 - INFO - Processed chunk 2, chunk mean: 1191693.3
+2026-04-24 18:09:23,116 - INFO - Processed chunk 3, chunk mean: 1318526.2
+2026-04-24 18:09:23,121 - INFO - Processed chunk 4, chunk mean: 1140615.7
+2026-04-24 18:09:23,125 - INFO - Processed chunk 5, chunk mean: 749392.6
+2026-04-24 18:09:23,131 - INFO - Processed chunk 6, chunk mean: 1056927.9
+2026-04-24 18:09:23,137 - INFO - Processed chunk 7, chunk mean: 881334.4
+2026-04-24 18:09:23,141 - INFO - Processed chunk 8, chunk mean: 897552.7
+2026-04-24 18:09:23,148 - INFO - Processed chunk 9, chunk mean: 944613.6
+2026-04-24 18:09:23,159 - INFO - Processed chunk 10, chunk mean: 1222199.3
+2026-04-24 18:09:23,171 - INFO - Processed chunk 11, chunk mean: 1005574.1
+2026-04-24 18:09:23,177 - INFO - Processed chunk 12, chunk mean: 854382.8
+2026-04-24 18:09:23,181 - INFO - Processed chunk 13, chunk mean: 1203041.5
+2026-04-24 18:09:23,187 - INFO - Processed chunk 14, chunk mean: 1000023.5
+2026-04-24 18:09:23,191 - INFO - Processed chunk 15, chunk mean: 863594.8
+2026-04-24 18:09:23,196 - INFO - Processed chunk 16, chunk mean: 931417.8
+2026-04-24 18:09:23,202 - INFO - Processed chunk 17, chunk mean: 954732.5
+2026-04-24 18:09:23,207 - INFO - Processed chunk 18, chunk mean: 1046256.0
+2026-04-24 18:09:23,214 - INFO - Processed chunk 19, chunk mean: 1248082.2
+2026-04-24 18:09:23,219 - INFO - Processed chunk 20, chunk mean: 948712.3
+2026-04-24 18:09:23,224 - INFO - Processed chunk 21, chunk mean: 954568.9
+2026-04-24 18:09:23,229 - INFO - Processed chunk 22, chunk mean: 973384.3
+2026-04-24 18:09:23,235 - INFO - Processed chunk 23, chunk mean: 1074552.6
+2026-04-24 18:09:23,240 - INFO - Processed chunk 24, chunk mean: 1026214.3
+2026-04-24 18:09:23,245 - INFO - Processed chunk 25, chunk mean: 923950.9
+2026-04-24 18:09:23,249 - INFO - Processed chunk 26, chunk mean: 1205792.8
+2026-04-24 18:09:23,254 - INFO - Processed chunk 27, chunk mean: 975365.0
+2026-04-24 18:09:23,259 - INFO - Processed chunk 28, chunk mean: 890467.0
+2026-04-24 18:09:23,264 - INFO - Processed chunk 29, chunk mean: 1157595.2
+2026-04-24 18:09:23,270 - INFO - Processed chunk 30, chunk mean: 920279.4
+2026-04-24 18:09:23,275 - INFO - Processed chunk 31, chunk mean: 807673.3
+2026-04-24 18:09:23,280 - INFO - Processed chunk 32, chunk mean: 1056567.1
+2026-04-24 18:09:23,285 - INFO - Processed chunk 33, chunk mean: 1266527.9
+2026-04-24 18:09:23,292 - INFO - Processed chunk 34, chunk mean: 1266878.6
+2026-04-24 18:09:23,297 - INFO - Processed chunk 35, chunk mean: 1373764.4
+2026-04-24 18:09:23,304 - INFO - Processed chunk 36, chunk mean: 1184646.5
+2026-04-24 18:09:23,309 - INFO - Processed chunk 37, chunk mean: 962115.6
+2026-04-24 18:09:23,315 - INFO - Processed chunk 38, chunk mean: 978427.2
+2026-04-24 18:09:23,320 - INFO - Processed chunk 39, chunk mean: 944103.9
+2026-04-24 18:09:23,325 - INFO - Processed chunk 40, chunk mean: 1033305.6
+2026-04-24 18:09:23,330 - INFO - Processed chunk 41, chunk mean: 1040354.9
+2026-04-24 18:09:23,335 - INFO - Processed chunk 42, chunk mean: 933255.9
+2026-04-24 18:09:23,340 - INFO - Processed chunk 43, chunk mean: 1411400.3
+2026-04-24 18:09:23,345 - INFO - Processed chunk 44, chunk mean: 1165977.3
+2026-04-24 18:09:23,353 - INFO - Processed chunk 45, chunk mean: 1120816.3
+2026-04-24 18:09:23,358 - INFO - Processed chunk 46, chunk mean: 1170220.7
+2026-04-24 18:09:23,364 - INFO - Processed chunk 47, chunk mean: 927229.4
+2026-04-24 18:09:23,372 - INFO - Processed chunk 48, chunk mean: 1257875.8
+2026-04-24 18:09:23,377 - INFO - Processed chunk 49, chunk mean: 874400.3
+2026-04-24 18:09:23,383 - INFO - Processed chunk 50, chunk mean: 1062614.8
+2026-04-24 18:09:23,388 - INFO - Processed chunk 51, chunk mean: 1054539.2
+2026-04-24 18:09:23,393 - INFO - Processed chunk 52, chunk mean: 1069047.1
+2026-04-24 18:09:23,398 - INFO - Processed chunk 53, chunk mean: 734459.3
+2026-04-24 18:09:23,403 - INFO - Processed chunk 54, chunk mean: 1134630.6
+2026-04-24 18:09:23,411 - INFO - Processed chunk 55, chunk mean: 1127951.3
+2026-04-24 18:09:23,421 - INFO - Processed chunk 56, chunk mean: 1165238.6
+2026-04-24 18:09:23,435 - INFO - Processed chunk 57, chunk mean: 914499.7
+2026-04-24 18:09:23,440 - INFO - Processed chunk 58, chunk mean: 879453.9
+2026-04-24 18:09:23,445 - INFO - Processed chunk 59, chunk mean: 1357956.3
+2026-04-24 18:09:23,450 - INFO - Processed chunk 60, chunk mean: 1354658.7
+2026-04-24 18:09:23,454 - INFO - Processed chunk 61, chunk mean: 872364.3
+2026-04-24 18:09:23,459 - INFO - Processed chunk 62, chunk mean: 730106.5
+2026-04-24 18:09:23,466 - INFO - Processed chunk 63, chunk mean: 1076633.5
+2026-04-24 18:09:23,473 - INFO - Processed chunk 64, chunk mean: 1303459.4
+2026-04-24 18:09:23,478 - INFO - Processed chunk 65, chunk mean: 1456689.8
+2026-04-24 18:09:23,483 - INFO - Processed chunk 66, chunk mean: 1019000.1
+2026-04-24 18:09:23,488 - INFO - Processed chunk 67, chunk mean: 1190499.7
+2026-04-24 18:09:23,492 - INFO - Processed chunk 68, chunk mean: 1179055.5
+2026-04-24 18:09:23,497 - INFO - Processed chunk 69, chunk mean: 890092.5
+2026-04-24 18:09:23,501 - INFO - Processed chunk 70, chunk mean: 842864.5
+2026-04-24 18:09:23,506 - INFO - Processed chunk 71, chunk mean: 1582881.8
+2026-04-24 18:09:23,511 - INFO - Processed chunk 72, chunk mean: 882157.2
+2026-04-24 18:09:23,516 - INFO - Processed chunk 73, chunk mean: 795279.6
+2026-04-24 18:09:23,520 - INFO - Processed chunk 74, chunk mean: 1339936.1
+2026-04-24 18:09:23,527 - INFO - Processed chunk 75, chunk mean: 1091615.7
+2026-04-24 18:09:23,532 - INFO - Processed chunk 76, chunk mean: 1245047.0
+2026-04-24 18:09:23,537 - INFO - Processed chunk 77, chunk mean: 978687.6
+2026-04-24 18:09:23,545 - INFO - Processed chunk 78, chunk mean: 1168846.0
+2026-04-24 18:09:23,550 - INFO - Processed chunk 79, chunk mean: 1290944.4
+2026-04-24 18:09:23,556 - INFO - Processed chunk 80, chunk mean: 848699.8
+2026-04-24 18:09:23,561 - INFO - Processed chunk 81, chunk mean: 1271761.7
+2026-04-24 18:09:23,568 - INFO - Processed chunk 82, chunk mean: 1262086.7
+2026-04-24 18:09:23,573 - INFO - Processed chunk 83, chunk mean: 909566.5
+2026-04-24 18:09:23,579 - INFO - Processed chunk 84, chunk mean: 1132371.3
+2026-04-24 18:09:23,585 - INFO - Processed chunk 85, chunk mean: 953958.2
+2026-04-24 18:09:23,591 - INFO - Processed chunk 86, chunk mean: 1033370.5
+2026-04-24 18:09:23,596 - INFO - Processed chunk 87, chunk mean: 893542.7
+2026-04-24 18:09:23,602 - INFO - Processed chunk 88, chunk mean: 888060.3
+2026-04-24 18:09:23,608 - INFO - Processed chunk 89, chunk mean: 1054639.1
+2026-04-24 18:09:23,614 - INFO - Processed chunk 90, chunk mean: 841647.1
+2026-04-24 18:09:23,621 - INFO - Processed chunk 91, chunk mean: 602441.3
+2026-04-24 18:09:23,626 - INFO - Processed chunk 92, chunk mean: 891896.8
+2026-04-24 18:09:23,631 - INFO - Processed chunk 93, chunk mean: 1292468.1
+2026-04-24 18:09:23,638 - INFO - Processed chunk 94, chunk mean: 1180669.3
+2026-04-24 18:09:23,642 - INFO - Processed chunk 95, chunk mean: 1106947.2
+2026-04-24 18:09:23,647 - INFO - Processed chunk 96, chunk mean: 1268461.3
+2026-04-24 18:09:23,651 - INFO - Processed chunk 97, chunk mean: 739374.8
+2026-04-24 18:09:23,656 - INFO - Processed chunk 98, chunk mean: 936445.7
+2026-04-24 18:09:23,660 - INFO - Processed chunk 99, chunk mean: 1143524.1
+2026-04-24 18:09:23,664 - INFO - Processed chunk 100, chunk mean: 1027922.5
+2026-04-24 18:09:23,669 - INFO - Processed chunk 101, chunk mean: 1104695.5
+2026-04-24 18:09:23,673 - INFO - Processed chunk 102, chunk mean: 1109531.9
+2026-04-24 18:09:23,678 - INFO - Processed chunk 103, chunk mean: 1044757.8
+2026-04-24 18:09:23,686 - INFO - Processed chunk 104, chunk mean: 1084666.7
+2026-04-24 18:09:23,693 - INFO - Processed chunk 105, chunk mean: 1111417.7
+2026-04-24 18:09:23,698 - INFO - Processed chunk 106, chunk mean: 1023722.1
+2026-04-24 18:09:23,703 - INFO - Processed chunk 107, chunk mean: 1343606.4
+2026-04-24 18:09:23,708 - INFO - Processed chunk 108, chunk mean: 905610.3
+2026-04-24 18:09:23,712 - INFO - Processed chunk 109, chunk mean: 1241102.2
+2026-04-24 18:09:23,717 - INFO - Processed chunk 110, chunk mean: 1326499.5
+2026-04-24 18:09:23,722 - INFO - Processed chunk 111, chunk mean: 994723.4
+2026-04-24 18:09:23,726 - INFO - Processed chunk 112, chunk mean: 938651.4
+2026-04-24 18:09:23,730 - INFO - Processed chunk 113, chunk mean: 993404.4
+2026-04-24 18:09:23,735 - INFO - Processed chunk 114, chunk mean: 860857.8
+2026-04-24 18:09:23,740 - INFO - Processed chunk 115, chunk mean: 774051.6
+2026-04-24 18:09:23,745 - INFO - Processed chunk 116, chunk mean: 890927.7
+2026-04-24 18:09:23,751 - INFO - Processed chunk 117, chunk mean: 1095517.9
+2026-04-24 18:09:23,756 - INFO - Processed chunk 118, chunk mean: 1210985.0
+2026-04-24 18:09:23,762 - INFO - Processed chunk 119, chunk mean: 1146755.9
+2026-04-24 18:09:23,768 - INFO - Processed chunk 120, chunk mean: 1181366.6
+2026-04-24 18:09:23,774 - INFO - Processed chunk 121, chunk mean: 897193.1
+2026-04-24 18:09:23,779 - INFO - Processed chunk 122, chunk mean: 977962.5
+2026-04-24 18:09:23,783 - INFO - Processed chunk 123, chunk mean: 924415.4
+2026-04-24 18:09:23,788 - INFO - Processed chunk 124, chunk mean: 941998.9
+2026-04-24 18:09:23,792 - INFO - Processed chunk 125, chunk mean: 938949.2
+2026-04-24 18:09:23,797 - INFO - Processed chunk 126, chunk mean: 882608.3
+2026-04-24 18:09:23,802 - INFO - Processed chunk 127, chunk mean: 1078269.9
+2026-04-24 18:09:23,807 - INFO - Processed chunk 128, chunk mean: 923719.2
+2026-04-24 18:09:23,811 - INFO - Processed chunk 129, chunk mean: 897636.8
+2026-04-24 18:09:23,817 - INFO - Processed chunk 130, chunk mean: 993946.4
+2026-04-24 18:09:23,821 - INFO - Processed chunk 131, chunk mean: 942855.1
+2026-04-24 18:09:23,826 - INFO - Processed chunk 132, chunk mean: 1137359.6
+2026-04-24 18:09:23,830 - INFO - Processed chunk 133, chunk mean: 1025471.1
+2026-04-24 18:09:23,835 - INFO - Processed chunk 134, chunk mean: 1216488.0
+2026-04-24 18:09:23,839 - INFO - Processed chunk 135, chunk mean: 974239.5
+2026-04-24 18:09:23,843 - INFO - Processed chunk 136, chunk mean: 1122416.3
+2026-04-24 18:09:23,847 - INFO - Processed chunk 137, chunk mean: 1115563.4
+2026-04-24 18:09:23,851 - INFO - Processed chunk 138, chunk mean: 1300624.1
+2026-04-24 18:09:23,854 - INFO - Processed chunk 139, chunk mean: 745603.5
+2026-04-24 18:09:23,858 - INFO - Processed chunk 140, chunk mean: 1065779.5
+2026-04-24 18:09:23,862 - INFO - Processed chunk 141, chunk mean: 1159123.7
+2026-04-24 18:09:23,866 - INFO - Processed chunk 142, chunk mean: 913155.2
+2026-04-24 18:09:23,870 - INFO - Processed chunk 143, chunk mean: 826287.2
+2026-04-24 18:09:23,874 - INFO - Processed chunk 144, chunk mean: 1100799.6
+2026-04-24 18:09:23,877 - INFO - Processed chunk 145, chunk mean: 1131383.9
+2026-04-24 18:09:23,881 - INFO - Processed chunk 146, chunk mean: 1066749.1
+2026-04-24 18:09:23,885 - INFO - Processed chunk 147, chunk mean: 997340.5
+2026-04-24 18:09:23,889 - INFO - Processed chunk 148, chunk mean: 1027620.5
+2026-04-24 18:09:23,892 - INFO - Processed chunk 149, chunk mean: 1150367.7
+2026-04-24 18:09:23,896 - INFO - Processed chunk 150, chunk mean: 945641.5
+2026-04-24 18:09:23,900 - INFO - Processed chunk 151, chunk mean: 1161390.8
+2026-04-24 18:09:23,904 - INFO - Processed chunk 152, chunk mean: 882173.7
+2026-04-24 18:09:23,908 - INFO - Processed chunk 153, chunk mean: 1203675.2
+2026-04-24 18:09:23,912 - INFO - Processed chunk 154, chunk mean: 1256565.1
+2026-04-24 18:09:23,916 - INFO - Processed chunk 155, chunk mean: 1028605.4
+2026-04-24 18:09:23,920 - INFO - Processed chunk 156, chunk mean: 1120286.7
+2026-04-24 18:09:23,923 - INFO - Processed chunk 157, chunk mean: 1068793.1
+2026-04-24 18:09:23,929 - INFO - Processed chunk 158, chunk mean: 763604.5
+2026-04-24 18:09:23,935 - INFO - Processed chunk 159, chunk mean: 1529993.1
+2026-04-24 18:09:23,939 - INFO - Processed chunk 160, chunk mean: 1080352.1
+2026-04-24 18:09:23,944 - INFO - Processed chunk 161, chunk mean: 982407.7
+2026-04-24 18:09:23,948 - INFO - Processed chunk 162, chunk mean: 919184.7
+2026-04-24 18:09:23,953 - INFO - Processed chunk 163, chunk mean: 1221944.2
+2026-04-24 18:09:23,956 - INFO - Processed chunk 164, chunk mean: 762116.1
+2026-04-24 18:09:23,961 - INFO - Processed chunk 165, chunk mean: 1106377.0
+2026-04-24 18:09:23,965 - INFO - Processed chunk 166, chunk mean: 1407938.0
+2026-04-24 18:09:23,970 - INFO - Processed chunk 167, chunk mean: 1025642.8
+2026-04-24 18:09:23,974 - INFO - Processed chunk 168, chunk mean: 1256729.7
+2026-04-24 18:09:23,977 - INFO - Processed chunk 169, chunk mean: 1102483.8
+2026-04-24 18:09:23,981 - INFO - Processed chunk 170, chunk mean: 1278452.3
+2026-04-24 18:09:23,985 - INFO - Processed chunk 171, chunk mean: 1002375.8
+2026-04-24 18:09:23,989 - INFO - Processed chunk 172, chunk mean: 833571.9
+2026-04-24 18:09:23,993 - INFO - Processed chunk 173, chunk mean: 798710.4
+2026-04-24 18:09:23,996 - INFO - Processed chunk 174, chunk mean: 1275671.3
+2026-04-24 18:09:24,000 - INFO - Processed chunk 175, chunk mean: 930517.5
+2026-04-24 18:09:24,004 - INFO - Processed chunk 176, chunk mean: 1007639.4
+2026-04-24 18:09:24,008 - INFO - Processed chunk 177, chunk mean: 897415.6
+2026-04-24 18:09:24,011 - INFO - Processed chunk 178, chunk mean: 987218.1
+2026-04-24 18:09:24,015 - INFO - Processed chunk 179, chunk mean: 785868.1
+2026-04-24 18:09:24,019 - INFO - Processed chunk 180, chunk mean: 1069475.8
+2026-04-24 18:09:24,022 - INFO - Processed chunk 181, chunk mean: 1096921.2
+2026-04-24 18:09:24,026 - INFO - Processed chunk 182, chunk mean: 1058630.8
+2026-04-24 18:09:24,029 - INFO - Processed chunk 183, chunk mean: 1195552.4
+2026-04-24 18:09:24,033 - INFO - Processed chunk 184, chunk mean: 984577.7
+2026-04-24 18:09:24,037 - INFO - Processed chunk 185, chunk mean: 835269.9
+2026-04-24 18:09:24,041 - INFO - Processed chunk 186, chunk mean: 850315.8
+2026-04-24 18:09:24,045 - INFO - Processed chunk 187, chunk mean: 1069620.1
+2026-04-24 18:09:24,048 - INFO - Processed chunk 188, chunk mean: 1218832.7
+2026-04-24 18:09:24,054 - INFO - Processed chunk 189, chunk mean: 724770.6
+2026-04-24 18:09:24,059 - INFO - Processed chunk 190, chunk mean: 940374.9
+2026-04-24 18:09:24,066 - INFO - Processed chunk 191, chunk mean: 950676.4
+2026-04-24 18:09:24,072 - INFO - Processed chunk 192, chunk mean: 1020857.4
+2026-04-24 18:09:24,079 - INFO - Processed chunk 193, chunk mean: 1204121.7
+2026-04-24 18:09:24,085 - INFO - Processed chunk 194, chunk mean: 1068863.0
+2026-04-24 18:09:24,090 - INFO - Processed chunk 195, chunk mean: 1167019.2
+2026-04-24 18:09:24,094 - INFO - Processed chunk 196, chunk mean: 1178135.0
+2026-04-24 18:09:24,098 - INFO - Processed chunk 197, chunk mean: 907722.4
+2026-04-24 18:09:24,103 - INFO - Processed chunk 198, chunk mean: 954328.6
+2026-04-24 18:09:24,109 - INFO - Processed chunk 199, chunk mean: 840018.6
+2026-04-24 18:09:24,113 - INFO - Processed chunk 200, chunk mean: 1050941.0
+2026-04-24 18:09:24,117 - INFO - Processed chunk 201, chunk mean: 1256115.6
+2026-04-24 18:09:24,121 - INFO - Processed chunk 202, chunk mean: 985521.1
+2026-04-24 18:09:24,126 - INFO - Processed chunk 203, chunk mean: 988808.0
+2026-04-24 18:09:24,130 - INFO - Processed chunk 204, chunk mean: 1145937.6
+2026-04-24 18:09:24,135 - INFO - Processed chunk 205, chunk mean: 1279837.5
+2026-04-24 18:09:24,138 - INFO - Processed chunk 206, chunk mean: 1059875.1
+2026-04-24 18:09:24,142 - INFO - Processed chunk 207, chunk mean: 1208603.3
+2026-04-24 18:09:24,146 - INFO - Processed chunk 208, chunk mean: 1053200.7
+2026-04-24 18:09:24,149 - INFO - Processed chunk 209, chunk mean: 978318.2
+2026-04-24 18:09:24,153 - INFO - Processed chunk 210, chunk mean: 1260699.6
+2026-04-24 18:09:24,157 - INFO - Processed chunk 211, chunk mean: 1123201.2
+2026-04-24 18:09:24,161 - INFO - Processed chunk 212, chunk mean: 868336.1
+2026-04-24 18:09:24,164 - INFO - Processed chunk 213, chunk mean: 938324.3
+2026-04-24 18:09:24,168 - INFO - Processed chunk 214, chunk mean: 1128882.3
+2026-04-24 18:09:24,172 - INFO - Processed chunk 215, chunk mean: 1091846.0
+2026-04-24 18:09:24,176 - INFO - Processed chunk 216, chunk mean: 888427.3
+2026-04-24 18:09:24,179 - INFO - Processed chunk 217, chunk mean: 901473.2
+2026-04-24 18:09:24,183 - INFO - Processed chunk 218, chunk mean: 991234.3
+2026-04-24 18:09:24,187 - INFO - Processed chunk 219, chunk mean: 1089906.0
+2026-04-24 18:09:24,190 - INFO - Processed chunk 220, chunk mean: 635204.5
+2026-04-24 18:09:24,193 - INFO - Processed chunk 221, chunk mean: 1010795.2
+2026-04-24 18:09:24,197 - INFO - Processed chunk 222, chunk mean: 1099476.1
+2026-04-24 18:09:24,200 - INFO - Processed chunk 223, chunk mean: 1371693.8
+2026-04-24 18:09:24,203 - INFO - Processed chunk 224, chunk mean: 1066520.5
+2026-04-24 18:09:24,207 - INFO - Processed chunk 225, chunk mean: 1312289.1
+2026-04-24 18:09:24,210 - INFO - Processed chunk 226, chunk mean: 929446.5
+2026-04-24 18:09:24,213 - INFO - Processed chunk 227, chunk mean: 1087133.4
+2026-04-24 18:09:24,217 - INFO - Processed chunk 228, chunk mean: 1070143.7
+2026-04-24 18:09:24,221 - INFO - Processed chunk 229, chunk mean: 1296158.2
+2026-04-24 18:09:24,224 - INFO - Processed chunk 230, chunk mean: 1002130.8
+2026-04-24 18:09:24,227 - INFO - Processed chunk 231, chunk mean: 1169893.4
+2026-04-24 18:09:24,231 - INFO - Processed chunk 232, chunk mean: 1057726.7
+2026-04-24 18:09:24,235 - INFO - Processed chunk 233, chunk mean: 1184733.6
+2026-04-24 18:09:24,240 - INFO - Processed chunk 234, chunk mean: 1292602.3
+2026-04-24 18:09:24,247 - INFO - Processed chunk 235, chunk mean: 1302557.1
+2026-04-24 18:09:24,252 - INFO - Processed chunk 236, chunk mean: 860182.7
+2026-04-24 18:09:24,258 - INFO - Processed chunk 237, chunk mean: 999664.5
+2026-04-24 18:09:24,264 - INFO - Processed chunk 238, chunk mean: 1186344.3
+2026-04-24 18:09:24,269 - INFO - Processed chunk 239, chunk mean: 1138372.1
+2026-04-24 18:09:24,274 - INFO - Processed chunk 240, chunk mean: 1087508.9
+2026-04-24 18:09:24,279 - INFO - Processed chunk 241, chunk mean: 896587.0
+2026-04-24 18:09:24,284 - INFO - Processed chunk 242, chunk mean: 1140438.8
+2026-04-24 18:09:24,287 - INFO - Processed chunk 243, chunk mean: 720757.3
+2026-04-24 18:09:24,291 - INFO - Processed chunk 244, chunk mean: 984940.6
+2026-04-24 18:09:24,294 - INFO - Processed chunk 245, chunk mean: 911241.3
+2026-04-24 18:09:24,297 - INFO - Processed chunk 246, chunk mean: 724535.2
+2026-04-24 18:09:24,302 - INFO - Processed chunk 247, chunk mean: 911851.5
+2026-04-24 18:09:24,306 - INFO - Processed chunk 248, chunk mean: 1180551.2
+2026-04-24 18:09:24,309 - INFO - Processed chunk 249, chunk mean: 734636.1
+2026-04-24 18:09:24,312 - INFO - Processed chunk 250, chunk mean: 1098214.3
+2026-04-24 18:09:24,317 - INFO - Processed chunk 251, chunk mean: 956152.9
+2026-04-24 18:09:24,323 - INFO - Processed chunk 252, chunk mean: 1013330.6
+2026-04-24 18:09:24,327 - INFO - Processed chunk 253, chunk mean: 907381.4
+2026-04-24 18:09:24,330 - INFO - Processed chunk 254, chunk mean: 1030068.6
+2026-04-24 18:09:24,333 - INFO - Processed chunk 255, chunk mean: 1250587.3
+2026-04-24 18:09:24,336 - INFO - Processed chunk 256, chunk mean: 888642.7
+2026-04-24 18:09:24,341 - INFO - Processed chunk 257, chunk mean: 1126007.0
+2026-04-24 18:09:24,345 - INFO - Processed chunk 258, chunk mean: 1138986.5
+2026-04-24 18:09:24,350 - INFO - Processed chunk 259, chunk mean: 1049892.0
+2026-04-24 18:09:24,355 - INFO - Processed chunk 260, chunk mean: 1125573.9
+2026-04-24 18:09:24,359 - INFO - Processed chunk 261, chunk mean: 1151220.3
+2026-04-24 18:09:24,365 - INFO - Processed chunk 262, chunk mean: 1410230.7
+2026-04-24 18:09:24,371 - INFO - Processed chunk 263, chunk mean: 871238.4
+2026-04-24 18:09:24,376 - INFO - Processed chunk 264, chunk mean: 1146729.5
+2026-04-24 18:09:24,380 - INFO - Processed chunk 265, chunk mean: 1021077.7
+2026-04-24 18:09:24,385 - INFO - Processed chunk 266, chunk mean: 1462570.1
+2026-04-24 18:09:24,390 - INFO - Processed chunk 267, chunk mean: 889912.6
+2026-04-24 18:09:24,395 - INFO - Processed chunk 268, chunk mean: 1118600.5
+2026-04-24 18:09:24,400 - INFO - Processed chunk 269, chunk mean: 1008291.4
+2026-04-24 18:09:24,404 - INFO - Processed chunk 270, chunk mean: 950573.6
+2026-04-24 18:09:24,408 - INFO - Processed chunk 271, chunk mean: 1293955.5
+2026-04-24 18:09:24,412 - INFO - Processed chunk 272, chunk mean: 1278981.6
+2026-04-24 18:09:24,416 - INFO - Processed chunk 273, chunk mean: 996803.4
+2026-04-24 18:09:24,420 - INFO - Processed chunk 274, chunk mean: 957893.0
+2026-04-24 18:09:24,424 - INFO - Processed chunk 275, chunk mean: 1112907.2
+2026-04-24 18:09:24,428 - INFO - Processed chunk 276, chunk mean: 1154879.6
+2026-04-24 18:09:24,432 - INFO - Processed chunk 277, chunk mean: 1092890.1
+2026-04-24 18:09:24,436 - INFO - Processed chunk 278, chunk mean: 1299675.2
+2026-04-24 18:09:24,487 - INFO - Processed chunk 279, chunk mean: 944892.9
+2026-04-24 18:09:24,492 - INFO - Processed chunk 280, chunk mean: 1065833.7
+2026-04-24 18:09:24,507 - INFO - Processed chunk 281, chunk mean: 702631.0
+2026-04-24 18:09:24,512 - INFO - Processed chunk 282, chunk mean: 920108.2
+2026-04-24 18:09:24,516 - INFO - Processed chunk 283, chunk mean: 1194395.1
+2026-04-24 18:09:24,521 - INFO - Processed chunk 284, chunk mean: 1282836.0
+2026-04-24 18:09:24,525 - INFO - Processed chunk 285, chunk mean: 1108638.8
+2026-04-24 18:09:24,529 - INFO - Processed chunk 286, chunk mean: 859202.9
+2026-04-24 18:09:24,534 - INFO - Processed chunk 287, chunk mean: 1356404.4
+2026-04-24 18:09:24,538 - INFO - Processed chunk 288, chunk mean: 870031.7
+2026-04-24 18:09:24,542 - INFO - Processed chunk 289, chunk mean: 1311833.1
+2026-04-24 18:09:24,546 - INFO - Processed chunk 290, chunk mean: 1327551.3
+2026-04-24 18:09:24,550 - INFO - Processed chunk 291, chunk mean: 1121859.6
+2026-04-24 18:09:24,553 - INFO - Processed chunk 292, chunk mean: 1230757.8
+2026-04-24 18:09:24,557 - INFO - Processed chunk 293, chunk mean: 997992.9
+2026-04-24 18:09:24,560 - INFO - Processed chunk 294, chunk mean: 825428.6
+2026-04-24 18:09:24,564 - INFO - Processed chunk 295, chunk mean: 1053842.1
+2026-04-24 18:09:24,568 - INFO - Processed chunk 296, chunk mean: 1086141.0
+2026-04-24 18:09:24,572 - INFO - Processed chunk 297, chunk mean: 836447.2
+2026-04-24 18:09:24,576 - INFO - Processed chunk 298, chunk mean: 1262486.7
+2026-04-24 18:09:24,579 - INFO - Processed chunk 299, chunk mean: 752941.4
+2026-04-24 18:09:24,585 - INFO - Processed chunk 300, chunk mean: 1077398.6
+2026-04-24 18:09:24,589 - INFO - Processed chunk 301, chunk mean: 912102.1
+2026-04-24 18:09:24,593 - INFO - Processed chunk 302, chunk mean: 832686.3
+2026-04-24 18:09:24,597 - INFO - Processed chunk 303, chunk mean: 1028246.9
+2026-04-24 18:09:24,602 - INFO - Processed chunk 304, chunk mean: 1108765.0
+2026-04-24 18:09:24,606 - INFO - Processed chunk 305, chunk mean: 941125.0
+2026-04-24 18:09:24,610 - INFO - Processed chunk 306, chunk mean: 921495.5
+2026-04-24 18:09:24,614 - INFO - Processed chunk 307, chunk mean: 854784.2
+2026-04-24 18:09:24,618 - INFO - Processed chunk 308, chunk mean: 1365611.7
+2026-04-24 18:09:24,622 - INFO - Processed chunk 309, chunk mean: 1355973.0
+2026-04-24 18:09:24,625 - INFO - Processed chunk 310, chunk mean: 1152680.5
+2026-04-24 18:09:24,629 - INFO - Processed chunk 311, chunk mean: 1136907.6
+2026-04-24 18:09:24,633 - INFO - Processed chunk 312, chunk mean: 1113769.3
+2026-04-24 18:09:24,639 - INFO - Processed chunk 313, chunk mean: 1126532.6
+2026-04-24 18:09:24,646 - INFO - Processed chunk 314, chunk mean: 864946.1
+2026-04-24 18:09:24,652 - INFO - Processed chunk 315, chunk mean: 868763.4
+2026-04-24 18:09:24,656 - INFO - Processed chunk 316, chunk mean: 1031210.9
+2026-04-24 18:09:24,660 - INFO - Processed chunk 317, chunk mean: 1141007.6
+2026-04-24 18:09:24,664 - INFO - Processed chunk 318, chunk mean: 1304895.3
+2026-04-24 18:09:24,668 - INFO - Processed chunk 319, chunk mean: 1030201.4
+2026-04-24 18:09:24,672 - INFO - Processed chunk 320, chunk mean: 1374138.5
+2026-04-24 18:09:24,676 - INFO - Processed chunk 321, chunk mean: 1129905.1
+2026-04-24 18:09:24,681 - INFO - Processed chunk 322, chunk mean: 1079637.2
+2026-04-24 18:09:24,685 - INFO - Processed chunk 323, chunk mean: 1178993.3
+2026-04-24 18:09:24,689 - INFO - Processed chunk 324, chunk mean: 973359.4
+2026-04-24 18:09:24,694 - INFO - Processed chunk 325, chunk mean: 988084.8
+2026-04-24 18:09:24,699 - INFO - Processed chunk 326, chunk mean: 1256123.1
+2026-04-24 18:09:24,703 - INFO - Processed chunk 327, chunk mean: 1256768.9
+2026-04-24 18:09:24,707 - INFO - Processed chunk 328, chunk mean: 1329811.3
+2026-04-24 18:09:24,713 - INFO - Processed chunk 329, chunk mean: 853121.1
+2026-04-24 18:09:24,718 - INFO - Processed chunk 330, chunk mean: 961118.6
+2026-04-24 18:09:24,721 - INFO - Processed chunk 331, chunk mean: 937329.9
+2026-04-24 18:09:24,725 - INFO - Processed chunk 332, chunk mean: 941469.9
+2026-04-24 18:09:24,728 - INFO - Processed chunk 333, chunk mean: 773704.1
+2026-04-24 18:09:24,732 - INFO - Processed chunk 334, chunk mean: 1021044.2
+2026-04-24 18:09:24,736 - INFO - Processed chunk 335, chunk mean: 1113882.0
+2026-04-24 18:09:24,741 - INFO - Processed chunk 336, chunk mean: 905169.7
+2026-04-24 18:09:24,745 - INFO - Processed chunk 337, chunk mean: 1187527.9
+2026-04-24 18:09:24,749 - INFO - Processed chunk 338, chunk mean: 1205991.3
+2026-04-24 18:09:24,752 - INFO - Processed chunk 339, chunk mean: 652262.5
+2026-04-24 18:09:24,757 - INFO - Processed chunk 340, chunk mean: 1101765.9
+2026-04-24 18:09:24,761 - INFO - Processed chunk 341, chunk mean: 1238026.5
+2026-04-24 18:09:24,764 - INFO - Processed chunk 342, chunk mean: 1088386.0
+2026-04-24 18:09:24,768 - INFO - Processed chunk 343, chunk mean: 1020578.9
+2026-04-24 18:09:24,772 - INFO - Processed chunk 344, chunk mean: 759147.1
+2026-04-24 18:09:24,776 - INFO - Processed chunk 345, chunk mean: 852752.4
+2026-04-24 18:09:24,780 - INFO - Processed chunk 346, chunk mean: 1079503.4
+2026-04-24 18:09:24,785 - INFO - Processed chunk 347, chunk mean: 1043539.1
+2026-04-24 18:09:24,790 - INFO - Processed chunk 348, chunk mean: 1199887.0
+2026-04-24 18:09:24,793 - INFO - Processed chunk 349, chunk mean: 1198787.1
+2026-04-24 18:09:24,797 - INFO - Processed chunk 350, chunk mean: 878131.8
+2026-04-24 18:09:24,802 - INFO - Processed chunk 351, chunk mean: 1104200.5
+2026-04-24 18:09:24,805 - INFO - Processed chunk 352, chunk mean: 746675.4
+2026-04-24 18:09:24,809 - INFO - Processed chunk 353, chunk mean: 943219.8
+2026-04-24 18:09:24,812 - INFO - Processed chunk 354, chunk mean: 914123.8
+2026-04-24 18:09:24,818 - INFO - Processed chunk 355, chunk mean: 1374305.4
+2026-04-24 18:09:24,821 - INFO - Processed chunk 356, chunk mean: 937738.1
+2026-04-24 18:09:24,824 - INFO - Processed chunk 357, chunk mean: 877615.2
+2026-04-24 18:09:24,828 - INFO - Processed chunk 358, chunk mean: 888426.2
+2026-04-24 18:09:24,831 - INFO - Processed chunk 359, chunk mean: 1150043.5
+2026-04-24 18:09:24,837 - INFO - Processed chunk 360, chunk mean: 704844.1
+2026-04-24 18:09:24,841 - INFO - Processed chunk 361, chunk mean: 935298.5
+2026-04-24 18:09:24,846 - INFO - Processed chunk 362, chunk mean: 1085044.7
+2026-04-24 18:09:24,850 - INFO - Processed chunk 363, chunk mean: 1187284.9
+2026-04-24 18:09:24,853 - INFO - Processed chunk 364, chunk mean: 1231008.4
+2026-04-24 18:09:24,857 - INFO - Processed chunk 365, chunk mean: 1078937.9
+2026-04-24 18:09:24,860 - INFO - Processed chunk 366, chunk mean: 1111517.0
+2026-04-24 18:09:24,866 - INFO - Processed chunk 367, chunk mean: 914592.9
+2026-04-24 18:09:24,871 - INFO - Processed chunk 368, chunk mean: 1148600.0
+2026-04-24 18:09:24,874 - INFO - Processed chunk 369, chunk mean: 1052388.7
+2026-04-24 18:09:24,878 - INFO - Processed chunk 370, chunk mean: 918134.2
+2026-04-24 18:09:24,883 - INFO - Processed chunk 371, chunk mean: 859065.4
+2026-04-24 18:09:24,887 - INFO - Processed chunk 372, chunk mean: 959739.3
+2026-04-24 18:09:24,891 - INFO - Processed chunk 373, chunk mean: 1035474.4
+2026-04-24 18:09:24,896 - INFO - Processed chunk 374, chunk mean: 1207151.1
+2026-04-24 18:09:24,900 - INFO - Processed chunk 375, chunk mean: 1410717.4
+2026-04-24 18:09:24,904 - INFO - Processed chunk 376, chunk mean: 1229195.8
+2026-04-24 18:09:24,907 - INFO - Processed chunk 377, chunk mean: 1090993.2
+2026-04-24 18:09:24,911 - INFO - Processed chunk 378, chunk mean: 1163257.4
+2026-04-24 18:09:24,914 - INFO - Processed chunk 379, chunk mean: 923376.3
+2026-04-24 18:09:24,918 - INFO - Processed chunk 380, chunk mean: 673363.2
+2026-04-24 18:09:24,922 - INFO - Processed chunk 381, chunk mean: 860586.4
+2026-04-24 18:09:24,925 - INFO - Processed chunk 382, chunk mean: 948247.3
+2026-04-24 18:09:24,929 - INFO - Processed chunk 383, chunk mean: 1022328.7
+2026-04-24 18:09:24,932 - INFO - Processed chunk 384, chunk mean: 1038332.6
+2026-04-24 18:09:24,936 - INFO - Processed chunk 385, chunk mean: 1009727.8
+2026-04-24 18:09:24,942 - INFO - Processed chunk 386, chunk mean: 1003387.4
+2026-04-24 18:09:24,971 - INFO - Processed chunk 387, chunk mean: 1048476.2
+2026-04-24 18:09:24,975 - INFO - Processed chunk 388, chunk mean: 955637.2
+2026-04-24 18:09:24,979 - INFO - Processed chunk 389, chunk mean: 1166956.7
+2026-04-24 18:09:24,982 - INFO - Processed chunk 390, chunk mean: 1288730.6
+2026-04-24 18:09:24,986 - INFO - Processed chunk 391, chunk mean: 1172738.2
+2026-04-24 18:09:24,990 - INFO - Processed chunk 392, chunk mean: 988471.8
+2026-04-24 18:09:24,995 - INFO - Processed chunk 393, chunk mean: 728997.0
+2026-04-24 18:09:24,999 - INFO - Processed chunk 394, chunk mean: 986397.0
+2026-04-24 18:09:25,004 - INFO - Processed chunk 395, chunk mean: 784606.9
+2026-04-24 18:09:25,010 - INFO - Processed chunk 396, chunk mean: 729191.8
+2026-04-24 18:09:25,015 - INFO - Processed chunk 397, chunk mean: 1155975.3
+2026-04-24 18:09:25,020 - INFO - Processed chunk 398, chunk mean: 1068854.5
+2026-04-24 18:09:25,024 - INFO - Processed chunk 399, chunk mean: 740337.1
+2026-04-24 18:09:25,028 - INFO - Processed chunk 400, chunk mean: 1035169.8
+2026-04-24 18:09:25,031 - INFO - Processed chunk 401, chunk mean: 1002929.3
+2026-04-24 18:09:25,036 - INFO - Processed chunk 402, chunk mean: 1182723.0
+2026-04-24 18:09:25,041 - INFO - Processed chunk 403, chunk mean: 1040244.1
+2026-04-24 18:09:25,045 - INFO - Processed chunk 404, chunk mean: 1080956.4
+2026-04-24 18:09:25,048 - INFO - Processed chunk 405, chunk mean: 1152779.1
+2026-04-24 18:09:25,055 - INFO - Processed chunk 406, chunk mean: 1031732.3
+2026-04-24 18:09:25,059 - INFO - Processed chunk 407, chunk mean: 1120991.2
+2026-04-24 18:09:25,063 - INFO - Processed chunk 408, chunk mean: 888641.6
+2026-04-24 18:09:25,067 - INFO - Processed chunk 409, chunk mean: 1135320.1
+2026-04-24 18:09:25,071 - INFO - Processed chunk 410, chunk mean: 748636.3
+2026-04-24 18:09:25,074 - INFO - Processed chunk 411, chunk mean: 978659.0
+2026-04-24 18:09:25,078 - INFO - Processed chunk 412, chunk mean: 166837.0
+2026-04-24 18:09:25,078 - INFO - Global mean price across chunks: 1047514.8362928728
+2026-04-24 18:09:25,079 - INFO - Processing chunks per-category (Language equivalent) from: data/processed/analytics\test_analytics.csv
+2026-04-24 18:09:27,479 - INFO - Combined accumulators - Category Means: {'Industrial': np.float64(1051805.361969112), 'Multi-Family': np.float64(1029804.2337278107), 'Office': np.float64(1047212.4534653465), 'Retail': np.float64(1060663.2407231207)}
+2026-04-24 18:09:27,481 - INFO - --- Exploratory Data Analysis ---
+2026-04-24 18:09:27,482 - INFO - Dataset Shape: (4111, 11)
+2026-04-24 18:09:27,488 - INFO - Dataset Info:
+None
+2026-04-24 18:09:27,508 - INFO - Descriptive Statistics:
+       property_id  name  address         price  sq_ft         area
+count          0.0   0.0      0.0  4.111000e+03    0.0  4111.000000
+mean           NaN   NaN      NaN  1.047515e+06    NaN  2765.032352
+std            NaN   NaN      NaN  5.500467e+05    NaN  1294.021366
+min            NaN   NaN      NaN  1.004640e+05    NaN   503.000000
+25%            NaN   NaN      NaN  5.710080e+05    NaN  1663.000000
+50%            NaN   NaN      NaN  1.045643e+06    NaN  2800.000000
+75%            NaN   NaN      NaN  1.531164e+06    NaN  3874.500000
+max            NaN   NaN      NaN  1.999953e+06    NaN  4999.000000
+2026-04-24 18:09:27,510 - INFO - Value Counts for 'type':
+type
+Retail          1051
+Industrial      1036
+Multi-Family    1014
+Office          1010
+Name: count, dtype: int64
+2026-04-24 18:09:27,510 - INFO - Unique values in 'type': 4
+2026-04-24 18:09:27,986 - INFO - Saved chart: data/processed/analytics/charts/property_types_dist.png
+2026-04-24 18:09:28,357 - INFO - Saved chart: data/processed/analytics/charts/price_distribution.png
+2026-04-24 18:09:28,357 - INFO - Requirement 7: Simulation of GoogleDrive upload for charts completed. Shared with Amila.
+2026-04-24 18:09:28,357 - INFO - --- Data Selection & Filtering ---
+2026-04-24 18:09:28,365 - INFO - loc selection (first 5 rows, listing_id & price):
+  listing_id    price
+0        NaN  1460967
+1        NaN  1447141
+2        NaN  1521300
+3        NaN   439792
+4        NaN  1025214
+2026-04-24 18:09:28,371 - INFO - iloc selection (first 3 rows, first 2 columns):
+   property_id  name
+0          NaN   NaN
+1          NaN   NaN
+2          NaN   NaN
+2026-04-24 18:09:28,372 - INFO - High value properties (price > 1M): 2147 found.
+2026-04-24 18:09:28,373 - INFO - Properties with type in ['Office', 'Retail']: 2061 found.
+2026-04-24 18:09:28,374 - INFO - Mid-range properties (500k-1M): 1103 found.
+2026-04-24 18:09:28,375 - INFO - --- Regular Expression Operations ---
+2026-04-24 18:10:26,202 - INFO - --- NumPy Foundations ---
+2026-04-24 18:10:26,203 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-24 18:10:26,204 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-24 18:10:26,205 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-24 18:10:26,206 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-24 18:10:26,297 - INFO - Memory usage before optimization: 1.49 MB
+2026-04-24 18:10:26,307 - INFO - Skipping category optimization for column coordinates due to unhashable type.
+2026-04-24 18:10:26,314 - INFO - Memory usage after optimization: 0.78 MB
+2026-04-24 18:10:26,348 - INFO - Data exported to data/processed/analytics\test_analytics.csv
+2026-04-24 18:10:26,348 - INFO - Loading CSV in chunks: data/processed/analytics\test_analytics.csv
+2026-04-24 18:10:26,378 - INFO - Processed chunk 1, chunk mean: 1028556.0
+2026-04-24 18:10:26,386 - INFO - Processed chunk 2, chunk mean: 1008188.4
+2026-04-24 18:10:26,393 - INFO - Processed chunk 3, chunk mean: 1464402.3
+2026-04-24 18:10:26,400 - INFO - Processed chunk 4, chunk mean: 1415012.0
+2026-04-24 18:10:26,406 - INFO - Processed chunk 5, chunk mean: 1092555.9
+2026-04-24 18:10:26,412 - INFO - Processed chunk 6, chunk mean: 1119978.5
+2026-04-24 18:10:26,417 - INFO - Processed chunk 7, chunk mean: 1131163.3
+2026-04-24 18:10:26,422 - INFO - Processed chunk 8, chunk mean: 1066966.0
+2026-04-24 18:10:26,426 - INFO - Processed chunk 9, chunk mean: 995518.1
+2026-04-24 18:10:26,431 - INFO - Processed chunk 10, chunk mean: 1353463.2
+2026-04-24 18:10:26,436 - INFO - Processed chunk 11, chunk mean: 1150434.9
+2026-04-24 18:10:26,440 - INFO - Processed chunk 12, chunk mean: 1237130.0
+2026-04-24 18:10:26,445 - INFO - Processed chunk 13, chunk mean: 760710.5
+2026-04-24 18:10:26,450 - INFO - Processed chunk 14, chunk mean: 1001297.1
+2026-04-24 18:10:26,455 - INFO - Processed chunk 15, chunk mean: 1108779.1
+2026-04-24 18:10:26,460 - INFO - Processed chunk 16, chunk mean: 830487.7
+2026-04-24 18:10:26,464 - INFO - Processed chunk 17, chunk mean: 993690.6
+2026-04-24 18:10:26,469 - INFO - Processed chunk 18, chunk mean: 959413.9
+2026-04-24 18:10:26,473 - INFO - Processed chunk 19, chunk mean: 791246.0
+2026-04-24 18:10:26,477 - INFO - Processed chunk 20, chunk mean: 1185767.4
+2026-04-24 18:10:26,481 - INFO - Processed chunk 21, chunk mean: 1185520.3
+2026-04-24 18:10:26,485 - INFO - Processed chunk 22, chunk mean: 879614.9
+2026-04-24 18:10:26,490 - INFO - Processed chunk 23, chunk mean: 562390.4
+2026-04-24 18:10:26,494 - INFO - Processed chunk 24, chunk mean: 981898.8
+2026-04-24 18:10:26,498 - INFO - Processed chunk 25, chunk mean: 1302211.2
+2026-04-24 18:10:26,503 - INFO - Processed chunk 26, chunk mean: 781446.6
+2026-04-24 18:10:26,508 - INFO - Processed chunk 27, chunk mean: 1150513.8
+2026-04-24 18:10:26,512 - INFO - Processed chunk 28, chunk mean: 1127381.3
+2026-04-24 18:10:26,517 - INFO - Processed chunk 29, chunk mean: 875073.6
+2026-04-24 18:10:26,522 - INFO - Processed chunk 30, chunk mean: 926655.7
+2026-04-24 18:10:26,526 - INFO - Processed chunk 31, chunk mean: 878321.2
+2026-04-24 18:10:26,531 - INFO - Processed chunk 32, chunk mean: 953225.4
+2026-04-24 18:10:26,535 - INFO - Processed chunk 33, chunk mean: 965883.0
+2026-04-24 18:10:26,540 - INFO - Processed chunk 34, chunk mean: 855357.7
+2026-04-24 18:10:26,544 - INFO - Processed chunk 35, chunk mean: 674822.3
+2026-04-24 18:10:26,548 - INFO - Processed chunk 36, chunk mean: 759658.3
+2026-04-24 18:10:26,552 - INFO - Processed chunk 37, chunk mean: 1028532.2
+2026-04-24 18:10:26,556 - INFO - Processed chunk 38, chunk mean: 1159085.9
+2026-04-24 18:10:26,561 - INFO - Processed chunk 39, chunk mean: 1376201.4
+2026-04-24 18:10:26,565 - INFO - Processed chunk 40, chunk mean: 1014787.5
+2026-04-24 18:10:26,570 - INFO - Processed chunk 41, chunk mean: 1000299.1
+2026-04-24 18:10:26,574 - INFO - Processed chunk 42, chunk mean: 1041734.7
+2026-04-24 18:10:26,580 - INFO - Processed chunk 43, chunk mean: 849937.7
+2026-04-24 18:10:26,585 - INFO - Processed chunk 44, chunk mean: 1235103.9
+2026-04-24 18:10:26,589 - INFO - Processed chunk 45, chunk mean: 1146662.4
+2026-04-24 18:10:26,593 - INFO - Processed chunk 46, chunk mean: 1126589.4
+2026-04-24 18:10:26,598 - INFO - Processed chunk 47, chunk mean: 1002916.1
+2026-04-24 18:10:26,602 - INFO - Processed chunk 48, chunk mean: 1107302.3
+2026-04-24 18:10:26,606 - INFO - Processed chunk 49, chunk mean: 1302733.0
+2026-04-24 18:10:26,610 - INFO - Processed chunk 50, chunk mean: 1083179.2
+2026-04-24 18:10:26,615 - INFO - Processed chunk 51, chunk mean: 902171.0
+2026-04-24 18:10:26,619 - INFO - Processed chunk 52, chunk mean: 1178500.0
+2026-04-24 18:10:26,623 - INFO - Processed chunk 53, chunk mean: 1076806.5
+2026-04-24 18:10:26,628 - INFO - Processed chunk 54, chunk mean: 720473.4
+2026-04-24 18:10:26,633 - INFO - Processed chunk 55, chunk mean: 936359.0
+2026-04-24 18:10:26,637 - INFO - Processed chunk 56, chunk mean: 1134521.4
+2026-04-24 18:10:26,642 - INFO - Processed chunk 57, chunk mean: 1025942.7
+2026-04-24 18:10:26,646 - INFO - Processed chunk 58, chunk mean: 1091526.1
+2026-04-24 18:10:26,651 - INFO - Processed chunk 59, chunk mean: 1381996.4
+2026-04-24 18:10:26,655 - INFO - Processed chunk 60, chunk mean: 1114459.4
+2026-04-24 18:10:26,659 - INFO - Processed chunk 61, chunk mean: 968752.9
+2026-04-24 18:10:26,664 - INFO - Processed chunk 62, chunk mean: 1281480.2
+2026-04-24 18:10:26,668 - INFO - Processed chunk 63, chunk mean: 1366082.3
+2026-04-24 18:10:26,672 - INFO - Processed chunk 64, chunk mean: 1054110.6
+2026-04-24 18:10:26,676 - INFO - Processed chunk 65, chunk mean: 983038.9
+2026-04-24 18:10:26,681 - INFO - Processed chunk 66, chunk mean: 1358331.2
+2026-04-24 18:10:26,685 - INFO - Processed chunk 67, chunk mean: 537708.8
+2026-04-24 18:10:26,690 - INFO - Processed chunk 68, chunk mean: 1022345.9
+2026-04-24 18:10:26,695 - INFO - Processed chunk 69, chunk mean: 1042430.9
+2026-04-24 18:10:26,700 - INFO - Processed chunk 70, chunk mean: 720588.7
+2026-04-24 18:10:26,706 - INFO - Processed chunk 71, chunk mean: 1205481.2
+2026-04-24 18:10:26,711 - INFO - Processed chunk 72, chunk mean: 1026081.8
+2026-04-24 18:10:26,716 - INFO - Processed chunk 73, chunk mean: 1261269.9
+2026-04-24 18:10:26,721 - INFO - Processed chunk 74, chunk mean: 1188074.8
+2026-04-24 18:10:26,726 - INFO - Processed chunk 75, chunk mean: 1225409.9
+2026-04-24 18:10:26,730 - INFO - Processed chunk 76, chunk mean: 1124941.1
+2026-04-24 18:10:26,737 - INFO - Processed chunk 77, chunk mean: 981839.9
+2026-04-24 18:10:26,742 - INFO - Processed chunk 78, chunk mean: 1101734.3
+2026-04-24 18:10:26,747 - INFO - Processed chunk 79, chunk mean: 1115793.6
+2026-04-24 18:10:26,751 - INFO - Processed chunk 80, chunk mean: 1042311.4
+2026-04-24 18:10:26,755 - INFO - Processed chunk 81, chunk mean: 1187040.7
+2026-04-24 18:10:26,760 - INFO - Processed chunk 82, chunk mean: 965645.6
+2026-04-24 18:10:26,764 - INFO - Processed chunk 83, chunk mean: 936378.4
+2026-04-24 18:10:26,769 - INFO - Processed chunk 84, chunk mean: 1138547.6
+2026-04-24 18:10:26,773 - INFO - Processed chunk 85, chunk mean: 1005593.8
+2026-04-24 18:10:26,778 - INFO - Processed chunk 86, chunk mean: 933886.1
+2026-04-24 18:10:26,782 - INFO - Processed chunk 87, chunk mean: 949712.5
+2026-04-24 18:10:26,787 - INFO - Processed chunk 88, chunk mean: 1116087.2
+2026-04-24 18:10:26,791 - INFO - Processed chunk 89, chunk mean: 904419.6
+2026-04-24 18:10:26,796 - INFO - Processed chunk 90, chunk mean: 811962.7
+2026-04-24 18:10:26,801 - INFO - Processed chunk 91, chunk mean: 1136779.7
+2026-04-24 18:10:26,810 - INFO - Processed chunk 92, chunk mean: 653017.2
+2026-04-24 18:10:26,815 - INFO - Processed chunk 93, chunk mean: 1095485.8
+2026-04-24 18:10:26,820 - INFO - Processed chunk 94, chunk mean: 1017055.5
+2026-04-24 18:10:26,825 - INFO - Processed chunk 95, chunk mean: 1143039.7
+2026-04-24 18:10:26,830 - INFO - Processed chunk 96, chunk mean: 1378106.5
+2026-04-24 18:10:26,834 - INFO - Processed chunk 97, chunk mean: 1024711.7
+2026-04-24 18:10:26,839 - INFO - Processed chunk 98, chunk mean: 957686.7
+2026-04-24 18:10:26,844 - INFO - Processed chunk 99, chunk mean: 1135374.7
+2026-04-24 18:10:26,848 - INFO - Processed chunk 100, chunk mean: 1094169.6
+2026-04-24 18:10:26,852 - INFO - Processed chunk 101, chunk mean: 862999.5
+2026-04-24 18:10:26,857 - INFO - Processed chunk 102, chunk mean: 1041671.6
+2026-04-24 18:10:26,862 - INFO - Processed chunk 103, chunk mean: 1028661.7
+2026-04-24 18:10:26,866 - INFO - Processed chunk 104, chunk mean: 1011608.0
+2026-04-24 18:10:26,872 - INFO - Processed chunk 105, chunk mean: 1164338.3
+2026-04-24 18:10:26,880 - INFO - Processed chunk 106, chunk mean: 1235974.3
+2026-04-24 18:10:26,888 - INFO - Processed chunk 107, chunk mean: 670815.5
+2026-04-24 18:10:26,894 - INFO - Processed chunk 108, chunk mean: 1251931.9
+2026-04-24 18:10:26,903 - INFO - Processed chunk 109, chunk mean: 1014203.1
+2026-04-24 18:10:26,912 - INFO - Processed chunk 110, chunk mean: 1289957.2
+2026-04-24 18:10:26,919 - INFO - Processed chunk 111, chunk mean: 1159213.4
+2026-04-24 18:10:26,925 - INFO - Processed chunk 112, chunk mean: 1153367.6
+2026-04-24 18:10:26,930 - INFO - Processed chunk 113, chunk mean: 1134525.1
+2026-04-24 18:10:26,934 - INFO - Processed chunk 114, chunk mean: 935071.8
+2026-04-24 18:10:26,938 - INFO - Processed chunk 115, chunk mean: 1108101.9
+2026-04-24 18:10:26,943 - INFO - Processed chunk 116, chunk mean: 1237338.9
+2026-04-24 18:10:26,947 - INFO - Processed chunk 117, chunk mean: 963501.4
+2026-04-24 18:10:26,952 - INFO - Processed chunk 118, chunk mean: 1045464.7
+2026-04-24 18:10:26,957 - INFO - Processed chunk 119, chunk mean: 922407.4
+2026-04-24 18:10:26,962 - INFO - Processed chunk 120, chunk mean: 1209433.1
+2026-04-24 18:10:26,967 - INFO - Processed chunk 121, chunk mean: 1294655.2
+2026-04-24 18:10:26,971 - INFO - Processed chunk 122, chunk mean: 1203286.9
+2026-04-24 18:10:26,976 - INFO - Processed chunk 123, chunk mean: 1167861.8
+2026-04-24 18:10:26,980 - INFO - Processed chunk 124, chunk mean: 869482.6
+2026-04-24 18:10:26,985 - INFO - Processed chunk 125, chunk mean: 988506.2
+2026-04-24 18:10:26,989 - INFO - Processed chunk 126, chunk mean: 1023414.7
+2026-04-24 18:10:26,994 - INFO - Processed chunk 127, chunk mean: 1080301.4
+2026-04-24 18:10:26,999 - INFO - Processed chunk 128, chunk mean: 1206377.7
+2026-04-24 18:10:27,006 - INFO - Processed chunk 129, chunk mean: 1169784.0
+2026-04-24 18:10:27,011 - INFO - Processed chunk 130, chunk mean: 876733.6
+2026-04-24 18:10:27,017 - INFO - Processed chunk 131, chunk mean: 1047211.4
+2026-04-24 18:10:27,022 - INFO - Processed chunk 132, chunk mean: 1162203.6
+2026-04-24 18:10:27,027 - INFO - Processed chunk 133, chunk mean: 1488081.5
+2026-04-24 18:10:27,031 - INFO - Processed chunk 134, chunk mean: 912104.7
+2026-04-24 18:10:27,035 - INFO - Processed chunk 135, chunk mean: 1063810.5
+2026-04-24 18:10:27,039 - INFO - Processed chunk 136, chunk mean: 1188170.0
+2026-04-24 18:10:27,043 - INFO - Processed chunk 137, chunk mean: 1075690.2
+2026-04-24 18:10:27,046 - INFO - Processed chunk 138, chunk mean: 764104.2
+2026-04-24 18:10:27,050 - INFO - Processed chunk 139, chunk mean: 1347487.5
+2026-04-24 18:10:27,055 - INFO - Processed chunk 140, chunk mean: 1132673.6
+2026-04-24 18:10:27,060 - INFO - Processed chunk 141, chunk mean: 983550.7
+2026-04-24 18:10:27,066 - INFO - Processed chunk 142, chunk mean: 1109550.1
+2026-04-24 18:10:27,073 - INFO - Processed chunk 143, chunk mean: 1134583.4
+2026-04-24 18:10:27,082 - INFO - Processed chunk 144, chunk mean: 1025245.0
+2026-04-24 18:10:27,087 - INFO - Processed chunk 145, chunk mean: 1038661.5
+2026-04-24 18:10:27,091 - INFO - Processed chunk 146, chunk mean: 1123907.6
+2026-04-24 18:10:27,096 - INFO - Processed chunk 147, chunk mean: 952041.3
+2026-04-24 18:10:27,099 - INFO - Processed chunk 148, chunk mean: 1147633.6
+2026-04-24 18:10:27,104 - INFO - Processed chunk 149, chunk mean: 1131630.9
+2026-04-24 18:10:27,108 - INFO - Processed chunk 150, chunk mean: 1028776.5
+2026-04-24 18:10:27,112 - INFO - Processed chunk 151, chunk mean: 756442.1
+2026-04-24 18:10:27,116 - INFO - Processed chunk 152, chunk mean: 1196742.2
+2026-04-24 18:10:27,120 - INFO - Processed chunk 153, chunk mean: 868859.6
+2026-04-24 18:10:27,124 - INFO - Processed chunk 154, chunk mean: 1121706.2
+2026-04-24 18:10:27,128 - INFO - Processed chunk 155, chunk mean: 1246664.5
+2026-04-24 18:10:27,133 - INFO - Processed chunk 156, chunk mean: 1016813.4
+2026-04-24 18:10:27,138 - INFO - Processed chunk 157, chunk mean: 844154.3
+2026-04-24 18:10:27,142 - INFO - Processed chunk 158, chunk mean: 776834.3
+2026-04-24 18:10:27,147 - INFO - Processed chunk 159, chunk mean: 1152262.3
+2026-04-24 18:10:27,153 - INFO - Processed chunk 160, chunk mean: 1063404.9
+2026-04-24 18:10:27,160 - INFO - Processed chunk 161, chunk mean: 1242293.7
+2026-04-24 18:10:27,165 - INFO - Processed chunk 162, chunk mean: 855550.2
+2026-04-24 18:10:27,170 - INFO - Processed chunk 163, chunk mean: 1163992.6
+2026-04-24 18:10:27,176 - INFO - Processed chunk 164, chunk mean: 1427565.1
+2026-04-24 18:10:27,180 - INFO - Processed chunk 165, chunk mean: 1039657.3
+2026-04-24 18:10:27,184 - INFO - Processed chunk 166, chunk mean: 960400.2
+2026-04-24 18:10:27,188 - INFO - Processed chunk 167, chunk mean: 1189123.6
+2026-04-24 18:10:27,192 - INFO - Processed chunk 168, chunk mean: 1230158.4
+2026-04-24 18:10:27,196 - INFO - Processed chunk 169, chunk mean: 1199366.0
+2026-04-24 18:10:27,200 - INFO - Processed chunk 170, chunk mean: 1153592.8
+2026-04-24 18:10:27,204 - INFO - Processed chunk 171, chunk mean: 1082161.9
+2026-04-24 18:10:27,208 - INFO - Processed chunk 172, chunk mean: 932222.8
+2026-04-24 18:10:27,212 - INFO - Processed chunk 173, chunk mean: 1143136.6
+2026-04-24 18:10:27,216 - INFO - Processed chunk 174, chunk mean: 942326.2
+2026-04-24 18:10:27,220 - INFO - Processed chunk 175, chunk mean: 1050267.4
+2026-04-24 18:10:27,223 - INFO - Processed chunk 176, chunk mean: 1040450.2
+2026-04-24 18:10:27,227 - INFO - Processed chunk 177, chunk mean: 1068829.5
+2026-04-24 18:10:27,232 - INFO - Processed chunk 178, chunk mean: 989382.6
+2026-04-24 18:10:27,236 - INFO - Processed chunk 179, chunk mean: 1119217.4
+2026-04-24 18:10:27,240 - INFO - Processed chunk 180, chunk mean: 1180069.5
+2026-04-24 18:10:27,245 - INFO - Processed chunk 181, chunk mean: 1152300.6
+2026-04-24 18:10:27,248 - INFO - Processed chunk 182, chunk mean: 1036722.6
+2026-04-24 18:10:27,252 - INFO - Processed chunk 183, chunk mean: 1229680.3
+2026-04-24 18:10:27,256 - INFO - Processed chunk 184, chunk mean: 834540.4
+2026-04-24 18:10:27,259 - INFO - Processed chunk 185, chunk mean: 1133727.9
+2026-04-24 18:10:27,265 - INFO - Processed chunk 186, chunk mean: 1157778.5
+2026-04-24 18:10:27,269 - INFO - Processed chunk 187, chunk mean: 1218227.6
+2026-04-24 18:10:27,273 - INFO - Processed chunk 188, chunk mean: 982334.2
+2026-04-24 18:10:27,277 - INFO - Processed chunk 189, chunk mean: 1163867.0
+2026-04-24 18:10:27,280 - INFO - Processed chunk 190, chunk mean: 1139558.5
+2026-04-24 18:10:27,284 - INFO - Processed chunk 191, chunk mean: 1164941.8
+2026-04-24 18:10:27,288 - INFO - Processed chunk 192, chunk mean: 1087323.8
+2026-04-24 18:10:27,292 - INFO - Processed chunk 193, chunk mean: 1030439.4
+2026-04-24 18:10:27,297 - INFO - Processed chunk 194, chunk mean: 915452.3
+2026-04-24 18:10:27,300 - INFO - Processed chunk 195, chunk mean: 1274613.6
+2026-04-24 18:10:27,305 - INFO - Processed chunk 196, chunk mean: 1155528.1
+2026-04-24 18:10:27,309 - INFO - Processed chunk 197, chunk mean: 1278618.2
+2026-04-24 18:10:27,312 - INFO - Processed chunk 198, chunk mean: 938713.5
+2026-04-24 18:10:27,316 - INFO - Processed chunk 199, chunk mean: 848662.5
+2026-04-24 18:10:27,319 - INFO - Processed chunk 200, chunk mean: 1170064.4
+2026-04-24 18:10:27,323 - INFO - Processed chunk 201, chunk mean: 911295.3
+2026-04-24 18:10:27,326 - INFO - Processed chunk 202, chunk mean: 907049.4
+2026-04-24 18:10:27,329 - INFO - Processed chunk 203, chunk mean: 924445.8
+2026-04-24 18:10:27,333 - INFO - Processed chunk 204, chunk mean: 944446.2
+2026-04-24 18:10:27,336 - INFO - Processed chunk 205, chunk mean: 1273894.5
+2026-04-24 18:10:27,339 - INFO - Processed chunk 206, chunk mean: 946326.9
+2026-04-24 18:10:27,343 - INFO - Processed chunk 207, chunk mean: 1136561.4
+2026-04-24 18:10:27,347 - INFO - Processed chunk 208, chunk mean: 1005443.0
+2026-04-24 18:10:27,350 - INFO - Processed chunk 209, chunk mean: 1322919.9
+2026-04-24 18:10:27,355 - INFO - Processed chunk 210, chunk mean: 873808.1
+2026-04-24 18:10:27,359 - INFO - Processed chunk 211, chunk mean: 1339454.4
+2026-04-24 18:10:27,363 - INFO - Processed chunk 212, chunk mean: 844841.4
+2026-04-24 18:10:27,367 - INFO - Processed chunk 213, chunk mean: 926325.0
+2026-04-24 18:10:27,371 - INFO - Processed chunk 214, chunk mean: 910298.2
+2026-04-24 18:10:27,375 - INFO - Processed chunk 215, chunk mean: 947024.2
+2026-04-24 18:10:27,379 - INFO - Processed chunk 216, chunk mean: 1012841.5
+2026-04-24 18:10:27,384 - INFO - Processed chunk 217, chunk mean: 1080761.2
+2026-04-24 18:10:27,388 - INFO - Processed chunk 218, chunk mean: 783149.5
+2026-04-24 18:10:27,392 - INFO - Processed chunk 219, chunk mean: 916240.6
+2026-04-24 18:10:27,395 - INFO - Processed chunk 220, chunk mean: 1039690.1
+2026-04-24 18:10:27,400 - INFO - Processed chunk 221, chunk mean: 1028824.7
+2026-04-24 18:10:27,404 - INFO - Processed chunk 222, chunk mean: 1152429.9
+2026-04-24 18:10:27,408 - INFO - Processed chunk 223, chunk mean: 1399180.8
+2026-04-24 18:10:27,411 - INFO - Processed chunk 224, chunk mean: 927601.9
+2026-04-24 18:10:27,415 - INFO - Processed chunk 225, chunk mean: 1155192.9
+2026-04-24 18:10:27,419 - INFO - Processed chunk 226, chunk mean: 958163.5
+2026-04-24 18:10:27,422 - INFO - Processed chunk 227, chunk mean: 1059975.5
+2026-04-24 18:10:27,426 - INFO - Processed chunk 228, chunk mean: 762474.3
+2026-04-24 18:10:27,430 - INFO - Processed chunk 229, chunk mean: 1031771.6
+2026-04-24 18:10:27,434 - INFO - Processed chunk 230, chunk mean: 1145218.8
+2026-04-24 18:10:27,438 - INFO - Processed chunk 231, chunk mean: 1075536.4
+2026-04-24 18:10:27,443 - INFO - Processed chunk 232, chunk mean: 1205157.5
+2026-04-24 18:10:27,449 - INFO - Processed chunk 233, chunk mean: 1355240.5
+2026-04-24 18:10:27,455 - INFO - Processed chunk 234, chunk mean: 655429.6
+2026-04-24 18:10:27,459 - INFO - Processed chunk 235, chunk mean: 1297086.8
+2026-04-24 18:10:27,465 - INFO - Processed chunk 236, chunk mean: 1286761.4
+2026-04-24 18:10:27,470 - INFO - Processed chunk 237, chunk mean: 711350.3
+2026-04-24 18:10:27,475 - INFO - Processed chunk 238, chunk mean: 1106416.1
+2026-04-24 18:10:27,478 - INFO - Processed chunk 239, chunk mean: 919411.2
+2026-04-24 18:10:27,483 - INFO - Processed chunk 240, chunk mean: 1028360.4
+2026-04-24 18:10:27,489 - INFO - Processed chunk 241, chunk mean: 1457582.1
+2026-04-24 18:10:27,496 - INFO - Processed chunk 242, chunk mean: 1408417.4
+2026-04-24 18:10:27,502 - INFO - Processed chunk 243, chunk mean: 931150.2
+2026-04-24 18:10:27,507 - INFO - Processed chunk 244, chunk mean: 840843.6
+2026-04-24 18:10:27,511 - INFO - Processed chunk 245, chunk mean: 1150638.7
+2026-04-24 18:10:27,518 - INFO - Processed chunk 246, chunk mean: 1241026.9
+2026-04-24 18:10:27,526 - INFO - Processed chunk 247, chunk mean: 832170.6
+2026-04-24 18:10:27,535 - INFO - Processed chunk 248, chunk mean: 1094344.6
+2026-04-24 18:10:27,544 - INFO - Processed chunk 249, chunk mean: 1185905.3
+2026-04-24 18:10:27,548 - INFO - Processed chunk 250, chunk mean: 1124635.4
+2026-04-24 18:10:27,552 - INFO - Processed chunk 251, chunk mean: 1296152.6
+2026-04-24 18:10:27,556 - INFO - Processed chunk 252, chunk mean: 855955.4
+2026-04-24 18:10:27,561 - INFO - Processed chunk 253, chunk mean: 797982.7
+2026-04-24 18:10:27,564 - INFO - Processed chunk 254, chunk mean: 1291352.4
+2026-04-24 18:10:27,569 - INFO - Processed chunk 255, chunk mean: 996299.4
+2026-04-24 18:10:27,573 - INFO - Processed chunk 256, chunk mean: 1046862.4
+2026-04-24 18:10:27,578 - INFO - Processed chunk 257, chunk mean: 1298341.5
+2026-04-24 18:10:27,583 - INFO - Processed chunk 258, chunk mean: 1089962.1
+2026-04-24 18:10:27,588 - INFO - Processed chunk 259, chunk mean: 1271438.3
+2026-04-24 18:10:27,592 - INFO - Processed chunk 260, chunk mean: 1472653.4
+2026-04-24 18:10:27,597 - INFO - Processed chunk 261, chunk mean: 1309007.1
+2026-04-24 18:10:27,603 - INFO - Processed chunk 262, chunk mean: 954353.4
+2026-04-24 18:10:27,608 - INFO - Processed chunk 263, chunk mean: 692336.2
+2026-04-24 18:10:27,615 - INFO - Processed chunk 264, chunk mean: 949625.5
+2026-04-24 18:10:27,622 - INFO - Processed chunk 265, chunk mean: 1114922.2
+2026-04-24 18:10:27,629 - INFO - Processed chunk 266, chunk mean: 1015109.7
+2026-04-24 18:10:27,637 - INFO - Processed chunk 267, chunk mean: 1164258.0
+2026-04-24 18:10:27,649 - INFO - Processed chunk 268, chunk mean: 1310688.2
+2026-04-24 18:10:27,660 - INFO - Processed chunk 269, chunk mean: 1136796.4
+2026-04-24 18:10:27,666 - INFO - Processed chunk 270, chunk mean: 1037662.6
+2026-04-24 18:10:27,673 - INFO - Processed chunk 271, chunk mean: 1027479.0
+2026-04-24 18:10:27,677 - INFO - Processed chunk 272, chunk mean: 1143270.0
+2026-04-24 18:10:27,684 - INFO - Processed chunk 273, chunk mean: 1141420.5
+2026-04-24 18:10:27,689 - INFO - Processed chunk 274, chunk mean: 949061.8
+2026-04-24 18:10:27,698 - INFO - Processed chunk 275, chunk mean: 1112472.3
+2026-04-24 18:10:27,711 - INFO - Processed chunk 276, chunk mean: 1665735.0
+2026-04-24 18:10:27,720 - INFO - Processed chunk 277, chunk mean: 1041542.5
+2026-04-24 18:10:27,730 - INFO - Processed chunk 278, chunk mean: 1018723.3
+2026-04-24 18:10:27,736 - INFO - Processed chunk 279, chunk mean: 843428.6
+2026-04-24 18:10:27,742 - INFO - Processed chunk 280, chunk mean: 861317.5
+2026-04-24 18:10:27,747 - INFO - Processed chunk 281, chunk mean: 1098693.7
+2026-04-24 18:10:27,754 - INFO - Processed chunk 282, chunk mean: 943332.1
+2026-04-24 18:10:27,759 - INFO - Processed chunk 283, chunk mean: 1270861.9
+2026-04-24 18:10:27,766 - INFO - Processed chunk 284, chunk mean: 1051127.1
+2026-04-24 18:10:27,773 - INFO - Processed chunk 285, chunk mean: 988266.6
+2026-04-24 18:10:27,780 - INFO - Processed chunk 286, chunk mean: 886874.4
+2026-04-24 18:10:27,788 - INFO - Processed chunk 287, chunk mean: 610469.7
+2026-04-24 18:10:27,795 - INFO - Processed chunk 288, chunk mean: 1097576.8
+2026-04-24 18:10:27,803 - INFO - Processed chunk 289, chunk mean: 1285368.9
+2026-04-24 18:10:27,809 - INFO - Processed chunk 290, chunk mean: 1272224.7
+2026-04-24 18:10:27,814 - INFO - Processed chunk 291, chunk mean: 1038053.0
+2026-04-24 18:10:27,819 - INFO - Processed chunk 292, chunk mean: 1187739.8
+2026-04-24 18:10:27,824 - INFO - Processed chunk 293, chunk mean: 1261301.5
+2026-04-24 18:10:27,828 - INFO - Processed chunk 294, chunk mean: 1220793.9
+2026-04-24 18:10:27,833 - INFO - Processed chunk 295, chunk mean: 1001649.1
+2026-04-24 18:10:27,837 - INFO - Processed chunk 296, chunk mean: 1237281.0
+2026-04-24 18:10:27,842 - INFO - Processed chunk 297, chunk mean: 930333.4
+2026-04-24 18:10:27,847 - INFO - Processed chunk 298, chunk mean: 730817.8
+2026-04-24 18:10:27,851 - INFO - Processed chunk 299, chunk mean: 1131167.2
+2026-04-24 18:10:27,855 - INFO - Processed chunk 300, chunk mean: 955655.1
+2026-04-24 18:10:27,859 - INFO - Processed chunk 301, chunk mean: 1053375.5
+2026-04-24 18:10:27,863 - INFO - Processed chunk 302, chunk mean: 923314.5
+2026-04-24 18:10:27,868 - INFO - Processed chunk 303, chunk mean: 599955.6
+2026-04-24 18:10:27,873 - INFO - Processed chunk 304, chunk mean: 1034347.9
+2026-04-24 18:10:27,882 - INFO - Processed chunk 305, chunk mean: 1012795.4
+2026-04-24 18:10:27,895 - INFO - Processed chunk 306, chunk mean: 818712.7
+2026-04-24 18:10:27,905 - INFO - Processed chunk 307, chunk mean: 1038274.7
+2026-04-24 18:10:27,910 - INFO - Processed chunk 308, chunk mean: 1279045.8
+2026-04-24 18:10:27,915 - INFO - Processed chunk 309, chunk mean: 1021420.8
+2026-04-24 18:10:27,921 - INFO - Processed chunk 310, chunk mean: 1060970.3
+2026-04-24 18:10:27,926 - INFO - Processed chunk 311, chunk mean: 1071364.3
+2026-04-24 18:10:27,930 - INFO - Processed chunk 312, chunk mean: 793930.0
+2026-04-24 18:10:27,934 - INFO - Processed chunk 313, chunk mean: 1341326.3
+2026-04-24 18:10:27,938 - INFO - Processed chunk 314, chunk mean: 1340063.5
+2026-04-24 18:10:27,942 - INFO - Processed chunk 315, chunk mean: 1072050.7
+2026-04-24 18:10:27,949 - INFO - Processed chunk 316, chunk mean: 1050623.4
+2026-04-24 18:10:27,954 - INFO - Processed chunk 317, chunk mean: 1036672.3
+2026-04-24 18:10:27,959 - INFO - Processed chunk 318, chunk mean: 1046764.1
+2026-04-24 18:10:27,963 - INFO - Processed chunk 319, chunk mean: 837678.4
+2026-04-24 18:10:27,967 - INFO - Processed chunk 320, chunk mean: 1464074.4
+2026-04-24 18:10:27,970 - INFO - Processed chunk 321, chunk mean: 1103661.1
+2026-04-24 18:10:27,975 - INFO - Processed chunk 322, chunk mean: 1353663.7
+2026-04-24 18:10:27,979 - INFO - Processed chunk 323, chunk mean: 1162330.1
+2026-04-24 18:10:27,983 - INFO - Processed chunk 324, chunk mean: 1034621.6
+2026-04-24 18:10:27,988 - INFO - Processed chunk 325, chunk mean: 955522.3
+2026-04-24 18:10:27,993 - INFO - Processed chunk 326, chunk mean: 1211314.5
+2026-04-24 18:10:28,001 - INFO - Processed chunk 327, chunk mean: 1117034.9
+2026-04-24 18:10:28,011 - INFO - Processed chunk 328, chunk mean: 978018.3
+2026-04-24 18:10:28,019 - INFO - Processed chunk 329, chunk mean: 1347054.2
+2026-04-24 18:10:28,027 - INFO - Processed chunk 330, chunk mean: 846235.6
+2026-04-24 18:10:28,031 - INFO - Processed chunk 331, chunk mean: 1154476.3
+2026-04-24 18:10:28,035 - INFO - Processed chunk 332, chunk mean: 1473421.1
+2026-04-24 18:10:28,039 - INFO - Processed chunk 333, chunk mean: 1094828.8
+2026-04-24 18:10:28,044 - INFO - Processed chunk 334, chunk mean: 1195901.9
+2026-04-24 18:10:28,048 - INFO - Processed chunk 335, chunk mean: 812026.7
+2026-04-24 18:10:28,052 - INFO - Processed chunk 336, chunk mean: 1090756.5
+2026-04-24 18:10:28,056 - INFO - Processed chunk 337, chunk mean: 980824.8
+2026-04-24 18:10:28,060 - INFO - Processed chunk 338, chunk mean: 967476.7
+2026-04-24 18:10:28,063 - INFO - Processed chunk 339, chunk mean: 1294074.2
+2026-04-24 18:10:28,068 - INFO - Processed chunk 340, chunk mean: 865712.4
+2026-04-24 18:10:28,071 - INFO - Processed chunk 341, chunk mean: 1200772.5
+2026-04-24 18:10:28,075 - INFO - Processed chunk 342, chunk mean: 1196546.2
+2026-04-24 18:10:28,079 - INFO - Processed chunk 343, chunk mean: 964555.4
+2026-04-24 18:10:28,083 - INFO - Processed chunk 344, chunk mean: 1270603.1
+2026-04-24 18:10:28,087 - INFO - Processed chunk 345, chunk mean: 1393039.8
+2026-04-24 18:10:28,092 - INFO - Processed chunk 346, chunk mean: 1294324.4
+2026-04-24 18:10:28,096 - INFO - Processed chunk 347, chunk mean: 1122134.0
+2026-04-24 18:10:28,100 - INFO - Processed chunk 348, chunk mean: 1206693.8
+2026-04-24 18:10:28,104 - INFO - Processed chunk 349, chunk mean: 1074822.2
+2026-04-24 18:10:28,107 - INFO - Processed chunk 350, chunk mean: 883246.9
+2026-04-24 18:10:28,111 - INFO - Processed chunk 351, chunk mean: 1179401.0
+2026-04-24 18:10:28,115 - INFO - Processed chunk 352, chunk mean: 1317227.7
+2026-04-24 18:10:28,119 - INFO - Processed chunk 353, chunk mean: 1079603.3
+2026-04-24 18:10:28,124 - INFO - Processed chunk 354, chunk mean: 759762.5
+2026-04-24 18:10:28,130 - INFO - Processed chunk 355, chunk mean: 1200176.0
+2026-04-24 18:10:28,135 - INFO - Processed chunk 356, chunk mean: 1013248.7
+2026-04-24 18:10:28,138 - INFO - Processed chunk 357, chunk mean: 1065712.5
+2026-04-24 18:10:28,143 - INFO - Processed chunk 358, chunk mean: 916680.2
+2026-04-24 18:10:28,147 - INFO - Processed chunk 359, chunk mean: 834612.0
+2026-04-24 18:10:28,151 - INFO - Processed chunk 360, chunk mean: 1145426.8
+2026-04-24 18:10:28,155 - INFO - Processed chunk 361, chunk mean: 800094.0
+2026-04-24 18:10:28,159 - INFO - Processed chunk 362, chunk mean: 828291.3
+2026-04-24 18:10:28,162 - INFO - Processed chunk 363, chunk mean: 1318779.2
+2026-04-24 18:10:28,166 - INFO - Processed chunk 364, chunk mean: 1113661.3
+2026-04-24 18:10:28,170 - INFO - Processed chunk 365, chunk mean: 1154525.0
+2026-04-24 18:10:28,174 - INFO - Processed chunk 366, chunk mean: 847500.3
+2026-04-24 18:10:28,178 - INFO - Processed chunk 367, chunk mean: 1005603.5
+2026-04-24 18:10:28,182 - INFO - Processed chunk 368, chunk mean: 1245224.9
+2026-04-24 18:10:28,186 - INFO - Processed chunk 369, chunk mean: 1254237.9
+2026-04-24 18:10:28,190 - INFO - Processed chunk 370, chunk mean: 978609.6
+2026-04-24 18:10:28,195 - INFO - Processed chunk 371, chunk mean: 889381.8
+2026-04-24 18:10:28,200 - INFO - Processed chunk 372, chunk mean: 1252980.8
+2026-04-24 18:10:28,204 - INFO - Processed chunk 373, chunk mean: 1161626.2
+2026-04-24 18:10:28,209 - INFO - Processed chunk 374, chunk mean: 1130890.8
+2026-04-24 18:10:28,214 - INFO - Processed chunk 375, chunk mean: 1253101.2
+2026-04-24 18:10:28,217 - INFO - Processed chunk 376, chunk mean: 904650.1
+2026-04-24 18:10:28,221 - INFO - Processed chunk 377, chunk mean: 1036004.4
+2026-04-24 18:10:28,225 - INFO - Processed chunk 378, chunk mean: 991136.4
+2026-04-24 18:10:28,229 - INFO - Processed chunk 379, chunk mean: 895013.6
+2026-04-24 18:10:28,232 - INFO - Processed chunk 380, chunk mean: 1176268.6
+2026-04-24 18:10:28,236 - INFO - Processed chunk 381, chunk mean: 1021202.0
+2026-04-24 18:10:28,239 - INFO - Processed chunk 382, chunk mean: 797548.4
+2026-04-24 18:10:28,243 - INFO - Processed chunk 383, chunk mean: 1046947.9
+2026-04-24 18:10:28,246 - INFO - Processed chunk 384, chunk mean: 816213.7
+2026-04-24 18:10:28,250 - INFO - Processed chunk 385, chunk mean: 1124840.4
+2026-04-24 18:10:28,254 - INFO - Processed chunk 386, chunk mean: 1045283.8
+2026-04-24 18:10:28,259 - INFO - Processed chunk 387, chunk mean: 1092273.6
+2026-04-24 18:10:28,264 - INFO - Processed chunk 388, chunk mean: 927038.4
+2026-04-24 18:10:28,267 - INFO - Processed chunk 389, chunk mean: 870591.9
+2026-04-24 18:10:28,271 - INFO - Processed chunk 390, chunk mean: 1141249.6
+2026-04-24 18:10:28,275 - INFO - Processed chunk 391, chunk mean: 1088184.9
+2026-04-24 18:10:28,279 - INFO - Processed chunk 392, chunk mean: 1377328.7
+2026-04-24 18:10:28,283 - INFO - Processed chunk 393, chunk mean: 1015953.9
+2026-04-24 18:10:28,286 - INFO - Processed chunk 394, chunk mean: 1299133.1
+2026-04-24 18:10:28,290 - INFO - Processed chunk 395, chunk mean: 1114684.3
+2026-04-24 18:10:28,294 - INFO - Processed chunk 396, chunk mean: 1074288.7
+2026-04-24 18:10:28,297 - INFO - Processed chunk 397, chunk mean: 1070570.4
+2026-04-24 18:10:28,301 - INFO - Processed chunk 398, chunk mean: 1051171.2
+2026-04-24 18:10:28,305 - INFO - Processed chunk 399, chunk mean: 1250945.3
+2026-04-24 18:10:28,309 - INFO - Processed chunk 400, chunk mean: 1108214.9
+2026-04-24 18:10:28,312 - INFO - Processed chunk 401, chunk mean: 899607.8
+2026-04-24 18:10:28,316 - INFO - Processed chunk 402, chunk mean: 910272.4
+2026-04-24 18:10:28,320 - INFO - Processed chunk 403, chunk mean: 1349716.2
+2026-04-24 18:10:28,323 - INFO - Processed chunk 404, chunk mean: 1165794.9
+2026-04-24 18:10:28,327 - INFO - Processed chunk 405, chunk mean: 1018134.9
+2026-04-24 18:10:28,331 - INFO - Processed chunk 406, chunk mean: 1411163.9
+2026-04-24 18:10:28,335 - INFO - Processed chunk 407, chunk mean: 1083729.8
+2026-04-24 18:10:28,339 - INFO - Processed chunk 408, chunk mean: 793220.5
+2026-04-24 18:10:28,343 - INFO - Processed chunk 409, chunk mean: 906152.4
+2026-04-24 18:10:28,347 - INFO - Processed chunk 410, chunk mean: 1119382.7
+2026-04-24 18:10:28,351 - INFO - Processed chunk 411, chunk mean: 1110686.7
+2026-04-24 18:10:28,354 - INFO - Processed chunk 412, chunk mean: 334306.0
+2026-04-24 18:10:28,355 - INFO - Global mean price across chunks: 1067958.3417659937
+2026-04-24 18:10:28,355 - INFO - Processing chunks per-category (Language equivalent) from: data/processed/analytics\test_analytics.csv
+2026-04-24 18:10:30,768 - INFO - Combined accumulators - Category Means: {'Industrial': np.float64(1054944.8293838862), 'Multi-Family': np.float64(1063101.898019802), 'Office': np.float64(1072001.8200192493), 'Retail': np.float64(1082291.102284012)}
+2026-04-24 18:10:30,768 - INFO - --- Exploratory Data Analysis ---
+2026-04-24 18:10:30,769 - INFO - Dataset Shape: (4111, 11)
+2026-04-24 18:10:30,776 - INFO - Dataset Info:
+None
+2026-04-24 18:10:30,798 - INFO - Descriptive Statistics:
+       property_id  name  address         price  sq_ft         area
+count          0.0   0.0      0.0  4.111000e+03    0.0  4111.000000
+mean           NaN   NaN      NaN  1.067958e+06    NaN  2762.786183
+std            NaN   NaN      NaN  5.457007e+05    NaN  1287.119879
+min            NaN   NaN      NaN  1.007910e+05    NaN   500.000000
+25%            NaN   NaN      NaN  5.906710e+05    NaN  1630.500000
+50%            NaN   NaN      NaN  1.095827e+06    NaN  2765.000000
+75%            NaN   NaN      NaN  1.543516e+06    NaN  3868.500000
+max            NaN   NaN      NaN  1.998545e+06    NaN  4999.000000
+2026-04-24 18:10:30,799 - INFO - Value Counts for 'type':
+type
+Industrial      1055
+Office          1039
+Multi-Family    1010
+Retail          1007
+Name: count, dtype: int64
+2026-04-24 18:10:30,799 - INFO - Unique values in 'type': 4
+2026-04-24 18:10:31,315 - INFO - Saved chart: data/processed/analytics/charts/property_types_dist.png
+2026-04-24 18:10:31,713 - INFO - Saved chart: data/processed/analytics/charts/price_distribution.png
+2026-04-24 18:10:31,713 - INFO - Requirement 7: Simulation of GoogleDrive upload for charts completed. Shared with Amila.
+2026-04-24 18:10:31,714 - INFO - --- Data Selection & Filtering ---
+2026-04-24 18:10:31,720 - INFO - loc selection (first 5 rows, listing_id & price):
+  listing_id    price
+0        NaN  1048605
+1        NaN  1115433
+2        NaN  1747152
+3        NaN   707210
+4        NaN  1182278
+2026-04-24 18:10:31,724 - INFO - iloc selection (first 3 rows, first 2 columns):
+   property_id  name
+0          NaN   NaN
+1          NaN   NaN
+2          NaN   NaN
+2026-04-24 18:10:31,726 - INFO - High value properties (price > 1M): 2272 found.
+2026-04-24 18:10:31,727 - INFO - Properties with type in ['Office', 'Retail']: 2046 found.
+2026-04-24 18:10:31,728 - INFO - Mid-range properties (500k-1M): 997 found.
+2026-04-24 18:10:31,728 - INFO - --- Regular Expression Operations ---
+2026-04-24 18:10:31,745 - INFO - Regex 1: Extracted years from descriptions.
+2026-04-24 18:10:31,750 - INFO - Regex 2: Titles starting with 'Property': 4111 found.
+2026-04-24 18:10:31,756 - INFO - Regex 3: Descriptions with phone numbers: 822 found.
+2026-04-24 18:10:31,765 - INFO - Regex 4: Extracted sqft values from descriptions.
+2026-04-24 18:10:31,768 - INFO - Regex 5: 'Genres' containing 'office' (case-insensitive): 1039 found.
+2026-04-24 18:10:31,768 - INFO - --- Data Quality Assessment ---
+2026-04-24 18:10:32,456 - INFO - Saved heatmap: data/processed/analytics/charts/missing_data_heatmap.png
+2026-04-24 18:10:32,459 - INFO - Saved quality report: data/processed/analytics/data_quality_report.csv
+2026-04-24 18:20:17,457 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-24 18:20:17,458 - INFO - Fetching data from API...
+2026-04-24 18:20:17,458 - INFO - --- Fetching Page 1 ---
+2026-04-24 18:20:19,738 - INFO - Successfully grabbed 160 items from page 1
+2026-04-24 18:20:19,743 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-24 18:20:19,744 - INFO - --- Fetching Page 2 ---
+2026-04-24 18:20:21,952 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-24 18:20:24,486 - INFO - Successfully grabbed 0 items from page 2
+2026-04-24 18:20:24,487 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-24 18:20:24,487 - INFO - --- Fetching Page 3 ---
+2026-04-24 18:20:26,136 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-24 18:20:27,988 - INFO - Successfully grabbed 0 items from page 3
+2026-04-24 18:20:27,988 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-24 18:20:27,989 - INFO - Parsing data...
+2026-04-24 18:20:27,990 - INFO - Saving to MongoDB...
+2026-04-24 18:20:28,000 - INFO - Success! Saved 160 houses to MongoDB.
+2026-04-24 18:20:28,000 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-24 18:20:28,000 - INFO - Starting image download for 160 items.
+2026-04-24 18:20:28,008 - INFO - Successfully downloaded 0 images.
+2026-04-24 18:20:28,009 - INFO - Starting batch process for 1 images.
+2026-04-24 18:20:28,010 - INFO - Processing image: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-24 18:20:28,171 - INFO - Resized image saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-24 18:20:28,335 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-24 18:20:28,335 - INFO - Uploading 2 files to Google Drive.
+2026-04-24 18:20:28,354 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-24 18:20:29,513 - ERROR - Error uploading image C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-24 18:20:30,030 - ERROR - Error uploading image C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-24 18:20:30,030 - INFO - Batch processing complete.
+2026-04-24 18:20:30,030 - INFO - Starting unstructured document extraction...
+2026-04-24 18:20:30,031 - INFO - Extracting PDF: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-24 18:20:30,183 - INFO - Extracting PDF: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-24 18:20:30,274 - INFO - Extracting Word Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-24 18:20:30,286 - INFO - Extracting Word Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-24 18:20:30,298 - INFO - Extracting Excel Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-24 18:20:30,306 - INFO - Extracting Excel Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-24 18:20:30,312 - INFO - Saving 6 document records to MongoDB...
+2026-04-24 18:20:30,319 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-24 18:20:30,319 - INFO - Starting Phase 3: Web Scraping...
+2026-04-24 18:20:30,319 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-24 18:20:30,319 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-24 18:20:30,846 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-24 18:20:31,716 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-24 18:20:31,716 - INFO - Applying a 2-second delay between requests...
+2026-04-24 18:20:33,717 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-24 18:20:34,327 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-24 18:20:35,463 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-24 18:20:35,464 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-24 18:20:35,464 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-24 18:20:36,114 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-24 18:20:42,938 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-24 18:20:42,991 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-24 18:20:42,991 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-24 18:20:42,992 - INFO - Starting OCR for image: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-24 18:20:43,491 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-24 18:20:43,521 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-24 18:20:43,521 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-24 18:20:43,521 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-24 18:20:43,946 - INFO - Trimmed audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\trimmed_sample.wav
+2026-04-24 18:20:47,893 - INFO - Converted audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\converted_sample.ogg (format: ogg)
+2026-04-24 18:20:47,893 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Interstellar - Christopher Nolan - Official Warner Bros. [WqNirxasldY].mp3
+2026-04-24 18:20:48,410 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Interstellar – Building A Black Hole – Official Warner Bros. [MfGfZwQ_qaY].mp3
+2026-04-24 18:20:49,115 - INFO - Concatenated audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\concatenated_sample.wav
+2026-04-24 18:20:49,129 - INFO - Transcribing C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 with model base
+2026-04-24 18:20:50,506 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-24 18:20:51,400 - INFO - Processing audio with duration 03:12.401
+2026-04-24 18:20:52,127 - INFO - Detected language 'en' with probability 0.99
+2026-04-24 18:21:05,237 - INFO - Success! Saved transcript for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 to MongoDB with ID 69eb98716fb478d71f578bc5.
+2026-04-24 18:21:05,237 - INFO - Starting chunked transcription for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-24 18:21:05,698 - INFO - Loading cached transcript for chunk 0
+2026-04-24 18:21:05,699 - ERROR - Chunked transcription error: 'text'
+2026-04-24 18:21:05,702 - INFO - Loading video from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4
+2026-04-24 18:21:09,423 - INFO - Audio extracted and saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3
+2026-04-24 18:21:09,435 - INFO - Extracting frames from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 every 10 seconds
+2026-04-24 18:21:12,519 - INFO - Extracted 20 frames to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\frames
+2026-04-24 18:21:12,539 - INFO - Transcribing C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3 with model base
+2026-04-24 18:21:12,931 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-24 18:21:13,672 - INFO - Processing audio with duration 03:12.400
+2026-04-24 18:21:14,466 - INFO - Detected language 'en' with probability 0.99
+2026-04-24 18:21:27,430 - INFO - Success! Saved transcript for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 to MongoDB with ID 69eb98876fb478d71f578bc7.
+2026-04-24 18:21:27,431 - INFO - Starting Phase 6: Data Analytics...
+2026-04-24 18:21:27,432 - INFO - --- NumPy Foundations ---
+2026-04-24 18:21:27,432 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-24 18:21:27,433 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-24 18:21:27,433 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-24 18:21:27,434 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-24 18:21:27,492 - INFO - Loaded integrated data with 4271 records.
+2026-04-24 18:21:27,496 - INFO - Memory usage before optimization: 1.55 MB
+2026-04-24 18:21:27,509 - INFO - Skipping category optimization for column coordinates due to unhashable type.
+2026-04-24 18:21:27,512 - INFO - Memory usage after optimization: 0.81 MB
+2026-04-24 18:21:27,535 - INFO - Data exported to data/processed/analytics\raw_integrated_data.csv
+2026-04-24 18:21:27,536 - INFO - Loading CSV in chunks: data/processed/analytics\raw_integrated_data.csv
+2026-04-24 18:21:27,604 - INFO - Processed chunk 1, chunk mean: 834318.5
+2026-04-24 18:21:27,612 - INFO - Processed chunk 2, chunk mean: 1055408.8
+2026-04-24 18:21:27,617 - INFO - Processed chunk 3, chunk mean: 1066346.85
+2026-04-24 18:21:27,623 - INFO - Processed chunk 4, chunk mean: 958794.7
+2026-04-24 18:21:27,626 - INFO - Processed chunk 5, chunk mean: 953331.95
+2026-04-24 18:21:27,629 - INFO - Processed chunk 6, chunk mean: 995683.1
+2026-04-24 18:21:27,633 - INFO - Processed chunk 7, chunk mean: 934160.05
+2026-04-24 18:21:27,639 - INFO - Processed chunk 8, chunk mean: 1170249.95
+2026-04-24 18:21:27,642 - INFO - Processed chunk 9, chunk mean: 813728.95
+2026-04-24 18:21:27,645 - INFO - Processed chunk 10, chunk mean: 906715.45
+2026-04-24 18:21:27,648 - INFO - Processed chunk 11, chunk mean: 1215120.7
+2026-04-24 18:21:27,652 - INFO - Processed chunk 12, chunk mean: 1097962.55
+2026-04-24 18:21:27,655 - INFO - Processed chunk 13, chunk mean: 1111050.55
+2026-04-24 18:21:27,658 - INFO - Processed chunk 14, chunk mean: 992178.75
+2026-04-24 18:21:27,661 - INFO - Processed chunk 15, chunk mean: 1063571.25
+2026-04-24 18:21:27,665 - INFO - Processed chunk 16, chunk mean: 843647.3
+2026-04-24 18:21:27,668 - INFO - Processed chunk 17, chunk mean: 981964.3
+2026-04-24 18:21:27,671 - INFO - Processed chunk 18, chunk mean: 1096382.3
+2026-04-24 18:21:27,674 - INFO - Processed chunk 19, chunk mean: 943542.25
+2026-04-24 18:21:27,677 - INFO - Processed chunk 20, chunk mean: 1082664.9
+2026-04-24 18:21:27,680 - INFO - Processed chunk 21, chunk mean: 1061057.65
+2026-04-24 18:21:27,683 - INFO - Processed chunk 22, chunk mean: 1262055.9
+2026-04-24 18:21:27,687 - INFO - Processed chunk 23, chunk mean: 1027262.7
+2026-04-24 18:21:27,690 - INFO - Processed chunk 24, chunk mean: 1186051.05
+2026-04-24 18:21:27,693 - INFO - Processed chunk 25, chunk mean: 1248448.0
+2026-04-24 18:21:27,696 - INFO - Processed chunk 26, chunk mean: 1006727.25
+2026-04-24 18:21:27,699 - INFO - Processed chunk 27, chunk mean: 1026373.5
+2026-04-24 18:21:27,702 - INFO - Processed chunk 28, chunk mean: 974411.6
+2026-04-24 18:21:27,705 - INFO - Processed chunk 29, chunk mean: 1128512.5
+2026-04-24 18:21:27,708 - INFO - Processed chunk 30, chunk mean: 1111165.25
+2026-04-24 18:21:27,711 - INFO - Processed chunk 31, chunk mean: 1162063.65
+2026-04-24 18:21:27,714 - INFO - Processed chunk 32, chunk mean: 1274443.75
+2026-04-24 18:21:27,717 - INFO - Processed chunk 33, chunk mean: 1101654.9
+2026-04-24 18:21:27,720 - INFO - Processed chunk 34, chunk mean: 1259693.15
+2026-04-24 18:21:27,723 - INFO - Processed chunk 35, chunk mean: 1169822.4
+2026-04-24 18:21:27,726 - INFO - Processed chunk 36, chunk mean: 1006629.05
+2026-04-24 18:21:27,729 - INFO - Processed chunk 37, chunk mean: 998557.1
+2026-04-24 18:21:27,732 - INFO - Processed chunk 38, chunk mean: 1100143.45
+2026-04-24 18:21:27,735 - INFO - Processed chunk 39, chunk mean: 1119259.8
+2026-04-24 18:21:27,738 - INFO - Processed chunk 40, chunk mean: 1215598.6
+2026-04-24 18:21:27,741 - INFO - Processed chunk 41, chunk mean: 976090.55
+2026-04-24 18:21:27,744 - INFO - Processed chunk 42, chunk mean: 1165044.1
+2026-04-24 18:21:27,747 - INFO - Processed chunk 43, chunk mean: 903775.2
+2026-04-24 18:21:27,750 - INFO - Processed chunk 44, chunk mean: 917620.35
+2026-04-24 18:21:27,753 - INFO - Processed chunk 45, chunk mean: 822633.2
+2026-04-24 18:21:27,756 - INFO - Processed chunk 46, chunk mean: 1025578.75
+2026-04-24 18:21:27,759 - INFO - Processed chunk 47, chunk mean: 1126297.95
+2026-04-24 18:21:27,762 - INFO - Processed chunk 48, chunk mean: 1252511.15
+2026-04-24 18:21:27,765 - INFO - Processed chunk 49, chunk mean: 1086988.6
+2026-04-24 18:21:27,768 - INFO - Processed chunk 50, chunk mean: 1124293.5
+2026-04-24 18:21:27,771 - INFO - Processed chunk 51, chunk mean: 1091771.3
+2026-04-24 18:21:27,774 - INFO - Processed chunk 52, chunk mean: 1124383.7
+2026-04-24 18:21:27,777 - INFO - Processed chunk 53, chunk mean: 1190192.05
+2026-04-24 18:21:27,780 - INFO - Processed chunk 54, chunk mean: 1183950.65
+2026-04-24 18:21:27,783 - INFO - Processed chunk 55, chunk mean: 1115093.3
+2026-04-24 18:21:27,786 - INFO - Processed chunk 56, chunk mean: 1098609.6
+2026-04-24 18:21:27,789 - INFO - Processed chunk 57, chunk mean: 1024208.85
+2026-04-24 18:21:27,792 - INFO - Processed chunk 58, chunk mean: 920202.7
+2026-04-24 18:21:27,795 - INFO - Processed chunk 59, chunk mean: 979252.55
+2026-04-24 18:21:27,798 - INFO - Processed chunk 60, chunk mean: 1049670.6
+2026-04-24 18:21:27,801 - INFO - Processed chunk 61, chunk mean: 861823.25
+2026-04-24 18:21:27,804 - INFO - Processed chunk 62, chunk mean: 1090614.45
+2026-04-24 18:21:27,807 - INFO - Processed chunk 63, chunk mean: 1139420.35
+2026-04-24 18:21:27,810 - INFO - Processed chunk 64, chunk mean: 1071075.95
+2026-04-24 18:21:27,813 - INFO - Processed chunk 65, chunk mean: 1045354.6
+2026-04-24 18:21:27,816 - INFO - Processed chunk 66, chunk mean: 1027678.85
+2026-04-24 18:21:27,819 - INFO - Processed chunk 67, chunk mean: 1109825.95
+2026-04-24 18:21:27,822 - INFO - Processed chunk 68, chunk mean: 836826.65
+2026-04-24 18:21:27,825 - INFO - Processed chunk 69, chunk mean: 1045268.75
+2026-04-24 18:21:27,827 - INFO - Processed chunk 70, chunk mean: 1227038.8
+2026-04-24 18:21:27,830 - INFO - Processed chunk 71, chunk mean: 1155482.55
+2026-04-24 18:21:27,832 - INFO - Processed chunk 72, chunk mean: 924596.45
+2026-04-24 18:21:27,835 - INFO - Processed chunk 73, chunk mean: 1042983.2
+2026-04-24 18:21:27,837 - INFO - Processed chunk 74, chunk mean: 917561.1
+2026-04-24 18:21:27,840 - INFO - Processed chunk 75, chunk mean: 1093963.55
+2026-04-24 18:21:27,843 - INFO - Processed chunk 76, chunk mean: 1075567.05
+2026-04-24 18:21:27,845 - INFO - Processed chunk 77, chunk mean: 993303.45
+2026-04-24 18:21:27,848 - INFO - Processed chunk 78, chunk mean: 1052645.6
+2026-04-24 18:21:27,850 - INFO - Processed chunk 79, chunk mean: 1125542.0
+2026-04-24 18:21:27,853 - INFO - Processed chunk 80, chunk mean: 1058109.1
+2026-04-24 18:21:27,856 - INFO - Processed chunk 81, chunk mean: 1191514.8
+2026-04-24 18:21:27,859 - INFO - Processed chunk 82, chunk mean: 996612.7
+2026-04-24 18:21:27,861 - INFO - Processed chunk 83, chunk mean: 1061626.75
+2026-04-24 18:21:27,864 - INFO - Processed chunk 84, chunk mean: 1014261.55
+2026-04-24 18:21:27,866 - INFO - Processed chunk 85, chunk mean: 1013794.55
+2026-04-24 18:21:27,869 - INFO - Processed chunk 86, chunk mean: 1207977.4
+2026-04-24 18:21:27,871 - INFO - Processed chunk 87, chunk mean: 999133.65
+2026-04-24 18:21:27,874 - INFO - Processed chunk 88, chunk mean: 1092228.4
+2026-04-24 18:21:27,876 - INFO - Processed chunk 89, chunk mean: 996329.3
+2026-04-24 18:21:27,879 - INFO - Processed chunk 90, chunk mean: 988125.25
+2026-04-24 18:21:27,881 - INFO - Processed chunk 91, chunk mean: 1145429.85
+2026-04-24 18:21:27,884 - INFO - Processed chunk 92, chunk mean: 996772.4
+2026-04-24 18:21:27,887 - INFO - Processed chunk 93, chunk mean: 1120481.5
+2026-04-24 18:21:27,889 - INFO - Processed chunk 94, chunk mean: 1048217.5
+2026-04-24 18:21:27,892 - INFO - Processed chunk 95, chunk mean: 1023760.7
+2026-04-24 18:21:27,895 - INFO - Processed chunk 96, chunk mean: 1019513.55
+2026-04-24 18:21:27,897 - INFO - Processed chunk 97, chunk mean: 1229280.35
+2026-04-24 18:21:27,901 - INFO - Processed chunk 98, chunk mean: 1082072.3
+2026-04-24 18:21:27,904 - INFO - Processed chunk 99, chunk mean: 1150394.25
+2026-04-24 18:21:27,906 - INFO - Processed chunk 100, chunk mean: 1221102.6
+2026-04-24 18:21:27,909 - INFO - Processed chunk 101, chunk mean: 931723.55
+2026-04-24 18:21:27,911 - INFO - Processed chunk 102, chunk mean: 944727.9
+2026-04-24 18:21:27,914 - INFO - Processed chunk 103, chunk mean: 866288.75
+2026-04-24 18:21:27,917 - INFO - Processed chunk 104, chunk mean: 1000633.9
+2026-04-24 18:21:27,919 - INFO - Processed chunk 105, chunk mean: 1012455.5
+2026-04-24 18:21:27,922 - INFO - Processed chunk 106, chunk mean: 1183807.05
+2026-04-24 18:21:27,925 - INFO - Processed chunk 107, chunk mean: 999375.5
+2026-04-24 18:21:27,928 - INFO - Processed chunk 108, chunk mean: 1130394.3
+2026-04-24 18:21:27,930 - INFO - Processed chunk 109, chunk mean: 1028612.0
+2026-04-24 18:21:27,934 - INFO - Processed chunk 110, chunk mean: 973364.2
+2026-04-24 18:21:27,937 - INFO - Processed chunk 111, chunk mean: 1245791.85
+2026-04-24 18:21:27,939 - INFO - Processed chunk 112, chunk mean: 992985.35
+2026-04-24 18:21:27,941 - INFO - Processed chunk 113, chunk mean: 872306.5
+2026-04-24 18:21:27,944 - INFO - Processed chunk 114, chunk mean: 1034600.0
+2026-04-24 18:21:27,947 - INFO - Processed chunk 115, chunk mean: 1170998.7
+2026-04-24 18:21:27,949 - INFO - Processed chunk 116, chunk mean: 1166857.5
+2026-04-24 18:21:27,952 - INFO - Processed chunk 117, chunk mean: 1007458.85
+2026-04-24 18:21:27,954 - INFO - Processed chunk 118, chunk mean: 1034540.95
+2026-04-24 18:21:27,957 - INFO - Processed chunk 119, chunk mean: 1067179.35
+2026-04-24 18:21:27,959 - INFO - Processed chunk 120, chunk mean: 1026867.2
+2026-04-24 18:21:27,962 - INFO - Processed chunk 121, chunk mean: 1124363.9
+2026-04-24 18:21:27,965 - INFO - Processed chunk 122, chunk mean: 920585.05
+2026-04-24 18:21:27,967 - INFO - Processed chunk 123, chunk mean: 982994.4
+2026-04-24 18:21:27,969 - INFO - Processed chunk 124, chunk mean: 1384393.25
+2026-04-24 18:21:27,972 - INFO - Processed chunk 125, chunk mean: 938481.65
+2026-04-24 18:21:27,974 - INFO - Processed chunk 126, chunk mean: 982983.05
+2026-04-24 18:21:27,977 - INFO - Processed chunk 127, chunk mean: 1034546.1
+2026-04-24 18:21:27,980 - INFO - Processed chunk 128, chunk mean: 1041037.55
+2026-04-24 18:21:27,983 - INFO - Processed chunk 129, chunk mean: 1057203.7
+2026-04-24 18:21:27,986 - INFO - Processed chunk 130, chunk mean: 974969.9
+2026-04-24 18:21:27,989 - INFO - Processed chunk 131, chunk mean: 953612.55
+2026-04-24 18:21:27,993 - INFO - Processed chunk 132, chunk mean: 639537.45
+2026-04-24 18:21:27,997 - INFO - Processed chunk 133, chunk mean: 1028165.45
+2026-04-24 18:21:28,003 - INFO - Processed chunk 134, chunk mean: 1027983.55
+2026-04-24 18:21:28,007 - INFO - Processed chunk 135, chunk mean: 1066045.85
+2026-04-24 18:21:28,013 - INFO - Processed chunk 136, chunk mean: 989783.5
+2026-04-24 18:21:28,017 - INFO - Processed chunk 137, chunk mean: 993372.8
+2026-04-24 18:21:28,020 - INFO - Processed chunk 138, chunk mean: 1096862.7
+2026-04-24 18:21:28,024 - INFO - Processed chunk 139, chunk mean: 850635.35
+2026-04-24 18:21:28,029 - INFO - Processed chunk 140, chunk mean: 1099515.15
+2026-04-24 18:21:28,032 - INFO - Processed chunk 141, chunk mean: 1119731.5
+2026-04-24 18:21:28,035 - INFO - Processed chunk 142, chunk mean: 1175543.45
+2026-04-24 18:21:28,039 - INFO - Processed chunk 143, chunk mean: 955034.3
+2026-04-24 18:21:28,042 - INFO - Processed chunk 144, chunk mean: 755027.45
+2026-04-24 18:21:28,045 - INFO - Processed chunk 145, chunk mean: 1141248.85
+2026-04-24 18:21:28,049 - INFO - Processed chunk 146, chunk mean: 968730.8
+2026-04-24 18:21:28,053 - INFO - Processed chunk 147, chunk mean: 1230836.1
+2026-04-24 18:21:28,056 - INFO - Processed chunk 148, chunk mean: 1151989.65
+2026-04-24 18:21:28,059 - INFO - Processed chunk 149, chunk mean: 1100136.85
+2026-04-24 18:21:28,062 - INFO - Processed chunk 150, chunk mean: 1134295.6
+2026-04-24 18:21:28,066 - INFO - Processed chunk 151, chunk mean: 1011261.75
+2026-04-24 18:21:28,070 - INFO - Processed chunk 152, chunk mean: 1046222.75
+2026-04-24 18:21:28,074 - INFO - Processed chunk 153, chunk mean: 906428.45
+2026-04-24 18:21:28,077 - INFO - Processed chunk 154, chunk mean: 1228979.25
+2026-04-24 18:21:28,080 - INFO - Processed chunk 155, chunk mean: 862573.95
+2026-04-24 18:21:28,083 - INFO - Processed chunk 156, chunk mean: 1107317.3
+2026-04-24 18:21:28,086 - INFO - Processed chunk 157, chunk mean: 1087789.65
+2026-04-24 18:21:28,089 - INFO - Processed chunk 158, chunk mean: 851005.3
+2026-04-24 18:21:28,092 - INFO - Processed chunk 159, chunk mean: 1098545.9
+2026-04-24 18:21:28,094 - INFO - Processed chunk 160, chunk mean: 984063.55
+2026-04-24 18:21:28,097 - INFO - Processed chunk 161, chunk mean: 991982.95
+2026-04-24 18:21:28,100 - INFO - Processed chunk 162, chunk mean: 1058480.5
+2026-04-24 18:21:28,102 - INFO - Processed chunk 163, chunk mean: 829161.4
+2026-04-24 18:21:28,105 - INFO - Processed chunk 164, chunk mean: 1227518.4
+2026-04-24 18:21:28,108 - INFO - Processed chunk 165, chunk mean: 1051145.55
+2026-04-24 18:21:28,110 - INFO - Processed chunk 166, chunk mean: 877062.25
+2026-04-24 18:21:28,113 - INFO - Processed chunk 167, chunk mean: 998056.15
+2026-04-24 18:21:28,116 - INFO - Processed chunk 168, chunk mean: 1209736.7
+2026-04-24 18:21:28,118 - INFO - Processed chunk 169, chunk mean: 1012808.5
+2026-04-24 18:21:28,121 - INFO - Processed chunk 170, chunk mean: 1140960.65
+2026-04-24 18:21:28,124 - INFO - Processed chunk 171, chunk mean: 1054699.3
+2026-04-24 18:21:28,126 - INFO - Processed chunk 172, chunk mean: 943323.7
+2026-04-24 18:21:28,129 - INFO - Processed chunk 173, chunk mean: 980820.95
+2026-04-24 18:21:28,132 - INFO - Processed chunk 174, chunk mean: 1163219.8
+2026-04-24 18:21:28,135 - INFO - Processed chunk 175, chunk mean: 1132095.5
+2026-04-24 18:21:28,137 - INFO - Processed chunk 176, chunk mean: 1180462.85
+2026-04-24 18:21:28,140 - INFO - Processed chunk 177, chunk mean: 1088770.8
+2026-04-24 18:21:28,143 - INFO - Processed chunk 178, chunk mean: 1192488.7
+2026-04-24 18:21:28,146 - INFO - Processed chunk 179, chunk mean: 851410.7
+2026-04-24 18:21:28,149 - INFO - Processed chunk 180, chunk mean: 1019082.35
+2026-04-24 18:21:28,152 - INFO - Processed chunk 181, chunk mean: 1124931.05
+2026-04-24 18:21:28,155 - INFO - Processed chunk 182, chunk mean: 1048864.25
+2026-04-24 18:21:28,157 - INFO - Processed chunk 183, chunk mean: 1214699.85
+2026-04-24 18:21:28,160 - INFO - Processed chunk 184, chunk mean: 1066968.15
+2026-04-24 18:21:28,163 - INFO - Processed chunk 185, chunk mean: 1229600.4
+2026-04-24 18:21:28,165 - INFO - Processed chunk 186, chunk mean: 1055509.7
+2026-04-24 18:21:28,169 - INFO - Processed chunk 187, chunk mean: 1013642.75
+2026-04-24 18:21:28,172 - INFO - Processed chunk 188, chunk mean: 1173423.4
+2026-04-24 18:21:28,175 - INFO - Processed chunk 189, chunk mean: 998724.3
+2026-04-24 18:21:28,177 - INFO - Processed chunk 190, chunk mean: 1157835.6
+2026-04-24 18:21:28,180 - INFO - Processed chunk 191, chunk mean: 1052517.8
+2026-04-24 18:21:28,183 - INFO - Processed chunk 192, chunk mean: 1184055.9
+2026-04-24 18:21:28,186 - INFO - Processed chunk 193, chunk mean: 808143.15
+2026-04-24 18:21:28,188 - INFO - Processed chunk 194, chunk mean: 1051114.65
+2026-04-24 18:21:28,191 - INFO - Processed chunk 195, chunk mean: 1256902.85
+2026-04-24 18:21:28,193 - INFO - Processed chunk 196, chunk mean: 996926.75
+2026-04-24 18:21:28,196 - INFO - Processed chunk 197, chunk mean: 825666.05
+2026-04-24 18:21:28,198 - INFO - Processed chunk 198, chunk mean: 1217613.25
+2026-04-24 18:21:28,201 - INFO - Processed chunk 199, chunk mean: 1036665.9
+2026-04-24 18:21:28,203 - INFO - Processed chunk 200, chunk mean: 964225.6
+2026-04-24 18:21:28,206 - INFO - Processed chunk 201, chunk mean: 1097189.45
+2026-04-24 18:21:28,208 - INFO - Processed chunk 202, chunk mean: 980250.15
+2026-04-24 18:21:28,211 - INFO - Processed chunk 203, chunk mean: 998388.3
+2026-04-24 18:21:28,213 - INFO - Processed chunk 204, chunk mean: 1064260.1
+2026-04-24 18:21:28,216 - INFO - Processed chunk 205, chunk mean: 1309884.1
+2026-04-24 18:21:28,218 - INFO - Processed chunk 206, chunk mean: 1090686.55
+2026-04-24 18:21:28,221 - INFO - Processed chunk 207, chunk mean: 1005898.3
+2026-04-24 18:21:28,223 - INFO - Processed chunk 208, chunk mean: 1072032.25
+2026-04-24 18:21:28,226 - INFO - Processed chunk 209, chunk mean: 1036391.8
+2026-04-24 18:21:28,228 - INFO - Processed chunk 210, chunk mean: 1042232.1
+2026-04-24 18:21:28,231 - INFO - Processed chunk 211, chunk mean: 950370.9
+2026-04-24 18:21:28,233 - INFO - Processed chunk 212, chunk mean: 1019322.65
+2026-04-24 18:21:28,236 - INFO - Processed chunk 213, chunk mean: 1152356.1
+2026-04-24 18:21:28,238 - INFO - Processed chunk 214, chunk mean: 934366.7272727273
+2026-04-24 18:21:28,238 - INFO - Global mean price across chunks: 1052856.5757433856
+2026-04-24 18:21:28,239 - INFO - Processing chunks per-category (Language equivalent) from: data/processed/analytics\raw_integrated_data.csv
+2026-04-24 18:21:29,394 - INFO - Combined accumulators - Category Means: {'Industrial': np.float64(1043930.0436018957), 'Multi-Family': np.float64(1080616.468186135), 'Office': np.float64(1063103.6580406653), 'Retail': np.float64(1024270.9898242368)}
+2026-04-24 18:21:29,394 - INFO - --- Exploratory Data Analysis ---
+2026-04-24 18:21:29,395 - INFO - Dataset Shape: (4271, 11)
+2026-04-24 18:21:29,415 - INFO - Dataset Info:
+None
+2026-04-24 18:21:29,441 - INFO - Descriptive Statistics:
+       property_id  name  address         price  sq_ft         area
+count          0.0   0.0      0.0  4.271000e+03    0.0  4271.000000
+mean           NaN   NaN      NaN  1.052857e+06    NaN  2756.472021
+std            NaN   NaN      NaN  5.482420e+05    NaN  1287.407850
+min            NaN   NaN      NaN  1.002950e+05    NaN   501.000000
+25%            NaN   NaN      NaN  5.868405e+05    NaN  1666.000000
+50%            NaN   NaN      NaN  1.041615e+06    NaN  2767.000000
+75%            NaN   NaN      NaN  1.528066e+06    NaN  3890.000000
+max            NaN   NaN      NaN  1.999920e+06    NaN  4998.000000
+2026-04-24 18:21:29,443 - INFO - Value Counts for 'type':
+type
+Office          1082
+Retail          1081
+Industrial      1055
+Multi-Family    1053
+Name: count, dtype: int64
+2026-04-24 18:21:29,445 - INFO - Unique values in 'type': 4
+2026-04-24 18:21:30,041 - INFO - Saved chart: data/processed/analytics/charts/property_types_dist.png
+2026-04-24 18:21:30,441 - INFO - Saved chart: data/processed/analytics/charts/price_distribution.png
+2026-04-24 18:21:30,441 - INFO - Requirement 7: Simulation of GoogleDrive upload for charts completed. Shared with Amila.
+2026-04-24 18:21:30,441 - INFO - --- Data Selection & Filtering ---
+2026-04-24 18:21:30,446 - INFO - loc selection (first 5 rows, listing_id & price):
+  listing_id    price
+0        NaN  1041072
+1        NaN   674190
+2        NaN  1963755
+3        NaN   189945
+4        NaN  1832650
+2026-04-24 18:21:30,449 - INFO - iloc selection (first 3 rows, first 2 columns):
+   property_id  name
+0          NaN   NaN
+1          NaN   NaN
+2          NaN   NaN
+2026-04-24 18:21:30,451 - INFO - High value properties (price > 1M): 2222 found.
+2026-04-24 18:21:30,452 - INFO - Properties with type in ['Office', 'Retail']: 2163 found.
+2026-04-24 18:21:30,453 - INFO - Mid-range properties (500k-1M): 1170 found.
+2026-04-24 18:21:30,453 - INFO - --- Regular Expression Operations ---
+2026-04-24 18:21:30,462 - INFO - Regex 1: Extracted years from descriptions.
+2026-04-24 18:21:30,463 - INFO - Regex 2: Titles starting with 'Property': 4271 found.
+2026-04-24 18:21:30,468 - INFO - Regex 3: Descriptions with phone numbers: 854 found.
+2026-04-24 18:21:30,474 - INFO - Regex 4: Extracted sqft values from descriptions.
+2026-04-24 18:21:30,476 - INFO - Regex 5: 'Genres' containing 'office' (case-insensitive): 1082 found.
+2026-04-24 18:21:30,477 - INFO - --- Data Quality Assessment ---
+2026-04-24 18:21:30,807 - INFO - Saved heatmap: data/processed/analytics/charts/missing_data_heatmap.png
+2026-04-24 18:21:30,810 - INFO - Saved quality report: data/processed/analytics/data_quality_report.csv
+2026-04-24 18:21:30,811 - INFO - Pipeline finished successfully
+2026-04-25 17:22:01,926 - INFO - Starting Real Estate Market Monitor Pipeline...
+2026-04-25 17:22:01,928 - INFO - Fetching data from API...
+2026-04-25 17:22:01,928 - INFO - --- Fetching Page 1 ---
+2026-04-25 17:22:04,192 - INFO - Successfully grabbed 180 items from page 1
+2026-04-25 17:22:04,196 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_1.json
+2026-04-25 17:22:04,196 - INFO - --- Fetching Page 2 ---
+2026-04-25 17:22:06,222 - WARNING - Page 2 returned no houses. Trying backup payload...
+2026-04-25 17:22:09,066 - INFO - Successfully grabbed 0 items from page 2
+2026-04-25 17:22:09,066 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_2.json
+2026-04-25 17:22:09,066 - INFO - --- Fetching Page 3 ---
+2026-04-25 17:22:10,866 - WARNING - Page 3 returned no houses. Trying backup payload...
+2026-04-25 17:22:12,917 - INFO - Successfully grabbed 0 items from page 3
+2026-04-25 17:22:12,918 - INFO - Saved raw data to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\api\loopnet_page_3.json
+2026-04-25 17:22:12,920 - INFO - Parsing data...
+2026-04-25 17:22:12,921 - INFO - Saving to MongoDB...
+2026-04-25 17:22:12,946 - INFO - Success! Saved 180 houses to MongoDB.
+2026-04-25 17:22:12,947 - INFO - Starting Phase 1.5: Image Processing...
+2026-04-25 17:22:12,948 - INFO - Starting image download for 180 items.
+2026-04-25 17:22:12,976 - INFO - Successfully downloaded 0 images.
+2026-04-25 17:22:12,978 - INFO - Starting batch process for 1 images.
+2026-04-25 17:22:12,979 - INFO - Processing image: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\property_images\property_33157222.webp
+2026-04-25 17:22:13,318 - INFO - Resized image saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\resized\resized_property_33157222.webp
+2026-04-25 17:22:13,686 - INFO - Success! Saved 1 image metadata entries to MongoDB.
+2026-04-25 17:22:13,687 - INFO - Uploading 2 files to Google Drive.
+2026-04-25 17:22:14,878 - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-04-25 17:22:16,015 - ERROR - Error uploading image C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\webp\property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-25 17:22:16,466 - ERROR - Error uploading image C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\thumbnails\thumb_property_33157222.webp: <HttpError 404 when requesting None returned "File not found: your_google_drive_folder_id.". Details: "[{'message': 'File not found: your_google_drive_folder_id.', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2026-04-25 17:22:16,467 - INFO - Batch processing complete.
+2026-04-25 17:22:16,467 - INFO - Starting unstructured document extraction...
+2026-04-25 17:22:16,468 - INFO - Extracting PDF: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\pdf\Listing1.pdf
+2026-04-25 17:22:16,583 - INFO - Extracting PDF: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\pdf\Listing2.pdf
+2026-04-25 17:22:16,654 - INFO - Extracting Word Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\word\Listing3.docx
+2026-04-25 17:22:16,672 - INFO - Extracting Word Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\word\Listing4.docx
+2026-04-25 17:22:16,689 - INFO - Extracting Excel Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\excell\Table1.xlsx
+2026-04-25 17:22:16,699 - INFO - Extracting Excel Document: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\excell\Table2.xlsx
+2026-04-25 17:22:16,707 - INFO - Saving 6 document records to MongoDB...
+2026-04-25 17:22:16,714 - INFO - Success! Saved 6 houses to MongoDB.
+2026-04-25 17:22:16,715 - INFO - Starting Phase 3: Web Scraping...
+2026-04-25 17:22:16,715 - INFO - Starting Static Web Scraping (BeautifulSoup)...
+2026-04-25 17:22:16,715 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-25 17:22:17,762 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=1
+2026-04-25 17:22:19,234 - INFO - Scraped page 1 successfully. Found 20 items.
+2026-04-25 17:22:19,234 - INFO - Applying a 2-second delay between requests...
+2026-04-25 17:22:21,235 - INFO - Checking robots.txt at http://books.toscrape.com/robots.txt...
+2026-04-25 17:22:21,686 - INFO - \u2705 robots.txt ALLOWS scraping for http://books.toscrape.com/catalogue/category/books_1/index.html?page=2
+2026-04-25 17:22:22,374 - INFO - Scraped page 2 successfully. Found 20 items.
+2026-04-25 17:22:22,374 - INFO - Starting Dynamic Web Scraping (Playwright)...
+2026-04-25 17:22:22,374 - INFO - Checking robots.txt at https://quotes.toscrape.com/robots.txt...
+2026-04-25 17:22:23,070 - INFO - \u2705 robots.txt ALLOWS scraping for https://quotes.toscrape.com/scroll
+2026-04-25 17:22:34,015 - INFO - Dynamic scraping completed. Found 10 items.
+2026-04-25 17:22:34,040 - INFO - Success! Saved 50 houses to MongoDB.
+2026-04-25 17:22:34,040 - INFO - Starting Phase 4: OCR Image Processing...
+2026-04-25 17:22:34,041 - INFO - Starting OCR for image: C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\img\loopNet_1.webp
+2026-04-25 17:22:34,738 - INFO - OCR Compare [loopNet_1.webp]: Raw (135 chars) vs Optimized (99 chars)
+2026-04-25 17:22:34,791 - INFO - Success! Saved 1 houses to MongoDB.
+2026-04-25 17:22:34,792 - INFO - Starting Phase 5: Audio and Video Processing...
+2026-04-25 17:22:34,792 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-25 17:22:35,408 - INFO - Trimmed audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\trimmed_sample.wav
+2026-04-25 17:22:41,370 - INFO - Converted audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\converted_sample.ogg (format: ogg)
+2026-04-25 17:22:41,370 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Interstellar - Christopher Nolan - Official Warner Bros. [WqNirxasldY].mp3
+2026-04-25 17:22:41,910 - INFO - Loading audio from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Interstellar – Building A Black Hole – Official Warner Bros. [MfGfZwQ_qaY].mp3
+2026-04-25 17:22:42,595 - INFO - Concatenated audio saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\concatenated_sample.wav
+2026-04-25 17:22:42,600 - INFO - Transcribing C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 with model base
+2026-04-25 17:22:44,746 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-25 17:22:45,930 - INFO - Processing audio with duration 03:12.401
+2026-04-25 17:22:47,079 - INFO - Detected language 'en' with probability 0.99
+2026-04-25 17:23:03,295 - INFO - Success! Saved transcript for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3 to MongoDB with ID 69ecdc57e30b1e96a26b6265.
+2026-04-25 17:23:03,295 - INFO - Starting chunked transcription for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\audio\Inception _ The Dream Sequence _ HBO Max [mpj9dL7swwk].mp3
+2026-04-25 17:23:03,887 - INFO - Loading cached transcript for chunk 0
+2026-04-25 17:23:03,888 - ERROR - Chunked transcription error: 'text'
+2026-04-25 17:23:03,893 - INFO - Loading video from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4
+2026-04-25 17:23:08,420 - INFO - Audio extracted and saved to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3
+2026-04-25 17:23:08,431 - INFO - Extracting frames from C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 every 10 seconds
+2026-04-25 17:23:12,111 - INFO - Extracted 20 frames to C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\frames
+2026-04-25 17:23:12,125 - INFO - Transcribing C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\processed\audio\Inception _ The Dream Sequence _ HBO Max_from_video.mp3 with model base
+2026-04-25 17:23:12,647 - INFO - HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-04-25 17:23:13,628 - INFO - Processing audio with duration 03:12.400
+2026-04-25 17:23:14,545 - INFO - Detected language 'en' with probability 0.99
+2026-04-25 17:23:30,624 - INFO - Success! Saved transcript for C:\Users\User\Desktop\Real-Estate-Market-Monitor\data\raw\video\Inception _ The Dream Sequence _ HBO Max.mp4 to MongoDB with ID 69ecdc72e30b1e96a26b6267.
+2026-04-25 17:23:30,625 - INFO - Starting Phase 6: Data Analytics...
+2026-04-25 17:23:30,625 - INFO - --- NumPy Foundations ---
+2026-04-25 17:23:30,652 - INFO - Price Array - Shape: (6,), Dtype: int64, Ndim: 1
+2026-04-25 17:23:30,653 - INFO - Increased Prices (vectorized): [ 367500.  441000.  609000.  304500.  997500. 1260000.]
+2026-04-25 17:23:30,653 - INFO - Price per SqFt (vectorized): [233.33333333 233.33333333 263.63636364 241.66666667 271.42857143
+ 266.66666667]
+2026-04-25 17:23:30,654 - INFO - Loading data from MongoDB collection: loopnet_listings
+2026-04-25 17:23:30,703 - INFO - Loaded integrated data with 4451 records.
+2026-04-25 17:23:30,709 - INFO - Memory usage before optimization: 1.61 MB
+2026-04-25 17:23:30,720 - INFO - Skipping category optimization for column coordinates due to unhashable type.
+2026-04-25 17:23:30,725 - INFO - Memory usage after optimization: 0.84 MB
+2026-04-25 17:23:30,756 - INFO - Data exported to data/processed/analytics\raw_integrated_data.csv
+2026-04-25 17:23:30,756 - INFO - Loading CSV in chunks: data/processed/analytics\raw_integrated_data.csv
+2026-04-25 17:23:30,816 - INFO - Processed chunk 1, chunk mean: 1244022.2
+2026-04-25 17:23:30,827 - INFO - Processed chunk 2, chunk mean: 980112.35
+2026-04-25 17:23:30,834 - INFO - Processed chunk 3, chunk mean: 1190917.2
+2026-04-25 17:23:30,842 - INFO - Processed chunk 4, chunk mean: 1001269.3
+2026-04-25 17:23:30,851 - INFO - Processed chunk 5, chunk mean: 1007550.2
+2026-04-25 17:23:30,858 - INFO - Processed chunk 6, chunk mean: 1015875.2
+2026-04-25 17:23:30,865 - INFO - Processed chunk 7, chunk mean: 1153412.6
+2026-04-25 17:23:30,871 - INFO - Processed chunk 8, chunk mean: 905383.15
+2026-04-25 17:23:30,875 - INFO - Processed chunk 9, chunk mean: 998232.5
+2026-04-25 17:23:30,879 - INFO - Processed chunk 10, chunk mean: 1326823.75
+2026-04-25 17:23:30,884 - INFO - Processed chunk 11, chunk mean: 917685.1
+2026-04-25 17:23:30,888 - INFO - Processed chunk 12, chunk mean: 1038836.6
+2026-04-25 17:23:30,892 - INFO - Processed chunk 13, chunk mean: 1151700.25
+2026-04-25 17:23:30,896 - INFO - Processed chunk 14, chunk mean: 1036155.35
+2026-04-25 17:23:30,900 - INFO - Processed chunk 15, chunk mean: 1155794.25
+2026-04-25 17:23:30,905 - INFO - Processed chunk 16, chunk mean: 1130253.95
+2026-04-25 17:23:30,909 - INFO - Processed chunk 17, chunk mean: 985179.3
+2026-04-25 17:23:30,914 - INFO - Processed chunk 18, chunk mean: 1173138.6
+2026-04-25 17:23:30,919 - INFO - Processed chunk 19, chunk mean: 1068343.0
+2026-04-25 17:23:30,924 - INFO - Processed chunk 20, chunk mean: 997601.1
+2026-04-25 17:23:30,928 - INFO - Processed chunk 21, chunk mean: 1053687.55
+2026-04-25 17:23:30,932 - INFO - Processed chunk 22, chunk mean: 1087326.7
+2026-04-25 17:23:30,937 - INFO - Processed chunk 23, chunk mean: 1037728.15
+2026-04-25 17:23:30,941 - INFO - Processed chunk 24, chunk mean: 1135298.3
+2026-04-25 17:23:30,946 - INFO - Processed chunk 25, chunk mean: 1075094.6
+2026-04-25 17:23:30,950 - INFO - Processed chunk 26, chunk mean: 1052124.3
+2026-04-25 17:23:30,954 - INFO - Processed chunk 27, chunk mean: 1061303.95
+2026-04-25 17:23:30,959 - INFO - Processed chunk 28, chunk mean: 1204865.5
+2026-04-25 17:23:30,964 - INFO - Processed chunk 29, chunk mean: 1017925.9
+2026-04-25 17:23:30,969 - INFO - Processed chunk 30, chunk mean: 1038416.85
+2026-04-25 17:23:30,974 - INFO - Processed chunk 31, chunk mean: 1073225.1
+2026-04-25 17:23:30,979 - INFO - Processed chunk 32, chunk mean: 1028664.35
+2026-04-25 17:23:30,985 - INFO - Processed chunk 33, chunk mean: 838961.15
+2026-04-25 17:23:30,989 - INFO - Processed chunk 34, chunk mean: 1028602.1
+2026-04-25 17:23:30,994 - INFO - Processed chunk 35, chunk mean: 1220422.25
+2026-04-25 17:23:30,999 - INFO - Processed chunk 36, chunk mean: 908809.75
+2026-04-25 17:23:31,003 - INFO - Processed chunk 37, chunk mean: 1050780.05
+2026-04-25 17:23:31,008 - INFO - Processed chunk 38, chunk mean: 1021945.45
+2026-04-25 17:23:31,013 - INFO - Processed chunk 39, chunk mean: 1110407.8
+2026-04-25 17:23:31,018 - INFO - Processed chunk 40, chunk mean: 989903.3
+2026-04-25 17:23:31,022 - INFO - Processed chunk 41, chunk mean: 1163609.7
+2026-04-25 17:23:31,026 - INFO - Processed chunk 42, chunk mean: 1089354.6
+2026-04-25 17:23:31,031 - INFO - Processed chunk 43, chunk mean: 1045924.95
+2026-04-25 17:23:31,036 - INFO - Processed chunk 44, chunk mean: 922723.3
+2026-04-25 17:23:31,040 - INFO - Processed chunk 45, chunk mean: 1271974.65
+2026-04-25 17:23:31,045 - INFO - Processed chunk 46, chunk mean: 1118788.4
+2026-04-25 17:23:31,049 - INFO - Processed chunk 47, chunk mean: 1045464.2
+2026-04-25 17:23:31,054 - INFO - Processed chunk 48, chunk mean: 1158756.4
+2026-04-25 17:23:31,058 - INFO - Processed chunk 49, chunk mean: 1103447.75
+2026-04-25 17:23:31,062 - INFO - Processed chunk 50, chunk mean: 903881.3
+2026-04-25 17:23:31,067 - INFO - Processed chunk 51, chunk mean: 835125.4
+2026-04-25 17:23:31,071 - INFO - Processed chunk 52, chunk mean: 1013799.25
+2026-04-25 17:23:31,075 - INFO - Processed chunk 53, chunk mean: 1259287.15
+2026-04-25 17:23:31,080 - INFO - Processed chunk 54, chunk mean: 1271266.2
+2026-04-25 17:23:31,084 - INFO - Processed chunk 55, chunk mean: 968305.85
+2026-04-25 17:23:31,089 - INFO - Processed chunk 56, chunk mean: 1264655.25
+2026-04-25 17:23:31,093 - INFO - Processed chunk 57, chunk mean: 1127184.55
+2026-04-25 17:23:31,098 - INFO - Processed chunk 58, chunk mean: 1015846.35
+2026-04-25 17:23:31,102 - INFO - Processed chunk 59, chunk mean: 1080308.45
+2026-04-25 17:23:31,106 - INFO - Processed chunk 60, chunk mean: 1156781.5
+2026-04-25 17:23:31,111 - INFO - Processed chunk 61, chunk mean: 808321.95
+2026-04-25 17:23:31,116 - INFO - Processed chunk 62, chunk mean: 1080699.25
+2026-04-25 17:23:31,120 - INFO - Processed chunk 63, chunk mean: 873150.45
+2026-04-25 17:23:31,126 - INFO - Processed chunk 64, chunk mean: 1041181.4
+2026-04-25 17:23:31,130 - INFO - Processed chunk 65, chunk mean: 923159.2
+2026-04-25 17:23:31,135 - INFO - Processed chunk 66, chunk mean: 881593.9
+2026-04-25 17:23:31,140 - INFO - Processed chunk 67, chunk mean: 1214494.5
+2026-04-25 17:23:31,144 - INFO - Processed chunk 68, chunk mean: 1064678.55
+2026-04-25 17:23:31,148 - INFO - Processed chunk 69, chunk mean: 1163950.55
+2026-04-25 17:23:31,151 - INFO - Processed chunk 70, chunk mean: 887993.05
+2026-04-25 17:23:31,156 - INFO - Processed chunk 71, chunk mean: 1048241.75
+2026-04-25 17:23:31,160 - INFO - Processed chunk 72, chunk mean: 1028759.1
+2026-04-25 17:23:31,164 - INFO - Processed chunk 73, chunk mean: 1119705.65
+2026-04-25 17:23:31,167 - INFO - Processed chunk 74, chunk mean: 853991.25
+2026-04-25 17:23:31,172 - INFO - Processed chunk 75, chunk mean: 981634.15
+2026-04-25 17:23:31,176 - INFO - Processed chunk 76, chunk mean: 984289.45
+2026-04-25 17:23:31,181 - INFO - Processed chunk 77, chunk mean: 1004220.9
+2026-04-25 17:23:31,186 - INFO - Processed chunk 78, chunk mean: 972256.2
+2026-04-25 17:23:31,191 - INFO - Processed chunk 79, chunk mean: 1091833.05
+2026-04-25 17:23:31,195 - INFO - Processed chunk 80, chunk mean: 1024222.25
+2026-04-25 17:23:31,199 - INFO - Processed chunk 81, chunk mean: 1045340.65
+2026-04-25 17:23:31,203 - INFO - Processed chunk 82, chunk mean: 1246516.45
+2026-04-25 17:23:31,207 - INFO - Processed chunk 83, chunk mean: 963084.95
+2026-04-25 17:23:31,211 - INFO - Processed chunk 84, chunk mean: 894993.45
+2026-04-25 17:23:31,215 - INFO - Processed chunk 85, chunk mean: 1078666.9
+2026-04-25 17:23:31,219 - INFO - Processed chunk 86, chunk mean: 983849.75
+2026-04-25 17:23:31,224 - INFO - Processed chunk 87, chunk mean: 1017326.95
+2026-04-25 17:23:31,227 - INFO - Processed chunk 88, chunk mean: 1226324.0
+2026-04-25 17:23:31,231 - INFO - Processed chunk 89, chunk mean: 994893.25
+2026-04-25 17:23:31,235 - INFO - Processed chunk 90, chunk mean: 842448.75
+2026-04-25 17:23:31,239 - INFO - Processed chunk 91, chunk mean: 1186788.05
+2026-04-25 17:23:31,242 - INFO - Processed chunk 92, chunk mean: 1053110.1
+2026-04-25 17:23:31,246 - INFO - Processed chunk 93, chunk mean: 1157324.1
+2026-04-25 17:23:31,250 - INFO - Processed chunk 94, chunk mean: 1068340.2
+2026-04-25 17:23:31,254 - INFO - Processed chunk 95, chunk mean: 1056941.0
+2026-04-25 17:23:31,258 - INFO - Processed chunk 96, chunk mean: 991275.8
+2026-04-25 17:23:31,262 - INFO - Processed chunk 97, chunk mean: 1053048.1
+2026-04-25 17:23:31,267 - INFO - Processed chunk 98, chunk mean: 952860.45
+2026-04-25 17:23:31,272 - INFO - Processed chunk 99, chunk mean: 1076202.65
+2026-04-25 17:23:31,278 - INFO - Processed chunk 100, chunk mean: 1249347.35
+2026-04-25 17:23:31,282 - INFO - Processed chunk 101, chunk mean: 995601.8
+2026-04-25 17:23:31,288 - INFO - Processed chunk 102, chunk mean: 934853.25
+2026-04-25 17:23:31,293 - INFO - Processed chunk 103, chunk mean: 1044820.1
+2026-04-25 17:23:31,297 - INFO - Processed chunk 104, chunk mean: 979696.25
+2026-04-25 17:23:31,300 - INFO - Processed chunk 105, chunk mean: 848977.85
+2026-04-25 17:23:31,305 - INFO - Processed chunk 106, chunk mean: 1237550.65
+2026-04-25 17:23:31,310 - INFO - Processed chunk 107, chunk mean: 1035559.6
+2026-04-25 17:23:31,315 - INFO - Processed chunk 108, chunk mean: 951087.4
+2026-04-25 17:23:31,322 - INFO - Processed chunk 109, chunk mean: 1125872.35
+2026-04-25 17:23:31,329 - INFO - Processed chunk 110, chunk mean: 1018715.5
+2026-04-25 17:23:31,334 - INFO - Processed chunk 111, chunk mean: 955249.05
+2026-04-25 17:23:31,337 - INFO - Processed chunk 112, chunk mean: 1066228.7
+2026-04-25 17:23:31,341 - INFO - Processed chunk 113, chunk mean: 1123070.2
+2026-04-25 17:23:31,344 - INFO - Processed chunk 114, chunk mean: 1259156.0
+2026-04-25 17:23:31,347 - INFO - Processed chunk 115, chunk mean: 1289084.25
+2026-04-25 17:23:31,350 - INFO - Processed chunk 116, chunk mean: 1028834.05
+2026-04-25 17:23:31,354 - INFO - Processed chunk 117, chunk mean: 1112198.65
+2026-04-25 17:23:31,357 - INFO - Processed chunk 118, chunk mean: 887051.5
+2026-04-25 17:23:31,360 - INFO - Processed chunk 119, chunk mean: 1075758.5
+2026-04-25 17:23:31,364 - INFO - Processed chunk 120, chunk mean: 1168890.55
+2026-04-25 17:23:31,367 - INFO - Processed chunk 121, chunk mean: 1304948.75
+2026-04-25 17:23:31,370 - INFO - Processed chunk 122, chunk mean: 1149693.65
+2026-04-25 17:23:31,373 - INFO - Processed chunk 123, chunk mean: 1001485.05
+2026-04-25 17:23:31,377 - INFO - Processed chunk 124, chunk mean: 1248833.75
+2026-04-25 17:23:31,380 - INFO - Processed chunk 125, chunk mean: 1426863.95
+2026-04-25 17:23:31,383 - INFO - Processed chunk 126, chunk mean: 1064183.85
+2026-04-25 17:23:31,387 - INFO - Processed chunk 127, chunk mean: 984043.5
+2026-04-25 17:23:31,390 - INFO - Processed chunk 128, chunk mean: 1092054.85
+2026-04-25 17:23:31,395 - INFO - Processed chunk 129, chunk mean: 1174295.5
+2026-04-25 17:23:31,399 - INFO - Processed chunk 130, chunk mean: 1245797.75
+2026-04-25 17:23:31,404 - INFO - Processed chunk 131, chunk mean: 1140691.85
+2026-04-25 17:23:31,409 - INFO - Processed chunk 132, chunk mean: 814108.85
+2026-04-25 17:23:31,416 - INFO - Processed chunk 133, chunk mean: 928672.55
+2026-04-25 17:23:31,422 - INFO - Processed chunk 134, chunk mean: 1008359.4
+2026-04-25 17:23:31,427 - INFO - Processed chunk 135, chunk mean: 1163294.45
+2026-04-25 17:23:31,432 - INFO - Processed chunk 136, chunk mean: 1279253.7
+2026-04-25 17:23:31,437 - INFO - Processed chunk 137, chunk mean: 866660.45
+2026-04-25 17:23:31,442 - INFO - Processed chunk 138, chunk mean: 1033883.55
+2026-04-25 17:23:31,446 - INFO - Processed chunk 139, chunk mean: 984301.0
+2026-04-25 17:23:31,451 - INFO - Processed chunk 140, chunk mean: 1231330.45
+2026-04-25 17:23:31,457 - INFO - Processed chunk 141, chunk mean: 1062199.75
+2026-04-25 17:23:31,463 - INFO - Processed chunk 142, chunk mean: 941044.2
+2026-04-25 17:23:31,470 - INFO - Processed chunk 143, chunk mean: 855214.5
+2026-04-25 17:23:31,475 - INFO - Processed chunk 144, chunk mean: 1061769.85
+2026-04-25 17:23:31,481 - INFO - Processed chunk 145, chunk mean: 826679.5
+2026-04-25 17:23:31,486 - INFO - Processed chunk 146, chunk mean: 1196647.8
+2026-04-25 17:23:31,491 - INFO - Processed chunk 147, chunk mean: 1034602.55
+2026-04-25 17:23:31,496 - INFO - Processed chunk 148, chunk mean: 1118189.85
+2026-04-25 17:23:31,501 - INFO - Processed chunk 149, chunk mean: 1235254.5
+2026-04-25 17:23:31,505 - INFO - Processed chunk 150, chunk mean: 1180039.05
+2026-04-25 17:23:31,509 - INFO - Processed chunk 151, chunk mean: 1128130.2
+2026-04-25 17:23:31,514 - INFO - Processed chunk 152, chunk mean: 1178910.55
+2026-04-25 17:23:31,519 - INFO - Processed chunk 153, chunk mean: 1026775.75
+2026-04-25 17:23:31,523 - INFO - Processed chunk 154, chunk mean: 1061681.5
+2026-04-25 17:23:31,528 - INFO - Processed chunk 155, chunk mean: 972318.05
+2026-04-25 17:23:31,534 - INFO - Processed chunk 156, chunk mean: 983282.6
+2026-04-25 17:23:31,538 - INFO - Processed chunk 157, chunk mean: 1204898.05
+2026-04-25 17:23:31,543 - INFO - Processed chunk 158, chunk mean: 1106325.9
+2026-04-25 17:23:31,549 - INFO - Processed chunk 159, chunk mean: 1314729.4
+2026-04-25 17:23:31,555 - INFO - Processed chunk 160, chunk mean: 1225138.5
+2026-04-25 17:23:31,560 - INFO - Processed chunk 161, chunk mean: 992870.75
+2026-04-25 17:23:31,568 - INFO - Processed chunk 162, chunk mean: 885517.25
+2026-04-25 17:23:31,572 - INFO - Processed chunk 163, chunk mean: 866655.3
+2026-04-25 17:23:31,578 - INFO - Processed chunk 164, chunk mean: 948141.35
+2026-04-25 17:23:31,582 - INFO - Processed chunk 165, chunk mean: 966353.85
+2026-04-25 17:23:31,588 - INFO - Processed chunk 166, chunk mean: 1110090.15
+2026-04-25 17:23:31,594 - INFO - Processed chunk 167, chunk mean: 1068594.1
+2026-04-25 17:23:31,599 - INFO - Processed chunk 168, chunk mean: 985623.5
+2026-04-25 17:23:31,603 - INFO - Processed chunk 169, chunk mean: 1025345.9
+2026-04-25 17:23:31,607 - INFO - Processed chunk 170, chunk mean: 1066545.6
+2026-04-25 17:23:31,611 - INFO - Processed chunk 171, chunk mean: 1115605.4
+2026-04-25 17:23:31,617 - INFO - Processed chunk 172, chunk mean: 1113995.15
+2026-04-25 17:23:31,621 - INFO - Processed chunk 173, chunk mean: 982019.35
+2026-04-25 17:23:31,626 - INFO - Processed chunk 174, chunk mean: 1132759.6
+2026-04-25 17:23:31,633 - INFO - Processed chunk 175, chunk mean: 1266551.3
+2026-04-25 17:23:31,638 - INFO - Processed chunk 176, chunk mean: 1227931.05
+2026-04-25 17:23:31,643 - INFO - Processed chunk 177, chunk mean: 950585.85
+2026-04-25 17:23:31,649 - INFO - Processed chunk 178, chunk mean: 1086026.35
+2026-04-25 17:23:31,655 - INFO - Processed chunk 179, chunk mean: 933203.4
+2026-04-25 17:23:31,660 - INFO - Processed chunk 180, chunk mean: 990229.2
+2026-04-25 17:23:31,664 - INFO - Processed chunk 181, chunk mean: 1095737.4
+2026-04-25 17:23:31,668 - INFO - Processed chunk 182, chunk mean: 1127332.95
+2026-04-25 17:23:31,672 - INFO - Processed chunk 183, chunk mean: 987842.75
+2026-04-25 17:23:31,676 - INFO - Processed chunk 184, chunk mean: 1078585.65
+2026-04-25 17:23:31,680 - INFO - Processed chunk 185, chunk mean: 922649.15
+2026-04-25 17:23:31,683 - INFO - Processed chunk 186, chunk mean: 1076722.45
+2026-04-25 17:23:31,689 - INFO - Processed chunk 187, chunk mean: 977353.75
+2026-04-25 17:23:31,696 - INFO - Processed chunk 188, chunk mean: 966888.5
+2026-04-25 17:23:31,703 - INFO - Processed chunk 189, chunk mean: 952023.95
+2026-04-25 17:23:31,708 - INFO - Processed chunk 190, chunk mean: 968468.85
+2026-04-25 17:23:31,712 - INFO - Processed chunk 191, chunk mean: 1095414.75
+2026-04-25 17:23:31,716 - INFO - Processed chunk 192, chunk mean: 918199.95
+2026-04-25 17:23:31,719 - INFO - Processed chunk 193, chunk mean: 1025377.2
+2026-04-25 17:23:31,723 - INFO - Processed chunk 194, chunk mean: 971136.5
+2026-04-25 17:23:31,726 - INFO - Processed chunk 195, chunk mean: 1084854.45
+2026-04-25 17:23:31,730 - INFO - Processed chunk 196, chunk mean: 1007954.3
+2026-04-25 17:23:31,733 - INFO - Processed chunk 197, chunk mean: 1249573.8
+2026-04-25 17:23:31,737 - INFO - Processed chunk 198, chunk mean: 1005293.95
+2026-04-25 17:23:31,740 - INFO - Processed chunk 199, chunk mean: 898802.9
+2026-04-25 17:23:31,743 - INFO - Processed chunk 200, chunk mean: 1114815.3
+2026-04-25 17:23:31,747 - INFO - Processed chunk 201, chunk mean: 1080451.6
+2026-04-25 17:23:31,750 - INFO - Processed chunk 202, chunk mean: 866835.0
+2026-04-25 17:23:31,754 - INFO - Processed chunk 203, chunk mean: 1047114.05
+2026-04-25 17:23:31,757 - INFO - Processed chunk 204, chunk mean: 1144722.05
+2026-04-25 17:23:31,761 - INFO - Processed chunk 205, chunk mean: 1015055.7
+2026-04-25 17:23:31,765 - INFO - Processed chunk 206, chunk mean: 1049171.2
+2026-04-25 17:23:31,769 - INFO - Processed chunk 207, chunk mean: 803910.85
+2026-04-25 17:23:31,774 - INFO - Processed chunk 208, chunk mean: 797674.7
+2026-04-25 17:23:31,778 - INFO - Processed chunk 209, chunk mean: 883271.35
+2026-04-25 17:23:31,781 - INFO - Processed chunk 210, chunk mean: 1056024.0
+2026-04-25 17:23:31,785 - INFO - Processed chunk 211, chunk mean: 1221817.7
+2026-04-25 17:23:31,788 - INFO - Processed chunk 212, chunk mean: 1185369.85
+2026-04-25 17:23:31,791 - INFO - Processed chunk 213, chunk mean: 920109.3
+2026-04-25 17:23:31,795 - INFO - Processed chunk 214, chunk mean: 1182910.75
+2026-04-25 17:23:31,798 - INFO - Processed chunk 215, chunk mean: 1262842.3
+2026-04-25 17:23:31,802 - INFO - Processed chunk 216, chunk mean: 1133387.75
+2026-04-25 17:23:31,806 - INFO - Processed chunk 217, chunk mean: 1111282.3
+2026-04-25 17:23:31,809 - INFO - Processed chunk 218, chunk mean: 1159429.95
+2026-04-25 17:23:31,813 - INFO - Processed chunk 219, chunk mean: 1060012.9
+2026-04-25 17:23:31,816 - INFO - Processed chunk 220, chunk mean: 1082111.1
+2026-04-25 17:23:31,820 - INFO - Processed chunk 221, chunk mean: 981152.95
+2026-04-25 17:23:31,823 - INFO - Processed chunk 222, chunk mean: 1104789.95
+2026-04-25 17:23:31,827 - INFO - Processed chunk 223, chunk mean: 1097031.0909090908
+2026-04-25 17:23:31,827 - INFO - Global mean price across chunks: 1058210.092563469
+2026-04-25 17:23:31,828 - INFO - Processing chunks per-category (Language equivalent) from: data/processed/analytics\raw_integrated_data.csv
+2026-04-25 17:23:33,031 - INFO - Combined accumulators - Category Means: {'Industrial': np.float64(1060425.0152603232), 'Multi-Family': np.float64(1066759.2926613616), 'Office': np.float64(1049090.9127337488), 'Retail': np.float64(1056459.649122807)}
+2026-04-25 17:23:33,031 - INFO - --- Exploratory Data Analysis ---
+2026-04-25 17:23:33,031 - INFO - Dataset Shape: (4451, 11)
+2026-04-25 17:23:33,041 - INFO - Dataset Info:
+None
+2026-04-25 17:23:33,065 - INFO - Descriptive Statistics:
+       property_id  name  address         price  sq_ft         area
+count          0.0   0.0      0.0  4.451000e+03    0.0  4451.000000
+mean           NaN   NaN      NaN  1.058210e+06    NaN  2759.766569
+std            NaN   NaN      NaN  5.580896e+05    NaN  1311.230331
+min            NaN   NaN      NaN  1.000160e+05    NaN   500.000000
+25%            NaN   NaN      NaN  5.678715e+05    NaN  1642.500000
+50%            NaN   NaN      NaN  1.059867e+06    NaN  2759.000000
+75%            NaN   NaN      NaN  1.551023e+06    NaN  3913.500000
+max            NaN   NaN      NaN  1.999567e+06    NaN  4999.000000
+2026-04-25 17:23:33,067 - INFO - Value Counts for 'type':
+type
+Multi-Family    1131
+Office          1123
+Industrial      1114
+Retail          1083
+Name: count, dtype: int64
+2026-04-25 17:23:33,072 - INFO - Unique values in 'type': 4
+2026-04-25 17:23:33,548 - INFO - Saved chart: data/processed/analytics/charts/property_types_dist.png
+2026-04-25 17:23:33,784 - INFO - Saved chart: data/processed/analytics/charts/price_distribution.png
+2026-04-25 17:23:33,784 - INFO - Requirement 7: Simulation of GoogleDrive upload for charts completed. Shared with Amila.
+2026-04-25 17:23:33,784 - INFO - --- Data Selection & Filtering ---
+2026-04-25 17:23:33,790 - INFO - loc selection (first 5 rows, listing_id & price):
+  listing_id    price
+0        NaN   983093
+1        NaN  1527237
+2        NaN   707000
+3        NaN  1508372
+4        NaN  1351592
+2026-04-25 17:23:33,794 - INFO - iloc selection (first 3 rows, first 2 columns):
+   property_id  name
+0          NaN   NaN
+1          NaN   NaN
+2          NaN   NaN
+2026-04-25 17:23:33,827 - INFO - High value properties (price > 1M): 2398 found.
+2026-04-25 17:23:33,830 - INFO - Properties with type in ['Office', 'Retail']: 2206 found.
+2026-04-25 17:23:33,832 - INFO - Mid-range properties (500k-1M): 1098 found.
+2026-04-25 17:23:33,832 - INFO - --- Regular Expression Operations ---
+2026-04-25 17:23:33,847 - INFO - Regex 1: Extracted years from descriptions.
+2026-04-25 17:23:33,850 - INFO - Regex 2: Titles starting with 'Property': 4451 found.
+2026-04-25 17:23:33,857 - INFO - Regex 3: Descriptions with phone numbers: 890 found.
+2026-04-25 17:23:33,865 - INFO - Regex 4: Extracted sqft values from descriptions.
+2026-04-25 17:23:33,869 - INFO - Regex 5: 'Genres' containing 'office' (case-insensitive): 1123 found.
+2026-04-25 17:23:33,870 - INFO - --- Data Quality Assessment ---
+2026-04-25 17:23:34,279 - INFO - Saved heatmap: data/processed/analytics/charts/missing_data_heatmap.png
+2026-04-25 17:23:34,282 - INFO - Saved quality report: data/processed/analytics/data_quality_report.csv
+2026-04-25 17:23:34,282 - INFO - Pipeline finished successfully
