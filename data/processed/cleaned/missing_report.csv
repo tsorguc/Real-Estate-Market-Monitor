@@ -1,0 +1,17 @@
+column,missing_count,missing_percentage
+property_id,5001,100.0
+name,5001,100.0
+address,5001,100.0
+price,0,0.0
+sq_ft,5001,100.0
+collected_at,0,0.0
+source,0,0.0
+listing_id,312,6.23875224955009
+coordinates,312,6.23875224955009
+area,0,0.0
+type,0,0.0
+description,0,0.0
+title,0,0.0
+genres,0,0.0
+extracted_years,3000,59.98800239952009
+extracted_sqft,4001,80.00399920015997
