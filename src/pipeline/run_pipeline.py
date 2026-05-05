@@ -40,6 +40,9 @@ from analytics import (
     generate_quality_report
 )
 
+# New Imports for Cleaning (Lab 9)
+from cleaning import run_cleaning_pipeline
+
 def run_pipeline():
     logging.info("Starting Real Estate Market Monitor Pipeline...")
     print("🚀 Starting Pipeline...")
@@ -304,6 +307,15 @@ def run_pipeline():
     # 9. Data Quality Assessment
     generate_quality_report(df)
     print("🛠️ Data Quality Report generated.")
+
+    # =================================================================
+    # PHASE 7: LAB 9 - DATA CLEANING
+    # =================================================================
+    logging.info("Starting Phase 7: Data Cleaning...")
+    print("🧹 Running Phase 7: Data Cleaning...")
+    
+    clean_df = run_cleaning_pipeline(df)
+    print(f"✅ Data cleaning pipeline completed. Cleaned records: {len(clean_df)}")
 
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")

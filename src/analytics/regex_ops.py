@@ -48,3 +48,33 @@ def perform_regex_operations(df):
     logging.info(f"Regex 5: 'Genres' containing 'office' (case-insensitive): {len(office_genre)} found.")
     
     return df
+
+def extended_regex_cleaning(df):
+    """
+    Extended regex-based helper functions for data cleaning and validation.
+    As per Lab 9 Requirements.
+    """
+    logging.info("--- Extended Regex Cleaning Operations ---")
+
+    # 1. Detect invalid date formats (assuming YYYY-MM-DD)
+    if 'date_listed' in df.columns:
+        invalid_dates = df[~df['date_listed'].astype(str).str.match(r'^\d{4}-\d{2}-\d{2}$', na=False)]
+        logging.info(f"Regex: Invalid date formats found: {len(invalid_dates)}")
+        df['is_valid_date'] = df['date_listed'].astype(str).str.match(r'^\d{4}-\d{2}-\d{2}$', na=False)
+
+    # 2. Extract numeric values from description (e.g., price mentions)
+    if 'description' in df.columns:
+        df['extracted_price_mentions'] = df['description'].str.extract(r'(\$\d+(?:,\d{3})*(?:\.\d{2})?)')
+        logging.info("Regex: Extracted price mentions from descriptions.")
+
+    # 3. Flag overviews (descriptions) that are too short (e.g., < 20 chars)
+    if 'description' in df.columns:
+        df['short_description_flag'] = df['description'].astype(str).str.len() < 20
+        logging.info(f"Regex: Flagged {df['short_description_flag'].sum()} short descriptions.")
+
+    # 4. Detect language codes (e.g., 'en', 'es', 'fr')
+    if 'language' in df.columns:
+        df['is_valid_language'] = df['language'].astype(str).str.match(r'^[a-z]{2}(-[A-Z]{2})?$', na=False)
+        logging.info(f"Regex: Validated language codes.")
+
+    return df
