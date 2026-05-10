@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from utils.logger import logging
+from src.utils.logger import logging
 
 def generate_quality_report(df):
     """

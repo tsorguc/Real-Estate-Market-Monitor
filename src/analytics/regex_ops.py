@@ -1,5 +1,5 @@
 import pandas as pd
-from utils.logger import logging
+from src.utils.logger import logging
 
 def perform_regex_operations(df):
     """

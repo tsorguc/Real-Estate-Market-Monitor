@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from pymongo import MongoClient
 from dotenv import load_dotenv
-from utils.logger import logging
+from src.utils.logger import logging
 
 load_dotenv()
 MONGO_URI = os.getenv("MONGO_URI")
