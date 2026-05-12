@@ -2,7 +2,7 @@ import sys
 import os
 import json
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 
 from utils.logger import logging
 from api.client import fetch_loopnet_data
@@ -316,6 +316,33 @@ def run_pipeline():
     
     clean_df = run_cleaning_pipeline(df)
     print(f"✅ Data cleaning pipeline completed. Cleaned records: {len(clean_df)}")
+
+    # =================================================================
+    # PHASE 8: LAB 10 - ADVANCED ANALYTICS
+    # =================================================================
+    logging.info("Starting Phase 8: Advanced Analytics...")
+    print("📈 Running Phase 8: Advanced Analytics...")
+
+    from analytics import db_connector, data_combiner, aggregator, pivot_builder, time_series, insight_reporter
+
+    # 1. Ensure cleaned data exists
+    cleaned_csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/processed/cleaned/cleaned_data.csv"))
+    if not os.path.exists(cleaned_csv_path):
+        logging.error("Cleaned data file not found. Running cleaning pipeline again...")
+        # (Assuming run_cleaning_pipeline is imported from Phase 7)
+        clean_df = run_cleaning_pipeline(df) 
+    
+    # 2. Populate MySQL
+    db_connector.populate_financials(cleaned_csv_path)
+    df_financials = db_connector.query_financials()
+    
+    # 3. Generate analytics outputs
+    aggregator.calculate_genre_summary(df_financials).to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/genre_analysis.csv"))
+    aggregator.calculate_yearly_trends(df_financials).to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/yearly_trends.csv"))
+    
+    # 4. Print analytical summary
+    insight_reporter.run_all_questions(df_financials)
+    print("✅ Advanced Analytics pipeline completed.")
 
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")

@@ -1,6 +1,6 @@
 import os
 import matplotlib.pyplot as plt
-from utils.logger import logging
+from src.utils.logger import logging
 
 def perform_eda(df):
     """

@@ -1,5 +1,8 @@
 import numpy as np
-from utils.logger import logging
+from src.utils.logger import logging
+
+import sys, os
+sys.path.append(os.path.abspath('.'))
 
 def demonstrate_numpy_features():
     """
