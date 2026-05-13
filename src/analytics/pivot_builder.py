@@ -1,22 +1,34 @@
 import pandas as pd
 
-def wide_to_long(df, id_vars, value_vars, var_name='metric', value_name='value'):
+def demonstrate_melt(df):
     """
-    Converts data from wide to long format.
+    Demonstrates melting wide data to long format using 3 numeric columns.
+    As per Lab 10: budget_usd, revenue_usd, and we use area as a proxy for popularity.
     """
-    return df.melt(id_vars=id_vars, value_vars=value_vars, var_name=var_name, value_name=value_name)
+    # Ensure columns exist for demonstration
+    if 'area' in df.columns:
+        df = df.rename(columns={'area': 'popularity'})
+    
+    id_vars = ['listing_id', 'title', 'primary_genre']
+    value_vars = ['budget_usd', 'revenue_usd', 'popularity']
+    
+    # Filter to only existing columns
+    value_vars = [v for v in value_vars if v in df.columns]
+    
+    return df.melt(id_vars=id_vars, value_vars=value_vars, var_name='metric', value_name='value')
 
-def long_to_wide(df, index, columns, values):
+def create_genre_year_pivot(df):
     """
-    Converts data from long to wide format.
+    Builds a pivot table showing revenue_usd broken down by release_year and primary_genre.
+    Includes margins=True as per Lab 10.
     """
-    return df.pivot(index=index, columns=columns, values=values)
-
-def create_pivot_table(df, index, columns, values, aggfunc='mean', margins=True):
-    """
-    Builds an aggregated pivot table.
-    """
-    return df.pivot_table(index=index, columns=columns, values=values, aggfunc=aggfunc, margins=margins)
+    return df.pivot_table(
+        index='release_year', 
+        columns='primary_genre', 
+        values='revenue_usd', 
+        aggfunc='mean', 
+        margins=True
+    )
 
 def create_crosstab(df, index, columns):
     """

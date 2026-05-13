@@ -1,33 +1,36 @@
 import sys
 import os
 import json
+import pandas as pd
 
+# Add both 'src' and project root to sys.path to handle inconsistent import styles
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
-from utils.logger import logging
-from api.client import fetch_loopnet_data
-from parsing.parsers import parse_loopnet_map_data
-from storage.mongo import save_to_mongo
-# from storage.s3 import upload_file_to_s3
-from parsing.document_extractors import extract_from_pdf, extract_from_word, extract_from_excel
-from scraping.scraper import scrape_static_pages, scrape_dynamic_page
-from parsing.ocr_extractor import extract_text_from_image, extract_text_from_scanned_pdf
+from src.utils.logger import logging
+from src.api.client import fetch_loopnet_data
+from src.parsing.parsers import parse_loopnet_map_data
+from src.storage.mongo import save_to_mongo
+# from src.storage.s3 import upload_file_to_s3
+from src.parsing.document_extractors import extract_from_pdf, extract_from_word, extract_from_excel
+from src.scraping.scraper import scrape_static_pages, scrape_dynamic_page
+from src.parsing.ocr_extractor import extract_text_from_image, extract_text_from_scanned_pdf
 
 # --- LAB 7 AUDIO/VIDEO EXTENSION ---
-from audio_processing.loader import load_audio
-from audio_processing.processor import trim_audio, concatenate_audio, adjust_volume, apply_fades, convert_audio
-from audio_processing.transcriber import transcribe_audio, chunked_transcribe
-from video_processing.loader import load_video_and_extract_audio
-from video_processing.frame_extractor import extract_keyframes
-from storage.mongo import save_transcript_to_mongo
+from src.audio_processing.loader import load_audio
+from src.audio_processing.processor import trim_audio, concatenate_audio, adjust_volume, apply_fades, convert_audio
+from src.audio_processing.transcriber import transcribe_audio, chunked_transcribe
+from src.video_processing.loader import load_video_and_extract_audio
+from src.video_processing.frame_extractor import extract_keyframes
+from src.storage.mongo import save_transcript_to_mongo
 
 # New Imports for Image Processing
-from image_processing.downloader import fetch_and_download_images
-from image_processing.batch import batch_process_images
-from utils.report_generator import generate_combined_report
+from src.image_processing.downloader import fetch_and_download_images
+from src.image_processing.batch import batch_process_images
+from src.utils.report_generator import generate_combined_report
 
 # New Imports for Analytics (Lab 8)
-from analytics import (
+from src.analytics import (
     demonstrate_numpy_features,
     get_integrated_data,
     optimize_dataframe,
@@ -41,7 +44,7 @@ from analytics import (
 )
 
 # New Imports for Cleaning (Lab 9)
-from cleaning import run_cleaning_pipeline
+from src.cleaning import run_cleaning_pipeline
 
 def run_pipeline():
     logging.info("Starting Real Estate Market Monitor Pipeline...")
@@ -323,26 +326,56 @@ def run_pipeline():
     logging.info("Starting Phase 8: Advanced Analytics...")
     print("📈 Running Phase 8: Advanced Analytics...")
 
-    from analytics import db_connector, data_combiner, aggregator, pivot_builder, time_series, insight_reporter
+    from src.analytics import db_connector, data_combiner, aggregator, pivot_builder, time_series, insight_reporter, mongo_pipeline
 
     # 1. Ensure cleaned data exists
     cleaned_csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/processed/cleaned/cleaned_data.csv"))
     if not os.path.exists(cleaned_csv_path):
-        logging.error("Cleaned data file not found. Running cleaning pipeline again...")
-        # (Assuming run_cleaning_pipeline is imported from Phase 7)
+        logging.warning("Cleaned data file not found. Running cleaning pipeline...")
         clean_df = run_cleaning_pipeline(df) 
+    else:
+        clean_df = pd.read_csv(cleaned_csv_path)
     
-    # 2. Populate MySQL
+    # 2. Populate and Query MySQL
+    logging.info("Populating MySQL database...")
     db_connector.populate_financials(cleaned_csv_path)
     df_financials = db_connector.query_financials()
     
-    # 3. Generate analytics outputs
-    aggregator.calculate_type_summary(df_financials).to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/type_analysis.csv"))
-    aggregator.calculate_yearly_trends(df_financials).to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/yearly_trends.csv"))
+    # 3. Data Combination (Join Comparison)
+    logging.info("Comparing join types...")
+    data_combiner.compare_joins(df_financials, clean_df)
     
-    # 4. Print analytical summary
+    # 4. Reshaping and Pivoting
+    logging.info("Generating pivot tables...")
+    pivot_table = pivot_builder.create_genre_year_pivot(df_financials)
+    pivot_table.to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/pivot_genre_year.csv"))
+    
+    # 5. GroupBy Analysis
+    logging.info("Performing GroupBy aggregations...")
+    type_summary = aggregator.calculate_type_summary(df_financials)
+    type_summary.to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/genre_analysis.csv"))
+    
+    yearly_trends = aggregator.calculate_yearly_trends(df_financials)
+    yearly_trends.to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/yearly_trends.csv"))
+    
+    # 6. Time Series Analysis
+    logging.info("Processing time series data...")
+    monthly, yearly, rolling = time_series.build_time_series_analysis(df_financials.merge(clean_df[['listing_id', 'collected_at']], on='listing_id'))
+    rolling.to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/time_series_rolling.csv"))
+    
+    # 7. MongoDB Aggregation (Optional fallback)
+    try:
+        mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
+        mongo_stats = mongo_pipeline.get_mongo_genre_stats(mongo_uri, "real_estate_db", "loopnet_listings")
+        mongo_stats.to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/mongo_genre_stats.csv"))
+        logging.info("MongoDB aggregation completed.")
+    except Exception as e:
+        logging.error(f"MongoDB aggregation failed: {e}")
+
+    # 8. Insight Reporter (Quantified Questions)
     insight_reporter.run_all_questions(df_financials)
-    print("✅ Advanced Analytics pipeline completed.")
+    
+    print("✅ Advanced Analytics pipeline completed. Reports saved to data/processed/analytics/")
 
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")

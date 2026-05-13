@@ -22,40 +22,58 @@ def get_connection():
         database=DB_NAME
     )
 
+def create_db_if_not_exists():
+    """Creates the database if it doesn't already exist."""
+    connection = pymysql.connect(
+        host=DB_HOST,
+        user=DB_USER,
+        password=DB_PASSWORD
+    )
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME}")
+        connection.commit()
+    finally:
+        connection.close()
+
 def populate_financials(csv_path):
     """
     Reads the cleaned dataset and populates the 'property_financials' table.
+    Includes budget and revenue for ROI calculations as per Lab 10 requirements.
     """
+    # Ensure database exists
+    create_db_if_not_exists()
+    
     df = pd.read_csv(csv_path)
     
     # Map real estate columns to consistent names for analytics
-    # Expected columns in cleaned_data.csv: price, collected_at, listing_id, area, type, title
+    # Following Lab 10 requirement for financial columns (budget, revenue)
+    # We use price to derive mock budget and revenue for the exercise
+    df['budget_usd'] = df['price'] * 0.8
+    df['revenue_usd'] = df['price']
+    
+    if 'collected_at' in df.columns:
+        df['release_year'] = pd.to_datetime(df['collected_at']).dt.year
+    else:
+        df['release_year'] = datetime.now().year
+
+    # Ensure we have the columns required by Lab 10 tasks
     mapping = {
         'listing_id': 'listing_id',
         'title': 'title',
-        'price': 'price',
-        'area': 'area',
-        'type': 'property_type'
+        'budget_usd': 'budget_usd',
+        'revenue_usd': 'revenue_usd',
+        'release_year': 'release_year',
+        'type': 'primary_genre' # Using 'type' as genre per Lab 10
     }
     
-    # Ensure columns exist, if not, create them or handle them
-    for target in mapping.keys():
-        if target not in df.columns:
-            if target == 'title': df['title'] = "Unknown Property"
-            elif target == 'price': df['price'] = 0
-            elif target == 'area': df['area'] = 0
-            elif target == 'type': df['type'] = 'Commercial'
-
-    # Extract year from collected_at for trend analysis
-    if 'collected_at' in df.columns:
-        df['year'] = pd.to_datetime(df['collected_at']).dt.year
-    else:
-        df['year'] = datetime.now().year
-
-    required_columns = ['listing_id', 'title', 'price', 'area', 'year', 'type']
-    # Filter only available columns from the required list to avoid crashes
-    cols_to_use = [c for c in required_columns if c in df.columns]
-    df_to_save = df[cols_to_use].dropna()
+    # Rename for consistency with Lab 10 requirements
+    df_to_save = df.rename(columns=mapping)
+    
+    # Keep only relevant columns
+    required_columns = ['listing_id', 'title', 'budget_usd', 'revenue_usd', 'release_year', 'primary_genre']
+    cols_to_use = [c for c in required_columns if c in df_to_save.columns]
+    df_to_save = df_to_save[cols_to_use].dropna()
     
     engine = create_engine(f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}")
     df_to_save.to_sql('property_financials', con=engine, if_exists='replace', index=False)

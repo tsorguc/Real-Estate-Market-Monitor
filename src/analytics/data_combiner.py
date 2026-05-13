@@ -12,14 +12,16 @@ def concat_datasets(df_list, axis=0):
     """
     return pd.concat(df_list, axis=axis)
 
-def compare_joins(df1, df2, on_key):
+def compare_joins(df1, df2, on_key='listing_id'):
     """
     Demonstrates inner, left, right, and outer joins and returns their row counts.
+    As per Lab 10 requirement.
     """
     join_types = ['inner', 'left', 'right', 'outer']
     results = {}
+    print("\n--- Join Type Comparison (Lab 10) ---")
     for join_type in join_types:
-        merged = pd.merge(df1, df2, on=on_key, how=join_type)
+        merged = pd.merge(df1, df2, on=on_key, how=join_type, suffixes=('_db', '_csv'))
         results[join_type] = len(merged)
         print(f"{join_type.capitalize()} join row count: {len(merged)}")
     return results
