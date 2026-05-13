@@ -337,7 +337,7 @@ def run_pipeline():
     df_financials = db_connector.query_financials()
     
     # 3. Generate analytics outputs
-    aggregator.calculate_genre_summary(df_financials).to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/genre_analysis.csv"))
+    aggregator.calculate_type_summary(df_financials).to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/type_analysis.csv"))
     aggregator.calculate_yearly_trends(df_financials).to_csv(os.path.join(os.path.dirname(__file__), "../../data/processed/analytics/yearly_trends.csv"))
     
     # 4. Print analytical summary

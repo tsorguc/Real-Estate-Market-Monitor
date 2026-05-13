@@ -8,7 +8,7 @@ from datetime import datetime
 from utils.logger import logging as logger
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-POPPLER_PATH = r'C:\poppler\Library\bin'
+POPPLER_PATH = r'C:\poppler\poppler\Library\bin'
 
 def preprocess_image(img):
     """Applies Grayscale and Thresholding to improve OCR."""
