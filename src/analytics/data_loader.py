@@ -73,9 +73,9 @@ def load_csv_in_chunks(file_path, chunk_size=10):
 def process_chunks_per_category(file_path, chunk_size=10):
     """
     Process chunks per-category and combine accumulators.
-    Fulfills Lab 8 Requirement: 'Process chunks per-language'.
+    Fulfills Lab 8 Requirement.
     """
-    logging.info(f"Processing chunks per-category (Language equivalent) from: {file_path}")
+    logging.info(f"Processing chunks per-property type from: {file_path}")
     
     category_accumulators = {}
     
@@ -96,7 +96,7 @@ def process_chunks_per_category(file_path, chunk_size=10):
                 
     # Compute final means per category
     category_means = {cat: data['sum'] / data['count'] for cat, data in category_accumulators.items() if data['count'] > 0}
-    logging.info(f"Combined accumulators - Category Means: {category_means}")
+    logging.info(f"Combined accumulators - Type Means: {category_means}")
     return category_means
 
 def optimize_dataframe(df):

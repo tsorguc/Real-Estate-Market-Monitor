@@ -4,7 +4,7 @@ from src.utils.logger import logging
 def perform_regex_operations(df):
     """
     Performs 4+ regex operations on text columns.
-    Mapped from 'title, overview, genres' to 'description, type'.
+    Focuses on description and property type.
     As per Lab 8 Requirements.
     """
     logging.info("--- Regular Expression Operations ---")
@@ -21,13 +21,10 @@ def perform_regex_operations(df):
         # Repeat and slice to exactly match df length
         df['description'] = (descriptions * (len(df) // len(descriptions) + 1))[:len(df)]
     
-    # Mocking 'title' and 'genres' for requirement fulfillment if not present
     if 'title' not in df.columns:
         df['title'] = "Property Listing " + df.index.astype(str)
-    if 'genres' not in df.columns:
-        df['genres'] = df['type'] if 'type' in df.columns else 'Commercial'
 
-    # 1. Extract years from 'description' (Overview equivalent)
+    # 1. Extract years from 'description'
     df['extracted_years'] = df['description'].str.extract(r'(\b(?:19|20)\d{2}\b)')
     logging.info("Regex 1: Extracted years from descriptions.")
     
@@ -43,9 +40,9 @@ def perform_regex_operations(df):
     df['extracted_sqft'] = df['description'].str.extract(r'(\d+)\s*sqft')
     logging.info("Regex 4: Extracted sqft values from descriptions.")
     
-    # 5. Case-insensitive search for 'office' in 'genres' (Type equivalent)
-    office_genre = df[df['genres'].astype(str).str.contains(r'office', case=False, regex=True, na=False)]
-    logging.info(f"Regex 5: 'Genres' containing 'office' (case-insensitive): {len(office_genre)} found.")
+    # 5. Case-insensitive search for 'office' in 'type'
+    office_type = df[df['type'].astype(str).str.contains(r'office', case=False, regex=True, na=False)]
+    logging.info(f"Regex 5: 'Type' containing 'office' (case-insensitive): {len(office_type)} found.")
     
     return df
 

@@ -10,3 +10,4 @@ from .explorer import perform_eda
 from .selector import demonstrate_selection
 from .regex_ops import perform_regex_operations
 from .quality_report import generate_quality_report
+from . import db_connector, data_combiner, aggregator, pivot_builder, time_series, insight_reporter, mongo_pipeline
