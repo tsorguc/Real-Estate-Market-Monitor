@@ -377,6 +377,47 @@ def run_pipeline():
     
     print("✅ Advanced Analytics pipeline completed. Reports saved to data/processed/analytics/")
 
+    # =================================================================
+    # PHASE 9: LAB 11 - EMBEDDINGS AND VECTOR SEARCH
+    # =================================================================
+    logging.info("Starting Phase 9: Embeddings and Vector Search...")
+    print("🧠 Running Phase 9: Embeddings and Vector Search...")
+
+    from src.embeddings.embedder import Embedder
+    from src.embeddings.chroma_store import ChromaStore
+
+    # 1. Initialize Embedder and ChromaStore
+    embedder = Embedder()
+    store = ChromaStore(path=os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/embeddings/chroma_db")))
+
+    # 2. Prepare and Add properties to ChromaDB (if empty or re-population requested)
+    if store.count() == 0:
+        logging.info("Populating ChromaDB with property embeddings...")
+        documents = []
+        metadatas = []
+        ids = []
+        
+        for idx, row in clean_df.iterrows():
+            doc = embedder.combine_property_fields(row)
+            meta = {
+                "title": str(row.get('title', 'Unknown')),
+                "type": str(row.get('type', 'Commercial')),
+                "listing_id": str(row.get('listing_id', idx))
+            }
+            documents.append(doc)
+            metadatas.append(meta)
+            ids.append(str(idx))
+        
+        # Generate embeddings explicitly to avoid ChromaDB downloading its own model
+        print(f"🔄 Encoding {len(documents)} documents...")
+        embeddings = embedder.generate_embeddings(documents)
+        
+        # Pass pre-computed embeddings
+        store.add_properties(documents, metadatas, ids, embeddings=embeddings.tolist())
+        print(f"✅ ChromaDB populated with {store.count()} property records.")
+    else:
+        print(f"📦 ChromaDB already contains {store.count()} records. Skipping re-population.")
+
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")
     
