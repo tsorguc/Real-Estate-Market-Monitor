@@ -46,6 +46,9 @@ from src.analytics import (
 # New Imports for Cleaning (Lab 9)
 from src.cleaning import run_cleaning_pipeline
 
+# New Imports for Visualization (Lab 12)
+from src.visualization.chart_generator import run_visualization_pipeline
+
 def run_pipeline():
     logging.info("Starting Real Estate Market Monitor Pipeline...")
     print("🚀 Starting Pipeline...")
@@ -417,6 +420,17 @@ def run_pipeline():
         print(f"✅ ChromaDB populated with {store.count()} property records.")
     else:
         print(f"📦 ChromaDB already contains {store.count()} records. Skipping re-population.")
+
+    # =================================================================
+    # PHASE 10: LAB 12 - DATA VISUALIZATION
+    # =================================================================
+    logging.info("Starting Phase 10: Data Visualization...")
+    print("📊 Running Phase 10: Data Visualization...")
+    
+    static_out = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../outputs/visualizations/static"))
+    interactive_out = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../outputs/visualizations/interactive"))
+    
+    run_visualization_pipeline(cleaned_csv_path, static_out, interactive_out)
 
     logging.info("Pipeline finished successfully")
     print("🏁 Pipeline finished successfully!")
