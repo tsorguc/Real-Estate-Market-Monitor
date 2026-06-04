@@ -438,5 +438,15 @@ def run_pipeline():
     # Final step: Generate the summary report for the user
     generate_combined_report()
 
+    # Part 11: Display dashboard execution instructions
+    print("\n" + "="*50)
+    print("🖥️  DASHBOARD READY TO RUN")
+    print("="*50)
+    print("To start the interactive dashboard locally, run:")
+    print("    python app.py")
+    print("\nTo build and run the full stack (Dashboard + MongoDB) with Docker, run:")
+    print("    docker compose up --build")
+    print("="*50 + "\n")
+
 if __name__ == "__main__":
     run_pipeline()
